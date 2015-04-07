@@ -11,16 +11,10 @@ html{
 }
 
 body {
-<<<<<<< HEAD
   height: 100%;
   padding-top: 50px;
   font-family: 'Open Sans';
   overflow: hidden;
-=======
-    height: 100%;
-    padding-top: 50px;
-    font-family: 'Open Sans';
->>>>>>> 26fe2cc842b1b33bc0f1d44c71f59d8965ce4899
 }
 
 /*
@@ -145,13 +139,6 @@ body {
 }
 
 .chat_input_area{
-<<<<<<< HEAD
-  width: inherit;
-  position: fixed;
-  bottom: 0;
-}
-
-=======
     width: inherit;
     position: fixed;
     bottom: 0;
@@ -175,7 +162,6 @@ body {
     height: 46px;
     border: 1px solid #e6e6e6;
 }
->>>>>>> 26fe2cc842b1b33bc0f1d44c71f59d8965ce4899
 
 
 .chat_body{
