@@ -1,3 +1,4 @@
+
 $(document).ready(function() {
     console.log('got JQ on via integration');
 
@@ -5,6 +6,8 @@ $(document).ready(function() {
     var url = 'https://hackidc2015.imrapid.io/message';
     var roomID = 'david';
     var projectName = 'hackidc2015';
+
+
 
 
     //message output
@@ -26,6 +29,7 @@ $(document).ready(function() {
     //message feed
     var io = createIO(projectName, roomID);
 
+
     function generateCurrentBlob(data){
        var d = new Date();
        var hours = d.getHours() < 10 ? '0' + d.getHours() : d.getHours();
@@ -41,5 +45,6 @@ $(document).ready(function() {
    // alert(data);
     console.log(data);//,outputHTMLString);
    $('.chat_body').append(outputHTMLString);
+
 });
 });
