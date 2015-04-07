@@ -8,9 +8,16 @@
 
 include_once("Beacon.php");
 
-$requestID = $_GET['rid'];//request id 0/1 connect/disconnect
+$requestID = intval($_GET['rid']);//request id 0/1 connect/disconnect
 $beaconID = $_GET['bid'];
 $clientID = $_GET['cid'];
+
+
+echo "</br> type of : </br>" .
+    "rid = " . (gettype($requestID)) . "</br>" .
+    "bid = " . (gettype($beaconID)) . "</br>" ;
+
+
 
 if($requestID === 0 || $requestID === 1)
 {
@@ -18,6 +25,10 @@ if($requestID === 0 || $requestID === 1)
     if($requestID === 0)
     {
         $result = $beaconHandler->handleConnectionRequest();
+
+        ////
+        echo "</br> handleConnectionResult  = " . $result  ."|| </br>";
+        ///
         if($result !== null)
         {
             echo parseResponseToJson($result);

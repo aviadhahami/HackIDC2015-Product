@@ -20,7 +20,8 @@ class Beacon {
         $this->responseID = $responseID;
 
         $this->mysqli = new mysqli("localhost","839771","argov123","839771");
-        $this->$beaconTable = "beacon";
+
+        $this->beaconTable = "beacon";
         $this->clientTable = "clients";
     }
 
@@ -34,7 +35,7 @@ class Beacon {
     public function isBeaconExists()
     {
         $localBeacon = $this->beaconID;
-        $beaconTbl = $this->$beaconTable;
+        $beaconTbl = $this->beaconTable;
         $beaconExistsQuery = "SELECT * FROM $beaconTbl WHERE bid = '$localBeacon'";
 
         $resultSet = $this->mysqli->query($beaconExistsQuery);
@@ -99,7 +100,7 @@ class Beacon {
 
         $clientId = $this->generateClientId($clientArr);
 
-        $addNewClientQuery = "INSERT INTO $localClientTable (bid, cid) VALUES ('$localBeaconId', '$clientId')";
+        $addNewClientQuery = "INSERT INTO $localClientTable (bid, uid) VALUES ('$localBeaconId', '$clientId')";
 
         $addNewClientExecute = $this->mysqli->query($addNewClientQuery);
 
@@ -132,17 +133,31 @@ class Beacon {
 
     public function handleConnectionRequest()
     {
+        ///
+        echo "</br> entered HandleConnection";
+        ///
         $userSet = $this->isBeaconExists();
+
+        echo "</br> userset : " . print_r($userSet) . "||</br>";
+
         if($userSet === null)
         {
             return null;
         }
 
+        echo "</br> first if block passed in connection handler </br>";
+
         $clientId = $this->addNewClient($userSet);
+
+        ////
+        echo "</br> clientID = ". $clientId ."</br>";
+        ////
+
         if($clientId === null)
         {
             return null;
         }
+        echo "</br> second if block passed in connection handler </br>";
 
         return ["connection"=>"1",'cid'=>$clientId, 'amount'=> $this->getAmountConnected($userSet)];
     }
@@ -155,7 +170,9 @@ class Beacon {
     /////////////////////////////////////////////////////////////////////////////
     public function handleDisconnectionRequest($clientID)
     {
-        if($this->verifyBeaconBoolean())
+        $bool = $this->verifyBeaconBoolean();
+        echo "</br> handleDisconnect berifyBeaconbool = " .$bool ."</br>";
+        if($bool)
         {
             return $this->removeClientFromDB($clientID);
         }
@@ -168,7 +185,7 @@ class Beacon {
         $localBeaconId = $this->beaconID;
         $localClientTable = $this->clientTable;
 
-        $removeClientQuery = "DELETE FROM '$localClientTable' WHERE bid = '$localBeaconId' AND uid = '$clientID'";
+        $removeClientQuery = "DELETE FROM $localClientTable WHERE bid = '$localBeaconId' AND uid = '$clientID'";
 
         $removeClientExecute = $this->mysqli->query($removeClientQuery);
         if($removeClientExecute === true)
@@ -182,7 +199,7 @@ class Beacon {
     public function verifyBeaconBoolean()
     {
         $localBeacon = $this->beaconID;
-        $beaconTbl = $this->$beaconTable;
+        $beaconTbl = $this->beaconTable;
         $beaconExistsQuery = "SELECT * FROM $beaconTbl WHERE bid = '$localBeacon'";
 
         $resultSet = $this->mysqli->query($beaconExistsQuery);
