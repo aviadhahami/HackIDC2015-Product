@@ -10,6 +10,7 @@ include_once("Beacon.php");
 
 $requestID = $_GET['rid'];//request id 0/1 connect/disconnect
 $beaconID = $_GET['bid'];
+$clientID = $_GET['cid'];
 
 if($requestID === 0 || $requestID === 1)
 {
@@ -21,6 +22,14 @@ if($requestID === 0 || $requestID === 1)
         {
             echo parseResponseToJson($result);
         }
+    }
+    elseif($requestID === 1)
+    {
+        if($beaconHandler->handleDisconnectionRequest($clientID))
+        {
+            echo json_encode(["connection"=>"1"]);
+        }
+        echo json_encode(["connection"=>"-1"]);
     }
 }
 
