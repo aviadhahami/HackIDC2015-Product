@@ -3,8 +3,12 @@
  */
 
 /* Move down content because we have a fixed navbar that is 50px tall */
+
+@import url(http://fonts.googleapis.com/css?family=Oxygen:400,300,700);
+
 body {
   padding-top: 50px;
+    font-family: 'Oxygen';
 }
 
 
@@ -93,10 +97,29 @@ body {
 }
 @media (min-width: 768px) {
   .main {
-    padding-right: 40px;
-    padding-left: 40px;
+    padding-right: 0px;
+    padding-left: 0px;
   }
 }
 .main .page-header {
   margin-top: 0;
 }
+
+.user_msg {
+    margin-bottom: 20px;
+}
+
+.user_icon_container {
+   width: 65px;
+    float: left;
+}
+
+.user_icon_container img {
+    width: 40px;
+    height: auto;
+}
+
+.user_txt_container {
+
+}
+
