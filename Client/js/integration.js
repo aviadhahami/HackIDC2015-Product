@@ -8,8 +8,8 @@ $(document).ready(function() {
 
 
     //message output
-    $('#send').click(function(){
-        var chatMsg = $('#textBox').val();
+    $('#sendMsg').click(function(){
+        var chatMsg = $('#chatMsg').val();
         var msg = {
             message : chatMsg,
             room : roomID
