@@ -139,6 +139,7 @@ body {
 }
 
 .chat_input_area{
+    z-index: 1000;
     width: inherit;
     position: fixed;
     bottom: 0;
