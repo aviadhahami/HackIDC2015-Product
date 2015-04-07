@@ -1,29 +1,32 @@
 $(document).ready(function() {
+    console.log('got JQ on via integration');
 
     //global data
-    var url = "https://hackidc2015.imrapid.io/message";
-    var roomID = "2";
-    var projectName = "hackidc2015";
-
+    var url = 'https://hackidc2015.imrapid.io/message';
+    var roomID = 'david';
+    var projectName = 'hackidc2015';
 
 
     //message output
-    $('#myButt').click(function(e) {
-        var message = $('#chatInput').val();
-        var clientData = {
-            room: roomID,
-            UID: '2',
-            message: message
+    $('#send').click(function(){
+        var chatMsg = $('#textBox').val();
+        var msg = {
+            message : chatMsg,
+            room : roomID
         };
-        $.post(url, clientData, function(data) {
-            console.log(data);
+        console.log('sending message object.. msg is' + chatMsg);
+
+        $.post(url,msg,function(data,status){
+            console.log('data: ' + data + 'status : ' + status + 'from the POST');
         });
     });
 
 
     //message feed
     var io = createIO(projectName, roomID);
-    io.on('newMessage', function(data) {
-        console.log(data.message);
+
+    io.on('newMsg', function(data) {
+        alert(data);
+        console.log(data);
     });
 });
