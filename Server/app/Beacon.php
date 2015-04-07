@@ -46,29 +46,40 @@ class Beacon {
             return $resultSet->fetch_object();
         }
 
+        return $this->getClientsSet();
 
     }
 
 
+    /**
+     * @desc retrieves an object set that represent the fetch
+     * @return null|object|stdClass
+     */
     private function getClientsSet()
     {
         $localClientTbl = $this->clientTable;
         $localBeacon = $this->beaconID;
+
+        $returnArr = array();
+
         $getClientSetQuery = "SELECT * FROM $localClientTbl WHERE bid = '$localBeacon'";
 
         $clientSetResult = $this->mysqli->query($getClientSetQuery);
-        $clientSetNumRows = $clientSetResult->num_rows;
 
 
-
+        //In case fetch failed
         if($clientSetResult === false)
         {
-
+            return null;
         }
-        elseif($clientSetNumRows === 0){}
-        else{}
 
 
+        //TODO: when result set is empty aka no other clients should be handled
+        while($nextRow = $clientSetResult->fetch_object())
+        {
+            $returnArr[] = $nextRow;
+        }
+        return $returnArr;
 
 
     }
