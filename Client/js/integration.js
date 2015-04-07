@@ -30,8 +30,6 @@ $(document).ready(function() {
 
 var socket = io('http://localhost');
 
-
-
 $('#sendMessage').click(function(){
     socket.emit('sendMessage',$('#chatInput').val());
     $('#chatInput').val('');
