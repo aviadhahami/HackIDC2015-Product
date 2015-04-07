@@ -142,7 +142,7 @@ class Beacon {
 
         if($userSet === null)
         {
-            return null;
+            return ["connection"=>"-1"];
         }
 
        // echo "</br> first if block passed in connection handler </br>";
@@ -155,7 +155,7 @@ class Beacon {
 
         if($clientId === null)
         {
-            return null;
+            return ["connection"=>"-1"];
         }
         //echo "</br> second if block passed in connection handler </br>";
 
