@@ -89,6 +89,24 @@ class Beacon {
     /////////////////////////////////////////////////////////////////////////////
 
 
+    private function addNewClient()
+    {
+        $localBeaconId = $this->beaconID;
+        $localClientTable = $this->clientTable;
+
+        $clientId = $this->generateClientId();
+
+        $addNewClientQuery = "INSERT INTO $localClientTable (bid, cid) VALUES ('$localBeaconId', '$clientId')";
+
+        $addNewClientExecute = $this->mysqli->query($addNewClientQuery);
+
+
+
+
+    }
+
+    private function generateClientId(){}
+
     public function handleConnectionRequest()
     {
         $beaconIdSet = $this->isBeaconExists();
@@ -99,7 +117,14 @@ class Beacon {
 
     }
 
-    private function getAmountConnected(){}
+    private function getAmountConnected($arrObjects)
+    {
+        if($arrObjects === null)
+        {
+            return 0;
+        }
+        return sizeof($arrObjects);
+    }
 
 
     /////////////////////////////////////////////////////////////////////////////
