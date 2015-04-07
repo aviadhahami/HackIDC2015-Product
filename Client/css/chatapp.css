@@ -6,7 +6,12 @@
 
 @import url(http://fonts.googleapis.com/css?family=Open-Sans:400,300,700);
 
+html{
+  height: 100%;
+}
+
 body {
+  height: 100%;
   padding-top: 50px;
     font-family: 'Open Sans';
 }
@@ -133,3 +138,12 @@ body {
   padding-left: 10px;
 }
 
+.chat_input_area{
+  position: fixed;
+  bottom: 0;
+}
+
+.chat_body{
+  height: 100%;
+  overflow-y: scroll;
+}
