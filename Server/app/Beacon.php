@@ -46,10 +46,10 @@ class Beacon {
 
         elseif($resultSetNumRows === 1)
         {
-            return $resultSet->fetch_object();
+            return $this->getClientsSet();
         }
 
-        return $this->getClientsSet();
+        return null;
 
     }
 
@@ -135,16 +135,16 @@ class Beacon {
         $userSet = $this->isBeaconExists();
         if($userSet === null)
         {
-            return -1;
+            return null;
         }
 
         $clientId = $this->addNewClient($userSet);
         if($clientId === null)
         {
-            return -1;
+            return null;
         }
 
-        return ['cid'=>$clientId, 'amount'=> $this->getAmountConnected($userSet)];
+        return ["connection"=>"1",'cid'=>$clientId, 'amount'=> $this->getAmountConnected($userSet)];
     }
 
 
