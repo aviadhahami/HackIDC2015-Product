@@ -13,9 +13,9 @@ html{
 body {
   height: 100%;
   padding-top: 50px;
-    font-family: 'Open Sans';
+  font-family: 'Open Sans';
+  overflow: hidden;
 }
-
 
 /*
  * Global add-ons
@@ -139,9 +139,12 @@ body {
 }
 
 .chat_input_area{
+  width: inherit;
   position: fixed;
   bottom: 0;
 }
+
+
 
 .chat_body{
   height: 100%;

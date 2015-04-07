@@ -17,6 +17,8 @@
 
     <!-- Custom styles for this template -->
     <link href="css/chatapp.css" rel="stylesheet">
+    <link href="css/loader.css" rel="stylesheet">
+
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -24,6 +26,8 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
+
+
 
 <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -198,13 +202,37 @@
         </div>
 
         <div class = "chat_input_area">
-        <input type="text" class="chatInput" />
-        <button id='myButt'>Send</button>
+          <input type="text" class="chatInput" />
+          <button id='myButt'>Send</button>
         </div>
 
     </div>
-    </div>
 
+<div class="shader">
+
+<div class='username'>
+  <span class = "quote">Today, I'm Called
+  <form class = "username_form">
+  <span class="input2 input--kozakura">
+          <input class="input__field2 input__field--kozakura" type="text" id="input-7" />
+          <label class="input__label2 input__label--kozakura" for="input-7">
+            <span class="input__label2-content input__label-content--kozakura" data-content="Name"></span>
+          </label>
+          <svg class="graphic2 graphic--kozakura" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+            <path d="M1200,9c0,0-305.005,0-401.001,0C733,9,675.327,4.969,598,4.969C514.994,4.969,449.336,9,400.333,9C299.666,9,0,9,0,9v43c0,0,299.666,0,400.333,0c49.002,0,114.66,3.484,197.667,3.484c77.327,0,135-3.484,200.999-3.484C894.995,52,1200,52,1200,52V9z"/>
+          </svg>
+  </span>
+  <input type = "submit" id = "submit_name" value="send"/>
+  </form>
+</div>
+
+<div class='loader'>
+    <img class = "loader-gif-img" src = "img/loader.gif" /><br><br>
+    <span class = "quote">“If things start happening, don't worry, don't stew, just go right along and you'll start happening too.” </span>
+    <span class = "author">― Dr. Seuss</span>
+</div>
+</div>
+</div>
 
 
 
@@ -219,6 +247,8 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/loader.js"></script>
     <script src="js/rapid_socket.js"></script>
     <script src="js/integration.js"></script>
 
