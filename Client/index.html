@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,54 +23,83 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-  </head>
+</head>
 
 <body>
-<nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Sxsw</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand navbar-white" href="#">@sxsw</a>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Sxsw</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand navbar-white" href="#">@sxsw</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Dashboard</a>
+                    </li>
+                    <li><a href="#">Settings</a>
+                    </li>
+                    <li><a href="#">Profile</a>
+                    </li>
+                    <li><a href="#">Help</a>
+                    </li>
+                </ul>
+                <form class="navbar-form navbar-right">
+                    <input type="text" class="form-control" placeholder="Search...">
+                </form>
+            </div>
         </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Dashboard</a></li>
-            <li><a href="#">Settings</a></li>
-            <li><a href="#">Profile</a></li>
-            <li><a href="#">Help</a></li>
-          </ul>
-          <form class="navbar-form navbar-right">
-            <input type="text" class="form-control" placeholder="Search...">
-          </form>
-        </div>
-      </div>
     </nav>
 
 
 
     <div class="col-sm-3 col-md-2 sidebar">
-          <ul class="nav nav-sidebar">
-            <li><a href="#"><img src= "img/yellow.png" /><span class = "user_name">Jonny</span></a></li>
-            <li><a href="#"><img src= "img/green.png" /><span class = "user_name">Jonny</span></a></li>
-            <li><a href="#"><img src= "img/cyan.png" /><span class = "user_name">Jonny</span></a></li>
-              <li><a href="#"><img src= "img/devil.png" /><span class = "user_name">Jonny</span></a></li>
-              <li><a href="#"><img src= "img/pink.png" /><span class = "user_name">Jonny</span></a></li>
-              <li><a href="#"><img src= "img/blue.png" /><span class = "user_name">Jonny</span></a></li>
-          </ul>
+        <ul class="nav nav-sidebar">
+            <li>
+                <a href="#">
+                    <img src="img/yellow.png" /><span class="user_name">Jonny</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="img/green.png" /><span class="user_name">Jonny</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="img/cyan.png" /><span class="user_name">Jonny</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="img/devil.png" /><span class="user_name">Jonny</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="img/pink.png" /><span class="user_name">Jonny</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="img/blue.png" /><span class="user_name">Jonny</span>
+                </a>
+            </li>
+        </ul>
     </div>
-<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
 
-    <!--<div class="col-xs-12 user_msg">
+        <!--<div class="col-xs-12 user_msg">
         <div class="user_icon_container">
             <img src="img/devil.png"/>
         </div>
         <div class="user_txt_container">Now this is a story all about how</div>
     </div>-->
+
 
     <div class="col-xs-12 user_msg">
         <div class="media message-box">
@@ -81,6 +111,7 @@
                 <p>Hello fellas!</p>
             </div>
         </div>
+<<<<<<< HEAD
   </div>
 
   <div class="col-xs-12 user_msg">
@@ -119,6 +150,11 @@
         </div>
   </div>
 </div>
+=======
+        <input type="text" />
+        <button id='myButt'>Send</button>
+    </div>
+>>>>>>> 13f9c1db91c0e22c987a6f98c4f1d153308aa43c
 
 
 
@@ -129,11 +165,14 @@
 
 
 
-<!-- Bootstrap core JavaScript
+    <!-- Bootstrap core JavaScript
 ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-  </body>
+    <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+    <script src="js/integration.js"></script>
+</body>
+
 
 </html>
