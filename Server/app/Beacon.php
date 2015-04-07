@@ -25,6 +25,9 @@ class Beacon {
     }
 
 
+
+
+
     /**
      * @return null | objectSet if beacon doesn't exists or failed in fetch returns null | returns the query set of clients
      */
@@ -100,7 +103,11 @@ class Beacon {
 
         $addNewClientExecute = $this->mysqli->query($addNewClientQuery);
 
-        return $addNewClientExecute;
+        if($addNewClientExecute)
+        {
+            return $clientId;
+        }
+        return null;
 
 
     }
@@ -113,16 +120,6 @@ class Beacon {
 
     }
 
-    public function handleConnectionRequest()
-    {
-        $beaconIdSet = $this->isBeaconExists();
-        if($beaconIdSet === null)
-        {
-            return -1;
-        }
-
-    }
-
     private function getAmountConnected($arrObjects)
     {
         if($arrObjects === null)
@@ -131,6 +128,26 @@ class Beacon {
         }
         return sizeof($arrObjects);
     }
+
+
+    public function handleConnectionRequest()
+    {
+        $userSet = $this->isBeaconExists();
+        if($userSet === null)
+        {
+            return -1;
+        }
+
+        $clientId = $this->addNewClient($userSet);
+        if($clientId === null)
+        {
+            return -1;
+        }
+
+        return ['cid'=>$clientId, 'amount'=> $this->getAmountConnected($userSet)];
+    }
+
+
 
 
     /////////////////////////////////////////////////////////////////////////////
