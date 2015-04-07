@@ -25,6 +25,9 @@ class Beacon {
     }
 
 
+
+
+
     /**
      * @return null | objectSet if beacon doesn't exists or failed in fetch returns null | returns the query set of clients
      */
@@ -43,10 +46,10 @@ class Beacon {
 
         elseif($resultSetNumRows === 1)
         {
-            return $resultSet->fetch_object();
+            return $this->getClientsSet();
         }
 
-        return $this->getClientsSet();
+        return null;
 
     }
 
@@ -89,17 +92,62 @@ class Beacon {
     /////////////////////////////////////////////////////////////////////////////
 
 
-    public function handleConnectionRequest()
+    private function addNewClient($clientArr)
     {
-        $beaconIdSet = $this->isBeaconExists();
-        if($beaconIdSet === null)
+        $localBeaconId = $this->beaconID;
+        $localClientTable = $this->clientTable;
+
+        $clientId = $this->generateClientId($clientArr);
+
+        $addNewClientQuery = "INSERT INTO $localClientTable (bid, cid) VALUES ('$localBeaconId', '$clientId')";
+
+        $addNewClientExecute = $this->mysqli->query($addNewClientQuery);
+
+        if($addNewClientExecute)
         {
-            return -1;
+            return $clientId;
         }
+        return null;
+
 
     }
 
-    private function getAmountConnected(){}
+    private function generateClientId($clientArr)
+    {
+        $size = $this->getAmountConnected($clientArr);
+        $beaconShrink = substr($this->beaconID,0,10);
+        return $beaconShrink . $size;
+
+    }
+
+    private function getAmountConnected($arrObjects)
+    {
+        if($arrObjects === null)
+        {
+            return 0;
+        }
+        return sizeof($arrObjects);
+    }
+
+
+    public function handleConnectionRequest()
+    {
+        $userSet = $this->isBeaconExists();
+        if($userSet === null)
+        {
+            return null;
+        }
+
+        $clientId = $this->addNewClient($userSet);
+        if($clientId === null)
+        {
+            return null;
+        }
+
+        return ["connection"=>"1",'cid'=>$clientId, 'amount'=> $this->getAmountConnected($userSet)];
+    }
+
+
 
 
     /////////////////////////////////////////////////////////////////////////////
