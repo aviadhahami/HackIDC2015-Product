@@ -91,7 +91,7 @@
             </li>
         </ul>
     </div>
-    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main chat_body">
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main chat_body" id="chatBody">
 
         <!--<div class="col-xs-12 user_msg">
         <div class="user_icon_container">
@@ -197,10 +197,10 @@
         </div>
     </div>
 
-    <div class = "chat_input_area">
+    <form class = "chat_input_area">
         <input type="text" class="chatInput" id="chatInput"/>
-        <button id="sendMessage">Send</button>
-    </div>
+        <input type="submit" id="sendMessage" value="send" />
+    </form>
 
 </div>
 </div>
@@ -215,13 +215,15 @@
 
 <script>
   var socket = io();
-  $('#sendMessage').click(function(){
+  $('form').click(function(){
     socket.emit('sendMessage', $('#chatInput').val());
     $('#chatInput').val('');
     return false;
 });
   socket.on('incomingMessage', function(msg){
-    console.log(msg);
+    var HTMLString = '<div class="col-xs-12 user_msg"><div class="media message-box"><div class="media-left"><img class="media-object user-profile-in-chat" src="img/green.png" alt="general_id" style="width: 35px; height: 35px;"></div><div class="media-body"><h4 class="media-heading timestamp" id="top-aligned-media">Jonny, 14:20<a class="anchorjs-link" href="#top-aligned-media"><span class="anchorjs-icon"></span></a></h4><p>' + msg + '</p></div></div></div>';
+    $("#chatBody").append(HTMLString);
+    //console.log(msg);
 });
 </script>
 </script>
