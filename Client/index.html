@@ -17,6 +17,8 @@
 
     <!-- Custom styles for this template -->
     <link href="css/chatapp.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/menu_sideslide.css" />
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -26,184 +28,270 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Sxsw</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand navbar-white" href="#">@sxsw</a>
-            </div>
-            <div id="navbar" class="navbar-collapse collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">Dashboard</a>
+<div class="total_container">
+    <div class="menu-wrap">
+
+        <nav class="menu">
+
+        </nav>
+        <button class="close-button" id="close-button">Close Menu</button>
+    </div>
+    <!--<button class="menu-button" id="open-button">Open Menu</button>-->
+    <div class="content-wrap">
+        <div class="content">
+
+            <nav class="navbar navbar-inverse navbar-fixed-top">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Sxsw</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand navbar-white" href="#">@sxsw</a>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#">Dashboard</a>
+                            </li>
+                            <li><a href="#">Settings</a>
+                            </li>
+                            <li><a href="#">Profile</a>
+                            </li>
+                            <li><a href="#">Help</a>
+                            </li>
+                        </ul>
+                        <form class="navbar-form navbar-right">
+                            <input type="text" class="form-control" placeholder="Search...">
+                        </form>
+                    </div>
+                </div>
+            </nav>
+
+
+
+            <div class="col-sm-3 col-md-2 sidebar">
+                <ul class="nav nav-sidebar">
+                    <li>
+                        <a href="#">
+                            <img src="img/yellow.png" /><span class="user_name">Jonny</span>
+                        </a>
                     </li>
-                    <li><a href="#">Settings</a>
+                    <li>
+                        <a href="#">
+                            <img src="img/green.png" /><span class="user_name">Jonny</span>
+                        </a>
                     </li>
-                    <li><a href="#">Profile</a>
+                    <li>
+                        <a href="#">
+                            <img src="img/cyan.png" /><span class="user_name">Jonny</span>
+                        </a>
                     </li>
-                    <li><a href="#">Help</a>
+                    <li>
+                        <a href="#">
+                            <img src="img/devil.png" /><span class="user_name">Jonny</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/pink.png" /><span class="user_name">Jonny</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/blue.png" /><span class="user_name">Jonny</span>
+                        </a>
                     </li>
                 </ul>
-                <form class="navbar-form navbar-right">
-                    <input type="text" class="form-control" placeholder="Search...">
-                </form>
+            </div>
+            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main chat_body">
+
+                <!--<div class="col-xs-12 user_msg">
+                <div class="user_icon_container">
+                    <img src="img/devil.png"/>
+                </div>
+                <div class="user_txt_container">Now this is a story all about how</div>
+            </div>-->
+
+
+                <div class="col-xs-12 user_msg">
+                    <div class="media message-box">
+                        <div class="media-left">
+                            <img class="media-object" src="img/pink.png" alt="general_id" style="width: 35px; height: 35px;">
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading timestamp" id="top-aligned-media">Jonny, 14:20<a class="anchorjs-link" href="#top-aligned-media"><span class="anchorjs-icon"></span></a></h4>
+                            <p>Hello fellas!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 user_msg">
+                    <div class="media message-box">
+                        <div class="media-left">
+                            <img class="media-object user-profile-in-chat" src="img/devil.png" alt="general_id" style="width: 35px; height: 35px;">
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading timestamp" id="top-aligned-media">Jonny, 14:20<a class="anchorjs-link" href="#top-aligned-media"><span class="anchorjs-icon"></span></a></h4>
+                            <img class="media-object image-in-chat" src="gifs/snorlax.gif" alt="general_id">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 user_msg">
+                    <div class="media message-box">
+                        <div class="media-left">
+                            <img class="media-object user-profile-in-chat" src="img/yellow.png" alt="general_id" style="width: 35px; height: 35px;">
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading timestamp" id="top-aligned-media">Jonny, 14:20<a class="anchorjs-link" href="#top-aligned-media"><span class="anchorjs-icon"></span></a></h4>
+                            <p>Hello fellas!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 user_msg">
+                    <div class="media message-box">
+                        <div class="media-left">
+                            <img class="media-object user-profile-in-chat" src="img/green.png" alt="general_id" style="width: 35px; height: 35px;">
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading timestamp" id="top-aligned-media">Jonny, 14:20<a class="anchorjs-link" href="#top-aligned-media"><span class="anchorjs-icon"></span></a></h4>
+                            <p>Hello fellas!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 user_msg">
+                    <div class="media message-box">
+                        <div class="media-left">
+                            <img class="media-object user-profile-in-chat" src="img/devil.png" alt="general_id" style="width: 35px; height: 35px;">
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading timestamp" id="top-aligned-media">Jonny, 14:20<a class="anchorjs-link" href="#top-aligned-media"><span class="anchorjs-icon"></span></a></h4>
+                            <img class="media-object image-in-chat" src="gifs/snorlax.gif" alt="general_id">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 user_msg">
+                    <div class="media message-box">
+                        <div class="media-left">
+                            <img class="media-object user-profile-in-chat" src="img/yellow.png" alt="general_id" style="width: 35px; height: 35px;">
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading timestamp" id="top-aligned-media">Jonny, 14:20<a class="anchorjs-link" href="#top-aligned-media"><span class="anchorjs-icon"></span></a></h4>
+                            <p>Hello fellas!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 user_msg">
+                    <div class="media message-box">
+                        <div class="media-left">
+                            <img class="media-object user-profile-in-chat" src="img/green.png" alt="general_id" style="width: 35px; height: 35px;">
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading timestamp" id="top-aligned-media">Jonny, 14:20<a class="anchorjs-link" href="#top-aligned-media"><span class="anchorjs-icon"></span></a></h4>
+                            <p>Hello fellas!</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-xs-12 user_msg">
+                    <div class="media message-box">
+                        <div class="media-left">
+                            <img class="media-object user-profile-in-chat" src="img/green.png" alt="general_id" style="width: 35px; height: 35px;">
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading timestamp" id="top-aligned-media">Jonny, 14:20<a class="anchorjs-link" href="#top-aligned-media"><span class="anchorjs-icon"></span></a></h4>
+                            <p>Hello fellas!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 user_msg">
+                    <div class="media message-box">
+                        <div class="media-left">
+                            <img class="media-object user-profile-in-chat" src="img/green.png" alt="general_id" style="width: 35px; height: 35px;">
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading timestamp" id="top-aligned-media">Jonny, 14:20<a class="anchorjs-link" href="#top-aligned-media"><span class="anchorjs-icon"></span></a></h4>
+                            <p>Hello fellas!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 user_msg">
+                    <div class="media message-box">
+                        <div class="media-left">
+                            <img class="media-object user-profile-in-chat" src="img/green.png" alt="general_id" style="width: 35px; height: 35px;">
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading timestamp" id="top-aligned-media">Jonny, 14:20<a class="anchorjs-link" href="#top-aligned-media"><span class="anchorjs-icon"></span></a></h4>
+                            <p>Hello fellas!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 user_msg">
+                    <div class="media message-box">
+                        <div class="media-left">
+                            <img class="media-object user-profile-in-chat" src="img/green.png" alt="general_id" style="width: 35px; height: 35px;">
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading timestamp" id="top-aligned-media">Jonny, 14:20<a class="anchorjs-link" href="#top-aligned-media"><span class="anchorjs-icon"></span></a></h4>
+                            <p>Hello fellas!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 user_msg">
+                    <div class="media message-box">
+                        <div class="media-left">
+                            <img class="media-object user-profile-in-chat" src="img/green.png" alt="general_id" style="width: 35px; height: 35px;">
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading timestamp" id="top-aligned-media">Jonny, 14:20<a class="anchorjs-link" href="#top-aligned-media"><span class="anchorjs-icon"></span></a></h4>
+                            <p>Hello fellas!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 user_msg">
+                    <div class="media message-box">
+                        <div class="media-left">
+                            <img class="media-object user-profile-in-chat" src="img/green.png" alt="general_id" style="width: 35px; height: 35px;">
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading timestamp" id="top-aligned-media">Jonny, 14:20<a class="anchorjs-link" href="#top-aligned-media"><span class="anchorjs-icon"></span></a></h4>
+                            <p>Hello fellas!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!--<div class = "chat_input_area">
+                <input type="text" class="chatInput" />
+                <button id='myButt'>Send</button>
+                </div>-->
+
+
+                <div class="chat_input_area input-group">
+                    <input type="text" class="form-control chat_input_box" placeholder="Enter text">
+          <span class="input-group-btn">
+              <button id="open-button" class="btn btn-default chat_send_btn" type="button">+</button>
+            <button id="myButt2" class="btn btn-default chat_send_btn" type="button">Send</button>
+          </span>
+                </div><!-- /input-group -->
             </div>
         </div>
-    </nav>
 
 
-
-    <div class="col-sm-3 col-md-2 sidebar">
-        <ul class="nav nav-sidebar">
-            <li>
-                <a href="#">
-                    <img src="img/yellow.png" /><span class="user_name">Jonny</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="img/green.png" /><span class="user_name">Jonny</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="img/cyan.png" /><span class="user_name">Jonny</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="img/devil.png" /><span class="user_name">Jonny</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="img/pink.png" /><span class="user_name">Jonny</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="img/blue.png" /><span class="user_name">Jonny</span>
-                </a>
-            </li>
-        </ul>
     </div>
-    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main chat_body">
-
-        <!--<div class="col-xs-12 user_msg">
-        <div class="user_icon_container">
-            <img src="img/devil.png"/>
+</div>
         </div>
-        <div class="user_txt_container">Now this is a story all about how</div>
-    </div>-->
-
-
-        <div class="col-xs-12 user_msg">
-            <div class="media message-box">
-                <div class="media-left">
-                    <img class="media-object" src="img/pink.png" alt="general_id" style="width: 35px; height: 35px;">
-                </div>
-                <div class="media-body">
-                    <h4 class="media-heading timestamp" id="top-aligned-media">Jonny, 14:20<a class="anchorjs-link" href="#top-aligned-media"><span class="anchorjs-icon"></span></a></h4>
-                    <p>Hello fellas!</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-xs-12 user_msg">
-            <div class="media message-box">
-                <div class="media-left">
-                    <img class="media-object user-profile-in-chat" src="img/devil.png" alt="general_id" style="width: 35px; height: 35px;">
-                </div>
-                <div class="media-body">
-                    <h4 class="media-heading timestamp" id="top-aligned-media">Jonny, 14:20<a class="anchorjs-link" href="#top-aligned-media"><span class="anchorjs-icon"></span></a></h4>
-                    <img class="media-object image-in-chat" src="gifs/snorlax.gif" alt="general_id">
-                </div>
-            </div>
-        </div>
-
-        <div class="col-xs-12 user_msg">
-            <div class="media message-box">
-                <div class="media-left">
-                    <img class="media-object user-profile-in-chat" src="img/yellow.png" alt="general_id" style="width: 35px; height: 35px;">
-                </div>
-                <div class="media-body">
-                    <h4 class="media-heading timestamp" id="top-aligned-media">Jonny, 14:20<a class="anchorjs-link" href="#top-aligned-media"><span class="anchorjs-icon"></span></a></h4>
-                    <p>Hello fellas!</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-xs-12 user_msg">
-            <div class="media message-box">
-                <div class="media-left">
-                    <img class="media-object user-profile-in-chat" src="img/green.png" alt="general_id" style="width: 35px; height: 35px;">
-                </div>
-                <div class="media-body">
-                    <h4 class="media-heading timestamp" id="top-aligned-media">Jonny, 14:20<a class="anchorjs-link" href="#top-aligned-media"><span class="anchorjs-icon"></span></a></h4>
-                    <p>Hello fellas!</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-xs-12 user_msg">
-            <div class="media message-box">
-                <div class="media-left">
-                    <img class="media-object user-profile-in-chat" src="img/green.png" alt="general_id" style="width: 35px; height: 35px;">
-                </div>
-                <div class="media-body">
-                    <h4 class="media-heading timestamp" id="top-aligned-media">Jonny, 14:20<a class="anchorjs-link" href="#top-aligned-media"><span class="anchorjs-icon"></span></a></h4>
-                    <p>Hello fellas!</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-xs-12 user_msg">
-            <div class="media message-box">
-                <div class="media-left">
-                    <img class="media-object user-profile-in-chat" src="img/green.png" alt="general_id" style="width: 35px; height: 35px;">
-                </div>
-                <div class="media-body">
-                    <h4 class="media-heading timestamp" id="top-aligned-media">Jonny, 14:20<a class="anchorjs-link" href="#top-aligned-media"><span class="anchorjs-icon"></span></a></h4>
-                    <p>Hello fellas!</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-xs-12 user_msg">
-            <div class="media message-box">
-                <div class="media-left">
-                    <img class="media-object user-profile-in-chat" src="img/green.png" alt="general_id" style="width: 35px; height: 35px;">
-                </div>
-                <div class="media-body">
-                    <h4 class="media-heading timestamp" id="top-aligned-media">Jonny, 14:20<a class="anchorjs-link" href="#top-aligned-media"><span class="anchorjs-icon"></span></a></h4>
-                    <p>Hello fellas!</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-xs-12 user_msg">
-            <div class="media message-box">
-                <div class="media-left">
-                    <img class="media-object user-profile-in-chat" src="img/green.png" alt="general_id" style="width: 35px; height: 35px;">
-                </div>
-                <div class="media-body">
-                    <h4 class="media-heading timestamp" id="top-aligned-media">Jonny, 14:20<a class="anchorjs-link" href="#top-aligned-media"><span class="anchorjs-icon"></span></a></h4>
-                    <p>Hello fellas!</p>
-                </div>
-            </div>
-        </div>
-
-        <div class = "chat_input_area">
-        <input type="text" class="chatInput" />
-        <button id='myButt'>Send</button>
-        </div>
-
-    </div>
-    </div>
+    </div><!-- /content-wrap -->
+</div>
 
 
 
@@ -219,6 +307,8 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/main.js"></script>
     <script src="js/rapid_socket.js"></script>
     <script src="js/integration.js"></script>
 
