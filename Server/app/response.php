@@ -40,7 +40,9 @@ if($requestID === 0 || $requestID === 1)
         {
             echo json_encode(["connection"=>"1"]);
         }
-        echo json_encode(["connection"=>"-1"]);
+        else {
+            echo json_encode(["connection"=>"-1"]);
+        }
     }
 }
 
