@@ -1,7 +1,11 @@
 /*!
  * classie - class helper functions
  * from bonzo https://github.com/ded/bonzo
+<<<<<<< HEAD
  *
+=======
+ * 
+>>>>>>> 26fe2cc842b1b33bc0f1d44c71f59d8965ce4899
  * classie.has( elem, 'my-class' ) -> true/false
  * classie.add( elem, 'my-new-class' )
  * classie.remove( elem, 'my-unwanted-class' )

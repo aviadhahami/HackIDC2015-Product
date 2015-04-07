@@ -6,6 +6,6 @@ $(".username_form").submit(function ( event ){
     $(".loader").fadeIn();
     setTimeout( function(){
         $('.shader').fadeOut();
-    },4000);
+    },0005);
 
 });
