@@ -119,12 +119,17 @@ body {
     float: left;
 }
 
-.user_icon_container img {
+.user_icon_container .user-profile-in-chat {
     width: 40px;
     height: auto;
 }
 
-.user_txt_container {
+.image-in-chat{
+  border-radius: 4px;
+  max-width: 80%;
+}
 
+.message-box{
+  padding-left: 10px;
 }
 
