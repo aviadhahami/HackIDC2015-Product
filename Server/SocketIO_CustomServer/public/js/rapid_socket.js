@@ -4297,7 +4297,9 @@ function createIO(_project, _room) {
     if (_room)
         room += ("/" + _room);
     console.log("PATH = " + path);
-    var s = _io(path);
+    var s = _io.connect(path, {
+        transport:['websocket']
+    });
     s.emit('join', room);
     return s;
 }
