@@ -153,7 +153,53 @@ class Beacon {
     /////////////////////////////////////////////////////////////////////////////
     /////////////////////////////////////////////////////////////////////////////
     /////////////////////////////////////////////////////////////////////////////
-    public function handleDisconnectionRequest(){}
+    public function handleDisconnectionRequest($clientID)
+    {
+        if($this->verifyBeaconBoolean())
+        {
+            return $this->removeClientFromDB($clientID);
+        }
+        return false;
+    }
+
+
+    private function removeClientFromDB($clientID)
+    {
+        $localBeaconId = $this->beaconID;
+        $localClientTable = $this->clientTable;
+
+        $removeClientQuery = "DELETE FROM '$localClientTable' WHERE bid = '$localBeaconId' AND uid = '$clientID'";
+
+        $removeClientExecute = $this->mysqli->query($removeClientQuery);
+        if($removeClientExecute === true)
+        {
+            return true;
+        }
+        return false;
+
+    }
+
+    public function verifyBeaconBoolean()
+    {
+        $localBeacon = $this->beaconID;
+        $beaconTbl = $this->$beaconTable;
+        $beaconExistsQuery = "SELECT * FROM $beaconTbl WHERE bid = '$localBeacon'";
+
+        $resultSet = $this->mysqli->query($beaconExistsQuery);
+        $resultSetNumRows = $resultSet->num_rows;
+        if(false || $resultSetNumRows === 0)
+        {
+            return false;
+        }
+
+        elseif($resultSetNumRows === 1)
+        {
+            return true;
+        }
+
+        return false;
+
+    }
 
 
 
