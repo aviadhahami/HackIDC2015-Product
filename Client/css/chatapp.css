@@ -166,7 +166,7 @@ body {
 
 .chat_body{
     height: 100%;
-    overflow-y: scroll;
+    /*overflow-y: scroll;*/
 }
 
 
