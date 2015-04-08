@@ -118,6 +118,3 @@ $(document).ready(function() {
  });
  });
 
-});
-});
-
