@@ -4292,7 +4292,7 @@ var _io = io;
 io = null;
 
 function createIO(_project, _room) {
-    var path = "imrapid.io"; //TESTING
+    var path = "http://imrapid.io"; //TESTING
     var room = ("/" + _project);
     if (_room)
         room += ("/" + _room);

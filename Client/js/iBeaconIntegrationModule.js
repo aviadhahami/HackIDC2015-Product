@@ -1,1 +1,1 @@
-//This is an empty stub
+//empty stub

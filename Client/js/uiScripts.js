@@ -9,6 +9,7 @@ $(document).ready(function() {
     $(window).resize(function() {
         fitChatWindow();
     });
+
     //Overriding "ENTER" key for send msg
     $('.chat_input_box').on('keyup',function(e){
     	if (e.which == 13){
@@ -18,6 +19,7 @@ $(document).ready(function() {
     });
     $('.username_form').submit(function(){
     	window.clientName = $('#namePick').val().length < 4 ? chance.name() : $('#namePick').val();
+        window.initiatePrimaryConnection();
     });
 
     function mobilecheck() {
@@ -28,7 +30,8 @@ $(document).ready(function() {
 
     var isOpen = false;
     $('#open-button').on('click', function(){
-       toggleMenu();
+       toggleGifMenu();
+
     });
 
     $('.chat_body').on('click', function(ev) {
@@ -36,12 +39,19 @@ $(document).ready(function() {
         if (isOpen && eventClass != "gif_drawer" && eventClass != "btn btn-default chat_gif_btn") {
             /*console.log(isOpen);
             console.log("yay" + $(event.target).attr('class'));*/
-            toggleMenu();
+            toggleGifMenu();
 
         }
     });
 
-    function toggleMenu() {
+    $('.user').on('click', function(ev) {
+        ev.preventDefault();
+        var input = $('#chatMsg');
+        var name = $('.user').find(".user_name").html();
+        input.val(input.val() +" @" +name);
+    });
+
+    function toggleGifMenu() {
         if(!isOpen){
             console.log('hi');
             $('.gif_drawer').css({
@@ -51,6 +61,7 @@ $(document).ready(function() {
                 '-o-transform'      : 'translate3d(0, 0, 0)',
                 'transform'         : 'translate3d(0, 0, 0)'
             });
+            $('.gif_toggle_icon').css('transform', 'rotate(45deg)');
             isOpen = true;
         }
         else{
@@ -62,6 +73,9 @@ $(document).ready(function() {
                 '-o-transform'      : 'translate3d(0, 750px, 0)',
                 'transform'         : 'translate3d(0, 750px, 0)'
             });
+            $('.gif_toggle_icon').css('transform', 'rotate(0)');
+
+
             isOpen = false;
         }
     }
