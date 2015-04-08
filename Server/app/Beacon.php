@@ -111,7 +111,7 @@ class Beacon {
         //echo "</br> userset : " . print_r($userSet) . "||</br>";
         if($userSet === null)
         {
-            return ["connection"=>"-1"];
+            return array("connection"=>"-1");
         }
         // echo "</br> first if block passed in connection handler </br>";
         $clientId = $this->addNewClient($userSet);
@@ -120,14 +120,14 @@ class Beacon {
         ////
         if($clientId === null)
         {
-            return ["connection"=>"-1"];
+            return array("connection"=>"-1");
         }
         // echo "</br> second if block passed in connection handler </br>";
         $amountConnect = $this->getAmountConnected($userSet);
         $imgSrc = $this->getFreeImage($amountConnect);
         $localBeaconIndex = $this->beaconIndex;
         //now returns aslo the localID of the beacon
-        return ["connection"=>"1",'cid'=>$clientId, 'amount'=> $amountConnect, "img"=>$imgSrc, "localID"=>$localBeaconIndex];
+        return array("connection"=>"1",'cid'=>$clientId, 'amount'=> $amountConnect, "img"=>$imgSrc, "localID"=>$localBeaconIndex);
     }
     /////////////////////////////////////////////////////////////////////////////
     /////////////////////////////////////////////////////////////////////////////
