@@ -16,9 +16,8 @@ class Beacon {
     {
         $this->beaconID = $beaconID;
         $this->responseID = $responseID;
-        // $this->mysqli = new mysqli("localhost","839771","argov123","839771");
+
         $this->mysqli = new mysqli("mysql14.000webhost.com","a5016316_argov","argov123","a5016316_argov");
-        //$this->mysqli = new mysqli("mysql.grendelhosting.com","u840437630_argov","argov123","u840437630_argov");
         $this->beaconTable = "beacon";
         $this->clientTable = "clients";
         $this->beaconIndex = 0;
