@@ -144,35 +144,37 @@ class Beacon {
     public function handleConnectionRequest()
     {
         ///
-        //echo "</br> entered HandleConnection";
+        echo "</br> entered HandleConnection";
         ///
         $userSet = $this->isBeaconExists();
 
-       // echo "</br> userset : " . print_r($userSet) . "||</br>";
+        echo "</br> userset : " . print_r($userSet) . "||</br>";
 
         if($userSet === null)
         {
             return ["connection"=>"-1"];
         }
 
-       // echo "</br> first if block passed in connection handler </br>";
+        echo "</br> first if block passed in connection handler </br>";
 
         $clientId = $this->addNewClient($userSet);
 
         ////
-       // echo "</br> clientID = ". $clientId ."</br>";
+        echo "</br> clientID = ". $clientId ."</br>";
         ////
 
         if($clientId === null)
         {
             return ["connection"=>"-1"];
         }
-        //echo "</br> second if block passed in connection handler </br>";
+        echo "</br> second if block passed in connection handler </br>";
 
         $amountConnect = $this->getAmountConnected($userSet);
         $imgSrc = $this->getFreeImage($amountConnect);
+        $localBeaconIndex = $this->beaconIndex;
 
-        return ["connection"=>"1",'cid'=>$clientId, 'amount'=> $amountConnect, "img"=>$imgSrc];
+        //now returns aslo the localID of the beacon
+        return ["connection"=>"1",'cid'=>$clientId, 'amount'=> $amountConnect, "img"=>$imgSrc, "localID"=>$localBeaconIndex];
     }
 
 
@@ -181,22 +183,23 @@ class Beacon {
     /////////////////////////////////////////////////////////////////////////////
     /////////////////////////////////////////////////////////////////////////////
     /////////////////////////////////////////////////////////////////////////////
-    public function handleDisconnectionRequest($clientID)
+    public function handleDisconnectionRequest($clientID, $beaconID)
     {
         $bool = $this->verifyBeaconBoolean();
         //echo "</br> handleDisconnect berifyBeaconbool = " .$bool ."</br>";
         if($bool)
         {
-            return $this->removeClientFromDB($clientID);
+            return $this->removeClientFromDB($clientID, $beaconID);//Added a parameter
         }
         return false;
     }
 
 
-    private function removeClientFromDB($clientID)
+    //Changed added one more parameter!!!
+    private function removeClientFromDB($clientID,$beaconID)
     {
         //$localBeaconId = $this->beaconID;
-        $localBeaconId = $this->beaconIndex;//Meant to work correctly
+        $localBeaconId = $beaconID;//Meant to work correctly
         $localClientTable = $this->clientTable;
 
         $removeClientQuery = "DELETE FROM $localClientTable WHERE bid = $localBeaconId AND uid = '$clientID'";
