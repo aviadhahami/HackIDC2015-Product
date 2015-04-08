@@ -2,8 +2,166 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c6abace-e918-4d91-870a-8f23e75d50c5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Server/app/Beacon.php" afterPath="$PROJECT_DIR$/Server/app/Beacon.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Server/app/response.php" afterPath="$PROJECT_DIR$/Server/app/response.php" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\.env.example" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\.gitattributes" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\app\Commands\Command.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\app\Console\Commands\Inspire.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\app\Console\Kernel.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\app\Events\Event.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\app\Exceptions\Handler.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\app\Handlers\Commands\.gitkeep" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\app\Handlers\Events\.gitkeep" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\app\Http\Controllers\Auth\AuthController.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\app\Http\Controllers\Auth\PasswordController.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\app\Http\Controllers\Controller.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\app\Http\Controllers\HomeController.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\app\Http\Controllers\WelcomeController.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\app\Http\Kernel.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\app\Http\Middleware\Authenticate.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\app\Http\Middleware\RedirectIfAuthenticated.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\app\Http\Middleware\VerifyCsrfToken.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\app\Http\Requests\Request.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\app\Http\routes.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\app\Providers\AppServiceProvider.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\app\Providers\BusServiceProvider.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\app\Providers\ConfigServiceProvider.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\app\Providers\EventServiceProvider.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\app\Providers\RouteServiceProvider.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\app\Services\Registrar.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\app\User.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\artisan" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\bootstrap\app.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\bootstrap\autoload.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\composer.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\composer.lock" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\config\app.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\config\auth.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\config\cache.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\config\compile.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\config\database.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\config\filesystems.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\config\mail.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\config\queue.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\config\services.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\config\session.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\config\view.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\database\.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\database\migrations\.gitkeep" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\database\migrations\2014_10_12_000000_create_users_table.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\database\migrations\2014_10_12_100000_create_password_resets_table.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\database\seeds\.gitkeep" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\database\seeds\DatabaseSeeder.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\gulpfile.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\package.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\phpspec.yml" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\phpunit.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\public\.htaccess" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\public\css\app.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\public\favicon.ico" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\public\fonts\glyphicons-halflings-regular.eot" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\public\fonts\glyphicons-halflings-regular.svg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\public\fonts\glyphicons-halflings-regular.ttf" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\public\fonts\glyphicons-halflings-regular.woff" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\public\fonts\glyphicons-halflings-regular.woff2" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\public\index.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\public\robots.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\readme.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\assets\less\app.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\assets\less\bootstrap\alerts.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\assets\less\bootstrap\badges.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\assets\less\bootstrap\bootstrap.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\assets\less\bootstrap\breadcrumbs.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\assets\less\bootstrap\button-groups.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\assets\less\bootstrap\buttons.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\assets\less\bootstrap\carousel.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\assets\less\bootstrap\close.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\assets\less\bootstrap\code.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\assets\less\bootstrap\component-animations.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\assets\less\bootstrap\dropdowns.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\assets\less\bootstrap\forms.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\assets\less\bootstrap\glyphicons.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\assets\less\bootstrap\grid.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\assets\less\bootstrap\input-groups.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\assets\less\bootstrap\jumbotron.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\assets\less\bootstrap\labels.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\assets\less\bootstrap\list-group.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\assets\less\bootstrap\media.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\assets\less\bootstrap\mixins.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\assets\less\bootstrap\mixins\alerts.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\assets\less\bootstrap\mixins\background-variant.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\assets\less\bootstrap\mixins\border-radius.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\assets\less\bootstrap\mixins\buttons.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\assets\less\bootstrap\mixins\center-block.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\assets\less\bootstrap\mixins\clearfix.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\assets\less\bootstrap\mixins\forms.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\assets\less\bootstrap\mixins\gradients.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\assets\less\bootstrap\mixins\grid-framework.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\assets\less\bootstrap\mixins\grid.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\assets\less\bootstrap\mixins\hide-text.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\assets\less\bootstrap\mixins\image.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\assets\less\bootstrap\mixins\labels.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\assets\less\bootstrap\mixins\list-group.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\assets\less\bootstrap\mixins\nav-divider.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\assets\less\bootstrap\mixins\nav-vertical-align.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\assets\less\bootstrap\mixins\opacity.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\assets\less\bootstrap\mixins\pagination.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\assets\less\bootstrap\mixins\panels.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\assets\less\bootstrap\mixins\progress-bar.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\assets\less\bootstrap\mixins\reset-filter.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\assets\less\bootstrap\mixins\resize.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\assets\less\bootstrap\mixins\responsive-visibility.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\assets\less\bootstrap\mixins\size.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\assets\less\bootstrap\mixins\tab-focus.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\assets\less\bootstrap\mixins\table-row.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\assets\less\bootstrap\mixins\text-emphasis.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\assets\less\bootstrap\mixins\text-overflow.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\assets\less\bootstrap\mixins\vendor-prefixes.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\assets\less\bootstrap\modals.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\assets\less\bootstrap\navbar.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\assets\less\bootstrap\navs.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\assets\less\bootstrap\normalize.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\assets\less\bootstrap\pager.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\assets\less\bootstrap\pagination.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\assets\less\bootstrap\panels.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\assets\less\bootstrap\popovers.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\assets\less\bootstrap\print.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\assets\less\bootstrap\progress-bars.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\assets\less\bootstrap\responsive-embed.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\assets\less\bootstrap\responsive-utilities.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\assets\less\bootstrap\scaffolding.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\assets\less\bootstrap\tables.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\assets\less\bootstrap\theme.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\assets\less\bootstrap\thumbnails.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\assets\less\bootstrap\tooltip.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\assets\less\bootstrap\type.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\assets\less\bootstrap\utilities.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\assets\less\bootstrap\variables.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\assets\less\bootstrap\wells.less" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\lang\en\pagination.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\lang\en\passwords.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\lang\en\validation.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\views\app.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\views\auth\login.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\views\auth\password.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\views\auth\register.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\views\auth\reset.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\views\emails\password.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\views\errors\503.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\views\home.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\views\vendor\.gitkeep" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\resources\views\welcome.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\server.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\storage\.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\storage\app\.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\storage\framework\.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\storage\framework\cache\.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\storage\framework\sessions\.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\storage\framework\views\.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\storage\logs\.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\tests\ExampleTest.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\hack2015\HackIDC2015\Server\laravel\laravel\tests\TestCase.php" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="HackIDC2015.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -220,6 +378,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HackIDC2015" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HackIDC2015" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Client" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -403,7 +575,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Robotlegs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -412,7 +584,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24144255" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24144255" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32997763" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
