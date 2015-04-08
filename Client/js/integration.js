@@ -8,8 +8,8 @@ $(document).ready(function() {
     //two vars above this should come from beacon integration
 
 
-    var serverDomain = 'argov.freevar.com/';
-    var managmentServerUrl = serverDomain + 'serverTest/app/response.php';
+    var serverDomain = 'http://argov.grn.cc/';
+    var managmentServerUrl = serverDomain + 'Server/app/response.php';
     var method = 'GET';
     var connectionFlag = '0'; //0 is income, 1 is disconnect
     var bid = major+ '.' + minor;
