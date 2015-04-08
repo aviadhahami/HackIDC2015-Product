@@ -44,6 +44,12 @@ $(document).ready(function() {
         }
     });
 
+    $('.user_name').on('click', function(ev) {
+        var input = $('#chatMsg');
+        var name = this.html();
+        input.val(input.val() + name);
+    });
+
     function toggleGifMenu() {
         if(!isOpen){
             console.log('hi');
