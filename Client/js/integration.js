@@ -22,7 +22,7 @@ $(document).ready(function() {
     var connectionStatus = '';
 
     window.initiatePrimaryConnection = function(){
-    var getReqDataString = '&rid=' + connectionFlag + '&bid=' + bid; //connection GET request string
+    var getReqDataString = 'rid=' + connectionFlag + '&bid=' + bid; //connection GET request string
     $.getJSON(managmentServerUrl,getReqDataString).done(function(res){
       console.log(res);
       connectionStatus = res.connection;
