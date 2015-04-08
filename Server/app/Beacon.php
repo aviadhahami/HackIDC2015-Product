@@ -185,8 +185,10 @@ class Beacon {
     /////////////////////////////////////////////////////////////////////////////
     public function handleDisconnectionRequest($clientID, $beaconID)
     {
-        $bool = $this->verifyBeaconBoolean();
+
         //echo "</br> handleDisconnect berifyBeaconbool = " .$bool ."</br>";
+        $this->beaconIndex = $beaconID;
+        $bool = $this->verifyBeaconBooleanWithID();
         if($bool)
         {
             return $this->removeClientFromDB($clientID, $beaconID);//Added a parameter
@@ -218,6 +220,28 @@ class Beacon {
         $localBeacon = $this->beaconID;
         $beaconTbl = $this->beaconTable;
         $beaconExistsQuery = "SELECT * FROM $beaconTbl WHERE bid = '$localBeacon'";
+
+        $resultSet = $this->mysqli->query($beaconExistsQuery);
+        $resultSetNumRows = $resultSet->num_rows;
+        if(false || $resultSetNumRows === 0)
+        {
+            return false;
+        }
+
+        elseif($resultSetNumRows === 1)
+        {
+            return true;
+        }
+
+        return false;
+
+    }
+
+    public function verifyBeaconBooleanWithID()
+    {
+        $localBeacon = $this->beaconIndex;
+        $beaconTbl = $this->beaconTable;
+        $beaconExistsQuery = "SELECT * FROM $beaconTbl WHERE id = $localBeacon";
 
         $resultSet = $this->mysqli->query($beaconExistsQuery);
         $resultSetNumRows = $resultSet->num_rows;
