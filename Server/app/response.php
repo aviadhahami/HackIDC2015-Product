@@ -32,17 +32,17 @@ if($requestID === 0 || $requestID === 1)
         ///
         if($result !== null)
         {
-            echo $cb . parseResponseToJson($result);
+            echo $cb ."(". parseResponseToJson($result) .")";
         }
     }
     elseif($requestID === 1)
     {
         if($beaconHandler->handleDisconnectionRequest($clientID, intval($beaconID)))
         {
-            echo $cb . json_encode(["connection"=>"1"]);
+            echo $cb . "(" . json_encode(array("connection"=>"1")).")";
         }
         else {
-            echo $cb . json_encode(["connection"=>"-1"]);
+            echo $cb ."(" . json_encode(array("connection"=>"-1")).")";
         }
     }
 }
