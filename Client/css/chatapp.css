@@ -4,7 +4,7 @@
 
 /* Move down content because we have a fixed navbar that is 50px tall */
 
-@import url(http://fonts.googleapis.com/css?family=Open-Sans:400,300,700);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:700,300,600,800,400);
 
 
 html{
@@ -13,9 +13,9 @@ html{
 
 
 body {
-  height: 100%;
-  padding-top: 50px;
-  font-family: 'Open Sans';
+    height: 100%;
+    padding-top: 50px;
+    font-family: 'Open Sans';
 }
 
 /*
@@ -76,6 +76,7 @@ body {
 .nav-sidebar > li > a {
     padding-right: 20px;
     padding-left: 20px;
+
 }
 .nav-sidebar > .active > a,
 .nav-sidebar > .active > a:hover,
@@ -104,12 +105,13 @@ body {
  */
 
 .main {
-    padding: 20px;
+    padding: 0;
 }
 @media (min-width: 768px) {
     .main {
         padding-right: 0px;
         padding-left: 0px;
+
     }
 }
 .main .page-header {
@@ -142,11 +144,14 @@ body {
 }
 
 .chat_input_area{
+    background: white;
     z-index: 1001;
     width: inherit;
+    /* position: fixed;
+     bottom: 0;*/
+    padding: 8px;
     position: fixed;
     bottom: 0;
-    padding: 0 8px 4px 8px;
 }
 
 .gif_drawer{
@@ -158,12 +163,12 @@ body {
     width: inherit;
     position: fixed;
     bottom: 0;
-    padding: 0 8px 45px 8px;
+    padding: 0 8px 80px 8px;
     -webkit-box-shadow: 0px -4px 122px -20px rgba(0,0,0,0.65);
     -moz-box-shadow: 0px -4px 122px -20px rgba(0,0,0,0.65);
     box-shadow: 0px -4px 122px -20px rgba(0,0,0,0.65);
-    -webkit-transform: translate3d(0,500px,0);
-    transform: translate3d(0,500px,0);
+    -webkit-transform: translate3d(0,750px,0);
+    transform: translate3d(0,750px,0);
     -webkit-transition: -webkit-transform 0.4s;
     transition: transform 0.4s;
     -webkit-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
@@ -171,29 +176,32 @@ body {
 }
 
 .gif_drawer img{
-  max-height: 100px;
-  margin-top: 10px;
-  margin-left: 10px;
+    max-height: 100px;
+    margin-top: 10px;
+    margin-left: 10px;
 }
 
 @media (max-width: 768px) {
     .gif_drawer{
-    overflow-y: scroll;
-  }
-  .gif_drawer img{
-    max-height: 40px;
-  }
-  }
+        overflow-y: scroll;
+    }
+    .gif_drawer img{
+        max-height: 40px;
+    }
+}
 
-
+.chat_input_area {
+    z-index: 1001;
+    padding: 5px;
+}
 @media (min-width: 768px) {
-  .chat_input_area{
-    z-index: 1000;
-    width: inherit;
-    position: fixed;
-    bottom: 0;
-    padding: 0 20px 4px 8px;
-  }
+    .chat_input_area{
+        z-index: 1001;
+        /* width: inherit; */
+        /* position: fixed;
+         bottom: 0;*/
+
+    }
 }
 
 .chat_input_box {
@@ -214,19 +222,24 @@ body {
     border: 1px solid #e6e6e6;
 }
 
+.chat_gif_btn {
+    height: 46px;
+    border: 1px solid #e6e6e6;
+}
 
 .chat_body{
-    height: 100%;
+    padding-top: 20px;
     padding-bottom: 50px;
     overflow-y: scroll;
 }
 
 @media (max-width: 768px) {
-  .chat_body{
-      height: 100%;
-      padding: 0px 10px 50px 10px;
+    .chat_body{
+        height: 100%;
+        padding: 0px 10px 0px 10px;
+        padding-top: 20px;
     }
-  }
+}
 
 
 

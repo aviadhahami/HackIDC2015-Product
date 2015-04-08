@@ -1,5 +1,14 @@
 $(document).ready(function() {
 
+
+    function fitChatWindow(){
+        $('.chat_body').css('height', $(window).height() - 110 + 'px');
+    }
+
+    fitChatWindow();
+    $(window).resize(function() {
+        fitChatWindow();
+    });
     //Overriding "ENTER" key for send msg
     $('.chat_input_box').on('keyup',function(e){
     	if (e.which == 13){
@@ -22,9 +31,12 @@ $(document).ready(function() {
        toggleMenu();
     });
 
-    $('.chat_body').on('click', function(e) {
-        if (isOpen && e != "gif_drawer") {
-            console.log(e);
+    $('.chat_body').on('click', function(ev) {
+        var eventClass = $(event.target).attr('class');
+        if (isOpen && eventClass != "gif_drawer" && eventClass != "btn btn-default chat_gif_btn") {
+            /*console.log(isOpen);
+            console.log("yay" + $(event.target).attr('class'));*/
+            toggleMenu();
 
         }
     });
@@ -44,13 +56,15 @@ $(document).ready(function() {
         else{
             console.log('bye');
             $('.gif_drawer').css({
-                '-webkit-transform' : 'translate3d(0, 500px, 0)',
-                '-moz-transform'    : 'translate3d(0, 500px, 0)',
-                '-ms-transform'     : 'translate3d(0, 500px, 0)',
-                '-o-transform'      : 'translate3d(0, 500px, 0)',
-                'transform'         : 'translate3d(0, 500px, 0)'
+                '-webkit-transform' : 'translate3d(0, 750px, 0)',
+                '-moz-transform'    : 'translate3d(0, 750px, 0)',
+                '-ms-transform'     : 'translate3d(0, 750px, 0)',
+                '-o-transform'      : 'translate3d(0, 750px, 0)',
+                'transform'         : 'translate3d(0, 750px, 0)'
             });
             isOpen = false;
         }
     }
 });
+
+
