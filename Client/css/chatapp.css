@@ -140,12 +140,44 @@ body {
 }
 
 .chat_input_area{
-    z-index: 1000;
+    z-index: 1001;
     width: inherit;
     position: fixed;
     bottom: 0;
     padding: 0 8px 4px 8px;
 }
+
+.gif_drawer{
+    top: 1800px;
+    background: #fff;
+    padding: 20px 20px 20px 20px;
+    max-height: 70%;
+    overflow-y: hidden;
+    z-index: 1000;
+    width: inherit;
+    position: fixed;
+    bottom: 0;
+    padding: 0 8px 45px 8px;
+    -webkit-box-shadow: 0px -4px 122px -20px rgba(0,0,0,0.65);
+    -moz-box-shadow: 0px -4px 122px -20px rgba(0,0,0,0.65);
+    box-shadow: 0px -4px 122px -20px rgba(0,0,0,0.65);
+}
+
+.gif_drawer img{
+  max-height: 100px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+    .gif_drawer{
+    overflow-y: scroll;
+  }
+  .gif_drawer img{
+    max-height: 40px;
+  }
+  }
+
 
 @media (min-width: 768px) {
   .chat_input_area{
