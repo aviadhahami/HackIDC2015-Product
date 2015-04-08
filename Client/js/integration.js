@@ -13,12 +13,26 @@ $(document).ready(function() {
     var method = 'GET';
     var connectionFlag = '0'; //0 is income, 1 is disconnect
     var bid = major+ '.' + minor;
-    var cid = ''; //recieved by server and shouold be sent to server upon DC
+    window.cid = ''; //recieved by server and shouold be sent to server upon DC
+
+    //preping global vars
+    var chatAmount ='';
+    var userImg = '';
+    var localID = '';
+    var connectionStatus = '';
 
 
     var getReqDataString = 'rid=' + connectionFlag + '&bid=' + bid; //connection GET request string
-    $.get(managmentServerUrl,getReqDataString,function(res){
-
+    $.getJSON(managmentServerUrl,getReqDataString).done(function(res){
+      consosle.log(res);
+      connectionStatus = res.connection;
+      window.cid = res.cid;
+      chatAmount = res.amount;
+      userImg = res.img;
+      localID = res.localID;
+    }).fail(function(e){
+      alert('Oops ! problems ! reload page!');
+      console.log(e);
     });
 
 
