@@ -44,10 +44,11 @@ $(document).ready(function() {
         }
     });
 
-    $('.user_name').on('click', function(ev) {
+    $('.user').on('click', function(ev) {
+        ev.preventDefault();
         var input = $('#chatMsg');
-        var name = this.html();
-        input.val(input.val() + name);
+        var name = $('.user').find(".user_name").html();
+        input.val(input.val() +" @" +name);
     });
 
     function toggleGifMenu() {
