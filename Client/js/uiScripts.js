@@ -53,6 +53,7 @@ $(document).ready(function() {
 
 
 
+
    var toggleGifMenu = function () {
     if(!isOpen){
             //console.log('hi');

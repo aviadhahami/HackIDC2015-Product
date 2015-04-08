@@ -20,6 +20,7 @@ $(document).ready(function() {
     var userImg = '';
     var localID = '';
     var connectionStatus = '';
+    var userID = '';
 
     window.initiatePrimaryConnection = function(){
     var getReqDataString = 'rid=' + connectionFlag + '&bid=' + bid; //connection GET request string
@@ -38,7 +39,9 @@ $(document).ready(function() {
       chatAmount = 5;
       userImg = 'avatars/cyan.png';
       localID = 0;
-    });
+    }).always(function(){
+     userID = localID === '' ? 0 : localID;
+   });
 
   };
     //end of server integration module//
@@ -60,7 +63,7 @@ $(document).ready(function() {
     console.log(window.clientName);
     console.log('got JQ on via integration');
 
-    var userID = localID;
+
 
     //message output
     $('#sendMsg').click(function(){
@@ -75,15 +78,22 @@ $(document).ready(function() {
         userImg : userImg,
         msgType : 'txt'
       };
-      console.log('sending message object.. msg is ',msg);
-      /*var outputHTMLString = generateCurrentBlob(msg);
 
-      $('.chat_body').append(outputHTMLString);*/
+
+      console.log('sending message object.. msg is ',msg);
+      var outputHTMLString = generateCurrentBlob(msg,true);
+      $('.chat_body').append(outputHTMLString);
       ScrollFix();
+
       $.post(url,msg,function(data,status){
         console.log('data: ' + data + 'status : ' + status + 'from the POST');
+
+
         if (status === "success") {
-          $('.timestamp').append('V');
+          //$('.timestamp').append('V');
+          var currentMsg = $('h4[data-userID=' + userID + ']');
+          currentMsg.append('V');
+          currentMsg.removeAttr('data-userID');
         }
       });
     });
@@ -92,24 +102,26 @@ $(document).ready(function() {
     $('.gif_drawer img').on('click',function(){
       chatMsg = $(this).attr('src');
       $('#chatMsg').val('');
-//close drawer
-$('#open-button').click();
-var msg = {
-  name: window.clientName,
-  message : chatMsg,
-  room : roomID,
-  userID : userID,
-  userImg : userImg,
-  msgType : 'img'
-};
+      //close drawer
+      $('#open-button').click();
+      var msg = {
+        name: window.clientName,
+        message : chatMsg,
+        room : roomID,
+        userID : userID,
+        userImg : userImg,
+        msgType : 'img'
+      };
 
 
-console.log('sending message object.. msg is ',msg);
-
+      console.log('sending message object.. msg is ',msg);
+          // CHECK ME ! 
         //code for local double messaging
-       /* var outputHTMLString = generateCurrentBlob(msg);
-       $('.chat_body').append(outputHTMLString);*/
-       ScrollFix();
+        var outputHTMLString = generateCurrentBlobForImage(msg,true);
+        $('.chat_body').append(outputHTMLString);
+        ScrollFix();
+
+
         //end of local double messaging
 
         $.post(url,msg,function(data,status){
@@ -117,34 +129,53 @@ console.log('sending message object.. msg is ',msg);
 
             //mark V if recieved by server
             if (status === "success") {
-              $('.timestamp').append('V');
+              var currentMsg = $('h4[data-userID=' + userID + ']');
+              currentMsg.append('V');
+              currentMsg.removeAttr('data-userID');
             }
           });
 
       });
 
-    $('#roomName').text(roomID);
-    $('#roomTag').text('@' + roomID);
+$('#roomName').text(roomID);
+$('#roomTag').text('@' + roomID);
     //message feed
     var io = createIO(projectName, roomID);
 
-    function generateCurrentBlob(data){
+    function generateCurrentBlob(data,flag){
+
+      var d = new Date();
+      var hours = d.getHours() < 10 ? '0' + d.getHours() : d.getHours();
+      var minutes = d.getMinutes() < 10 ? '0' + d.getMinutes() : d.getMinutes();
+      var dateString = hours + ':' + minutes;
+      
+      if (flag){
+        //if true we need to add data attr
+        var _htmlTemplateString = '<div class="col-xs-12 user_msg"><div class="media message-box"><div class="media-left"><img class="media-object user-profile-in-chat" src="' + data.userImg +'" alt="general_id" style="width: 35px; height: 35px;"></div><div class="media-body"><h4 class="media-heading timestamp" id="top-aligned-media" data-userID=' + userID +'>'+ data.name+', ' + dateString+'<a class="anchorjs-link" href="#top-aligned-media"><span class="anchorjs-icon"></span></a></h4><p>'+ data.message+'</p></div></div></div>';
+
+      }else{
+        //regular generation  
+        var _htmlTemplateString = '<div class="col-xs-12 user_msg"><div class="media message-box"><div class="media-left"><img class="media-object user-profile-in-chat" src="' + data.userImg +'" alt="general_id" style="width: 35px; height: 35px;"></div><div class="media-body"><h4 class="media-heading timestamp" id="top-aligned-media">'+ data.name+', ' + dateString+'<a class="anchorjs-link" href="#top-aligned-media"><span class="anchorjs-icon"></span></a></h4><p>'+ data.message+'</p></div></div></div>';
+
+      }
+      return _htmlTemplateString;
+
+    };
+
+    function generateCurrentBlobForImage(data,flag) {
+     // console.log('img blob');
      var d = new Date();
      var hours = d.getHours() < 10 ? '0' + d.getHours() : d.getHours();
      var minutes = d.getMinutes() < 10 ? '0' + d.getMinutes() : d.getMinutes();
      var dateString = hours + ':' + minutes;
-     var _htmlTemplateString = '<div class="col-xs-12 user_msg"><div class="media message-box"><div class="media-left"><img class="media-object user-profile-in-chat" src="' + data.userImg +'" alt="general_id" style="width: 35px; height: 35px;"></div><div class="media-body"><h4 class="media-heading timestamp" id="top-aligned-media">'+ data.name+', ' + dateString+'<a class="anchorjs-link" href="#top-aligned-media"><span class="anchorjs-icon"></span></a></h4><p>'+ data.message+'</p></div></div></div>';
-     return _htmlTemplateString;
 
-   };
+     if (flag){
+      var _htmlTemplateString = '<div class="col-xs-12 user_msg"><div class="media message-box"><div class="media-left"><img class="media-object user-profile-in-chat" src="' + data.userImg +'" alt="general_id" style="width: 35px; height: 35px;"></div><div class="media-body"><h4 class="media-heading timestamp" id="top-aligned-media" data-userID=' + userID+ '>'+ data.name+', ' + dateString+'<a class="anchorjs-link" href="#top-aligned-media"><span class="anchorjs-icon"></span></a></h4><p><img src="'+ data.message+'"/></p></div></div></div>';
 
-   function generateCurrentBlobForImage(data) {
-    console.log('img blob');
-    var d = new Date();
-    var hours = d.getHours() < 10 ? '0' + d.getHours() : d.getHours();
-    var minutes = d.getMinutes() < 10 ? '0' + d.getMinutes() : d.getMinutes();
-    var dateString = hours + ':' + minutes;
-    var _htmlTemplateString = '<div class="col-xs-12 user_msg"><div class="media message-box"><div class="media-left"><img class="media-object user-profile-in-chat" src="' + data.userImg +'" alt="general_id" style="width: 35px; height: 35px;"></div><div class="media-body"><h4 class="media-heading timestamp" id="top-aligned-media">'+ data.name+', ' + dateString+'<a class="anchorjs-link" href="#top-aligned-media"><span class="anchorjs-icon"></span></a></h4><p><img src="'+ data.message+'"/></p></div></div></div>';
+    }else{
+      var _htmlTemplateString = '<div class="col-xs-12 user_msg"><div class="media message-box"><div class="media-left"><img class="media-object user-profile-in-chat" src="' + data.userImg +'" alt="general_id" style="width: 35px; height: 35px;"></div><div class="media-body"><h4 class="media-heading timestamp" id="top-aligned-media">'+ data.name+', ' + dateString+'<a class="anchorjs-link" href="#top-aligned-media"><span class="anchorjs-icon"></span></a></h4><p><img src="'+ data.message+'"/></p></div></div></div>';
+
+    }
     return _htmlTemplateString;
   }
 
@@ -156,16 +187,18 @@ console.log('sending message object.. msg is ',msg);
     //console.log('data is ', JSON.stringify(data), 'data string is', data + '');
     //console.log(dataArr);
     console.log(data.msgType);
-    if (data.msgType === 'txt'){
-      var outputHTMLString = generateCurrentBlob(data);
-    }else{
-      var outputHTMLString = generateCurrentBlobForImage(data);
-    }
+    if (! (data.userID === userID)){
+      if (data.msgType === 'txt'){
+        var outputHTMLString = generateCurrentBlob(data,false);
+      }else{
+        var outputHTMLString = generateCurrentBlobForImage(data,false);
+      }
    // alert(data);
 
    $('.chat_body').append(outputHTMLString);
    ScrollFix();
+ }
 
- });
+});
 });
 
