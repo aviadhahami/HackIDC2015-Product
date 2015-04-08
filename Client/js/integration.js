@@ -3,13 +3,13 @@ $(document).ready(function() {
 
     //Managment server integration module//
 
-    var major = '';
-    var minor = '';
+    var major = '12345';
+    var minor = '67890';
     //two vars above this should come from beacon integration
 
+    var serverDomain = 'http://argov.webuda.com/';
+    var managmentServerUrl = serverDomain + 'Server/app/response.php?callback=?';
 
-    var serverDomain = 'http://argov.grn.cc/';
-    var managmentServerUrl = serverDomain + 'Server/app/response.php';
     var method = 'GET';
     var connectionFlag = '0'; //0 is income, 1 is disconnect
     var bid = major+ '.' + minor;
@@ -28,7 +28,7 @@ $(document).ready(function() {
       connectionStatus = res.connection;
       window.cid = res.cid;
       chatAmount = res.amount;
-      userImg = res.img;
+      userImg = 'avatars/' + res.img;
       localID = res.localID; //Beacon ID @ the server
     }).fail(function(e){
       alert('Oops ! problems!, stub generated');
@@ -92,18 +92,19 @@ $(document).ready(function() {
     $('.gif_drawer img').on('click',function(){
       chatMsg = $(this).attr('src');
       $('#chatMsg').val('');
+//close drawer
+$('#open-button').click();
+var msg = {
+  name: window.clientName,
+  message : chatMsg,
+  room : roomID,
+  userID : userID,
+  userImg : userImg,
+  msgType : 'img'
+};
 
-      var msg = {
-        name: window.clientName,
-        message : chatMsg,
-        room : roomID,
-        userID : userID,
-        userImg : userImg,
-        msgType : 'img'
-      };
 
-
-      console.log('sending message object.. msg is ',msg);
+console.log('sending message object.. msg is ',msg);
 
         //code for local double messaging
        /* var outputHTMLString = generateCurrentBlob(msg);
@@ -158,7 +159,6 @@ $(document).ready(function() {
     if (data.msgType === 'txt'){
       var outputHTMLString = generateCurrentBlob(data);
     }else{
-      $('#open-button').click();
       var outputHTMLString = generateCurrentBlobForImage(data);
     }
    // alert(data);

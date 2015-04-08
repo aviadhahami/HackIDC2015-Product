@@ -18,7 +18,7 @@ $(document).ready(function() {
     	}
     });
     $('.username_form').submit(function(){
-    	window.clientName = $('#namePick').val().length < 4 ? chance.name() : $('#namePick').val();
+    	window.clientName = $('#namePick').val().length <= 2 ? chance.name() : $('#namePick').val();
         window.initiatePrimaryConnection();
     });
 
@@ -31,8 +31,7 @@ $(document).ready(function() {
     var isOpen = false;
     $('#open-button').on('click', function(){
        toggleGifMenu();
-
-    });
+   });
 
     $('.chat_body').on('click', function(ev) {
         var eventClass = $(event.target).attr('class');
@@ -40,6 +39,7 @@ $(document).ready(function() {
             /*console.log(isOpen);
             console.log("yay" + $(event.target).attr('class'));*/
             toggleGifMenu();
+            //console.log('opening drawer');
 
         }
     });
@@ -48,12 +48,14 @@ $(document).ready(function() {
         ev.preventDefault();
         var input = $('#chatMsg');
         var name = $('.user').find(".user_name").html();
-        input.val(input.val() +" @" +name);
+        input.val(input.val() +" @" +name + " ");
     });
 
-    function toggleGifMenu() {
-        if(!isOpen){
-            console.log('hi');
+
+
+   var toggleGifMenu = function () {
+    if(!isOpen){
+            //console.log('hi');
             $('.gif_drawer').css({
                 '-webkit-transform' : 'translate3d(0, 0, 0)',
                 '-moz-transform'    : 'translate3d(0, 0, 0)',
@@ -65,7 +67,7 @@ $(document).ready(function() {
             isOpen = true;
         }
         else{
-            console.log('bye');
+            //console.log('bye');
             $('.gif_drawer').css({
                 '-webkit-transform' : 'translate3d(0, 750px, 0)',
                 '-moz-transform'    : 'translate3d(0, 750px, 0)',
