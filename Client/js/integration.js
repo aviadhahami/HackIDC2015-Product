@@ -122,7 +122,8 @@ $(document).ready(function() {
 
       });
 
-
+    $('#roomName').text(roomID);
+    $('#roomTag').text('@' + roomID);
     //message feed
     var io = createIO(projectName, roomID);
 
