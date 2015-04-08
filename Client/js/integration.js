@@ -150,9 +150,9 @@ $(document).ready(function() {
     //console.log(dataArr);
     console.log(data.msgType);
     if (data.msgType === 'txt'){
-      var outputHTMLString = generateCurrentBlob(data.message);
+      var outputHTMLString = generateCurrentBlob(data);
     }else{
-      var outputHTMLString = generateCurrentBlobForImage(data.message);
+      var outputHTMLString = generateCurrentBlobForImage(data);
     }
    // alert(data);
 
