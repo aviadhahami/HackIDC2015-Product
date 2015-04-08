@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c6abace-e918-4d91-870a-8f23e75d50c5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Server/app/Beacon.php" afterPath="$PROJECT_DIR$/Server/app/Beacon.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Server/app/response.php" afterPath="$PROJECT_DIR$/Server/app/response.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Server/app/lib/ajax.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Server/app/imgHandler.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Server/app/postHandler.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="HackIDC2015.iws" />
@@ -29,35 +30,80 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Beacon.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Beacon.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Server/app/Beacon.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7176471" vertical-offset="3000" max-vertical-offset="4473">
-              <caret line="187" column="42" selection-start-line="187" selection-start-column="42" selection-end-line="187" selection-end-column="42" />
+            <state vertical-scroll-proportion="-41.625" vertical-offset="2448" max-vertical-offset="6678">
+              <caret line="296" column="90" selection-start-line="296" selection-start-column="90" selection-end-line="296" selection-end-column="90" />
               <folding>
-                <element signature="n#generateClientId#0;n#Beacon#0;n#!!top" expanded="false" />
-                <element signature="n#getAmountConnected#0;n#Beacon#0;n#!!top" expanded="false" />
-                <marker date="1428435240136" expanded="true" signature="818:869" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
-                <marker date="1428435240136" expanded="true" signature="1516:1572" placeholder="SELECT * FRO.._localClientTbl WHERE..." />
-                <marker date="1428435240136" expanded="true" signature="2475:2554" placeholder="INSERT INTO ..." />
-                <marker date="1428435240136" expanded="true" signature="4645:4674" placeholder="DELETE FROM ..." />
-                <marker date="1428435240136" expanded="true" signature="4645:4686" placeholder="DELETE FROM ..." />
-                <marker date="1428435240136" expanded="true" signature="4645:4703" placeholder="DELETE FROM ..." />
-                <marker date="1428435240136" expanded="true" signature="4645:4707" placeholder="DELETE FROM ..." />
-                <marker date="1428435240136" expanded="true" signature="4645:4725" placeholder="DELETE FROM ..." />
-                <marker date="1428435240136" expanded="true" signature="4645:4990" placeholder="DELETE FROM ..." />
-                <marker date="1428435240136" expanded="true" signature="5078:5129" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
+                <marker date="1428495190378" expanded="true" signature="902:939" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
+                <marker date="1428495190378" expanded="true" signature="902:952" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
+                <marker date="1428495190378" expanded="true" signature="902:953" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
+                <marker date="1428495190378" expanded="true" signature="1772:1913" placeholder="SELECT * FRO.._localClientTbl WHERE..." />
+                <marker date="1428495190378" expanded="true" signature="1929:1971" placeholder="SELECT * FRO.._localClientTbl WHERE..." />
+                <marker date="1428495190378" expanded="true" signature="1929:1983" placeholder="SELECT * FRO.._localClientTbl WHERE..." />
+                <marker date="1428495190378" expanded="true" signature="3013:3090" placeholder="INSERT INTO ..." />
+                <marker date="1428495190378" expanded="true" signature="5672:5701" placeholder="DELETE FROM ..." />
+                <marker date="1428495190378" expanded="true" signature="5672:5728" placeholder="DELETE FROM ..." />
+                <marker date="1428495190378" expanded="true" signature="5672:5732" placeholder="DELETE FROM ..." />
+                <marker date="1428495190378" expanded="true" signature="5672:5750" placeholder="DELETE FROM ..." />
+                <marker date="1428495190378" expanded="true" signature="5672:5752" placeholder="DELETE FROM ..." />
+                <marker date="1428495190378" expanded="true" signature="5672:6015" placeholder="DELETE FROM ..." />
+                <marker date="1428495190378" expanded="true" signature="6103:6154" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
+                <marker date="1428495190378" expanded="true" signature="6647:6683" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
+                <marker date="1428495190378" expanded="true" signature="6647:6695" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
+                <marker date="1428495190378" expanded="true" signature="7480:7517" placeholder="INSERT INTO ..." />
+                <marker date="1428495190378" expanded="true" signature="7480:7534" placeholder="INSERT INTO ..." />
+                <marker date="1428495190378" expanded="true" signature="7969:7981" placeholder="DELETE FROM ..." />
+                <marker date="1428495190378" expanded="true" signature="7969:7982" placeholder="DELETE FROM ..." />
+                <marker date="1428495190378" expanded="true" signature="7969:7997" placeholder="DELETE FROM ..." />
+                <marker date="1428495190378" expanded="true" signature="7969:8003" placeholder="DELETE FROM ..." />
+                <marker date="1428495190378" expanded="true" signature="7969:8020" placeholder="DELETE FROM ..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="response.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="postHandler.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Server/app/postHandler.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-11.9" vertical-offset="0" max-vertical-offset="483">
+              <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="imgHandler.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Server/app/imgHandler.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-11.2" vertical-offset="0" max-vertical-offset="1008">
+              <caret line="16" column="49" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
+              <folding>
+                <element signature="e#6#93#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="response.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Server/app/response.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.6" vertical-offset="315" max-vertical-offset="1197">
-              <caret line="38" column="65" selection-start-line="38" selection-start-column="65" selection-end-line="38" selection-end-column="65" />
+            <state vertical-scroll-proportion="0.080976866" vertical-offset="63" max-vertical-offset="1239">
+              <caret line="11" column="22" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="22" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ajax.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Server/app/lib/ajax.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="189" max-vertical-offset="1470">
+              <caret line="31" column="7" selection-start-line="31" selection-start-column="7" selection-end-line="31" selection-end-column="7" />
+              <folding>
+                <element signature="n#!!doc;n#HandleNewConnection#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -76,6 +122,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Server/app/test.php" />
+        <option value="$PROJECT_DIR$/Server/app/postHandler.php" />
+        <option value="$PROJECT_DIR$/Server/app/imgHandler.php" />
+        <option value="$PROJECT_DIR$/Server/app/lib/ajax.js" />
         <option value="$PROJECT_DIR$/Server/app/response.php" />
         <option value="$PROJECT_DIR$/Server/app/Beacon.php" />
       </list>
@@ -164,6 +213,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HackIDC2015" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HackIDC2015" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -302,12 +373,72 @@
       <option name="project" value="LOCAL" />
       <updated>1428432074324</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="working and partially tested">
+      <created>1428435569125</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1428435569125</updated>
+    </task>
+    <task id="LOCAL-00006" summary="ori titkofef ata metaftaf&#10;">
+      <created>1428441816621</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1428441816621</updated>
+    </task>
+    <task id="LOCAL-00007" summary="added response for failure to connect">
+      <created>1428443242724</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1428443242724</updated>
+    </task>
+    <task id="LOCAL-00008" summary="added avatar image functionallity">
+      <created>1428478881104</created>
+      <option name="number" value="00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1428478881104</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Changed queries to work correctly with new table structure , also modifications needed to work correctly were done , NEED TO BE TESTED">
+      <created>1428486045674</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1428486045674</updated>
+    </task>
+    <task id="LOCAL-00010" summary="More modifications needed to match the correct structure , yet tested!">
+      <created>1428486269728</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1428486269728</updated>
+    </task>
+    <task id="LOCAL-00011" summary="disconnection had bugs , fixed yet tested , &#10;-json string also returns with the beaconID -as saved in our tables - upon connection&#10;-disconnection treats the cid recieved when the flags is 1 as the Beaconid and turns it into int">
+      <created>1428487615501</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1428487615501</updated>
+    </task>
+    <task id="LOCAL-00012" summary="fixed disconnection">
+      <created>1428490002953</created>
+      <option name="number" value="00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1428490002953</updated>
+    </task>
+    <task id="LOCAL-00013" summary="removed echos that were used for testing">
+      <created>1428490080019</created>
+      <option name="number" value="00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1428490080019</updated>
+    </task>
+    <task id="LOCAL-00014" summary="removed echos that were used for testing">
+      <created>1428503187281</created>
+      <option name="number" value="00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1428503187281</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Robotlegs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -317,7 +448,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3074572" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3074572" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32997763" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -351,7 +482,16 @@
     <MESSAGE value="connection handler part finished yet tested" />
     <MESSAGE value="connection handler and return json for established connection - need to be tested" />
     <MESSAGE value="disconnection handler finished - yet tested" />
-    <option name="LAST_COMMIT_MESSAGE" value="disconnection handler finished - yet tested" />
+    <MESSAGE value="working and partially tested" />
+    <MESSAGE value="ori titkofef ata metaftaf&#10;" />
+    <MESSAGE value="added response for failure to connect" />
+    <MESSAGE value="added avatar image functionallity" />
+    <MESSAGE value="Changed queries to work correctly with new table structure , also modifications needed to work correctly were done , NEED TO BE TESTED" />
+    <MESSAGE value="More modifications needed to match the correct structure , yet tested!" />
+    <MESSAGE value="disconnection had bugs , fixed yet tested , &#10;-json string also returns with the beaconID -as saved in our tables - upon connection&#10;-disconnection treats the cid recieved when the flags is 1 as the Beaconid and turns it into int" />
+    <MESSAGE value="fixed disconnection" />
+    <MESSAGE value="removed echos that were used for testing" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed echos that were used for testing" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -400,32 +540,71 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Server/app/response.php">
+    <entry file="file://$PROJECT_DIR$/Server/app/postHandler.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.6" vertical-offset="315" max-vertical-offset="1197">
-          <caret line="38" column="65" selection-start-line="38" selection-start-column="65" selection-end-line="38" selection-end-column="65" />
+        <state vertical-scroll-proportion="-11.9" vertical-offset="0" max-vertical-offset="483">
+          <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/app/imgHandler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.2" vertical-offset="0" max-vertical-offset="1008">
+          <caret line="16" column="49" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
+          <folding>
+            <element signature="e#6#93#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Server/app/Beacon.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7176471" vertical-offset="3000" max-vertical-offset="4473">
-          <caret line="187" column="42" selection-start-line="187" selection-start-column="42" selection-end-line="187" selection-end-column="42" />
+        <state vertical-scroll-proportion="-41.625" vertical-offset="2448" max-vertical-offset="6678">
+          <caret line="296" column="90" selection-start-line="296" selection-start-column="90" selection-end-line="296" selection-end-column="90" />
           <folding>
-            <element signature="n#generateClientId#0;n#Beacon#0;n#!!top" expanded="false" />
-            <element signature="n#getAmountConnected#0;n#Beacon#0;n#!!top" expanded="false" />
-            <marker date="1428435240136" expanded="true" signature="818:869" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
-            <marker date="1428435240136" expanded="true" signature="1516:1572" placeholder="SELECT * FRO.._localClientTbl WHERE..." />
-            <marker date="1428435240136" expanded="true" signature="2475:2554" placeholder="INSERT INTO ..." />
-            <marker date="1428435240136" expanded="true" signature="4645:4674" placeholder="DELETE FROM ..." />
-            <marker date="1428435240136" expanded="true" signature="4645:4686" placeholder="DELETE FROM ..." />
-            <marker date="1428435240136" expanded="true" signature="4645:4703" placeholder="DELETE FROM ..." />
-            <marker date="1428435240136" expanded="true" signature="4645:4707" placeholder="DELETE FROM ..." />
-            <marker date="1428435240136" expanded="true" signature="4645:4725" placeholder="DELETE FROM ..." />
-            <marker date="1428435240136" expanded="true" signature="4645:4990" placeholder="DELETE FROM ..." />
-            <marker date="1428435240136" expanded="true" signature="5078:5129" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
+            <marker date="1428495190378" expanded="true" signature="902:939" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
+            <marker date="1428495190378" expanded="true" signature="902:952" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
+            <marker date="1428495190378" expanded="true" signature="902:953" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
+            <marker date="1428495190378" expanded="true" signature="1772:1913" placeholder="SELECT * FRO.._localClientTbl WHERE..." />
+            <marker date="1428495190378" expanded="true" signature="1929:1971" placeholder="SELECT * FRO.._localClientTbl WHERE..." />
+            <marker date="1428495190378" expanded="true" signature="1929:1983" placeholder="SELECT * FRO.._localClientTbl WHERE..." />
+            <marker date="1428495190378" expanded="true" signature="3013:3090" placeholder="INSERT INTO ..." />
+            <marker date="1428495190378" expanded="true" signature="5672:5701" placeholder="DELETE FROM ..." />
+            <marker date="1428495190378" expanded="true" signature="5672:5728" placeholder="DELETE FROM ..." />
+            <marker date="1428495190378" expanded="true" signature="5672:5732" placeholder="DELETE FROM ..." />
+            <marker date="1428495190378" expanded="true" signature="5672:5750" placeholder="DELETE FROM ..." />
+            <marker date="1428495190378" expanded="true" signature="5672:5752" placeholder="DELETE FROM ..." />
+            <marker date="1428495190378" expanded="true" signature="5672:6015" placeholder="DELETE FROM ..." />
+            <marker date="1428495190378" expanded="true" signature="6103:6154" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
+            <marker date="1428495190378" expanded="true" signature="6647:6683" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
+            <marker date="1428495190378" expanded="true" signature="6647:6695" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
+            <marker date="1428495190378" expanded="true" signature="7480:7517" placeholder="INSERT INTO ..." />
+            <marker date="1428495190378" expanded="true" signature="7480:7534" placeholder="INSERT INTO ..." />
+            <marker date="1428495190378" expanded="true" signature="7969:7981" placeholder="DELETE FROM ..." />
+            <marker date="1428495190378" expanded="true" signature="7969:7982" placeholder="DELETE FROM ..." />
+            <marker date="1428495190378" expanded="true" signature="7969:7997" placeholder="DELETE FROM ..." />
+            <marker date="1428495190378" expanded="true" signature="7969:8003" placeholder="DELETE FROM ..." />
+            <marker date="1428495190378" expanded="true" signature="7969:8020" placeholder="DELETE FROM ..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/app/lib/ajax.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="189" max-vertical-offset="1470">
+          <caret line="31" column="7" selection-start-line="31" selection-start-column="7" selection-end-line="31" selection-end-column="7" />
+          <folding>
+            <element signature="n#!!doc;n#HandleNewConnection#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/app/response.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.080976866" vertical-offset="63" max-vertical-offset="1239">
+          <caret line="11" column="22" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
     </entry>
