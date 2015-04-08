@@ -10,6 +10,7 @@ include_once("Beacon.php");
 
 $requestID = intval($_GET['rid']);
 $beaconID = $_GET['bid'];
+
 $clientID = $_GET['cid'];//Only upon disconnection request
 $cb = $_GET['callback'];
 
@@ -21,6 +22,7 @@ if($requestID === 0 || $requestID === 1)
     if($requestID === 0)
     {
         $result = $beaconHandler->handleConnectionRequest();
+
 
         if($result !== null)
         {

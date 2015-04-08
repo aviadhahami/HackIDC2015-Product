@@ -9,6 +9,7 @@ $(document).ready(function() {
     $(window).resize(function() {
         fitChatWindow();
     });
+
     //Overriding "ENTER" key for send msg
     $('.chat_input_box').on('keyup',function(e){
     	if (e.which == 13){
@@ -17,7 +18,8 @@ $(document).ready(function() {
     	}
     });
     $('.username_form').submit(function(){
-    	window.clientName = $('#namePick').val().length < 4 ? chance.name() : $('#namePick').val();
+    	window.clientName = $('#namePick').val().length <= 2 ? chance.name() : $('#namePick').val();
+        window.initiatePrimaryConnection();
     });
 
     function mobilecheck() {
@@ -42,9 +44,16 @@ $(document).ready(function() {
         }
     });
 
+    $('.user').on('click', function(ev) {
+        ev.preventDefault();
+        var input = $('#chatMsg');
+        var name = $('.user').find(".user_name").html();
+        input.val(input.val() +" @" +name + " ");
+    });
+
     function toggleGifMenu() {
         if(!isOpen){
-            console.log('hi');
+            //console.log('hi');
             $('.gif_drawer').css({
                 '-webkit-transform' : 'translate3d(0, 0, 0)',
                 '-moz-transform'    : 'translate3d(0, 0, 0)',
@@ -56,7 +65,7 @@ $(document).ready(function() {
             isOpen = true;
         }
         else{
-            console.log('bye');
+            //console.log('bye');
             $('.gif_drawer').css({
                 '-webkit-transform' : 'translate3d(0, 750px, 0)',
                 '-moz-transform'    : 'translate3d(0, 750px, 0)',
