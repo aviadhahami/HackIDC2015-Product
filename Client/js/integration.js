@@ -67,7 +67,8 @@ $(document).ready(function() {
         message : chatMsg,
         room : roomID,
         userID : userID,
-        userImg : userImg
+        userImg : userImg,
+        msgType : 'txt'
       };
       console.log('sending message object.. msg is ',msg);
       var outputHTMLString = generateCurrentBlob(msg);
@@ -84,19 +85,20 @@ $(document).ready(function() {
 
     //img message output
     $('.gif_drawer img').on('click',function(){
-        chatMsg = $(this).attr('src');
-        $('#chatMsg').val('');
+      chatMsg = $(this).attr('src');
+      $('#chatMsg').val('');
 
-        var msg = {
-            name: window.clientName,
-            message : chatMsg,
-            room : roomID,
-            userID : userID,
-            userImg : userImg
-        };
+      var msg = {
+        name: window.clientName,
+        message : chatMsg,
+        room : roomID,
+        userID : userID,
+        userImg : userImg,
+        msgType : 'img'
+      };
 
 
-        console.log('sending message object.. msg is ',msg);
+      console.log('sending message object.. msg is ',msg);
 
         //code for local double messaging
         var outputHTMLString = generateCurrentBlob(msg);
@@ -105,13 +107,15 @@ $(document).ready(function() {
         //end of local double messaging
 
         $.post(url,msg,function(data,status){
-            console.log('data: ' + data + 'status : ' + status + 'from the POST');
-            if (status === "success") {
-                $('.timestamp').append('V');
-            }
-        });
+          console.log('data: ' + data + 'status : ' + status + 'from the POST');
 
-    });
+            //mark V if recieved by server
+            if (status === "success") {
+              $('.timestamp').append('V');
+            }
+          });
+
+      });
 
 
     //message feed
@@ -127,21 +131,26 @@ $(document).ready(function() {
 
    };
 
-    function generateCurrentBlobForImage(data) {
-        var d = new Date();
-        var hours = d.getHours() < 10 ? '0' + d.getHours() : d.getHours();
-        var minutes = d.getMinutes() < 10 ? '0' + d.getMinutes() : d.getMinutes();
-        var dateString = hours + ':' + minutes;
-        var _htmlTemplateString = '<div class="col-xs-12 user_msg"><div class="media message-box"><div class="media-left"><img class="media-object user-profile-in-chat" src="' + data.userImg +'" alt="general_id" style="width: 35px; height: 35px;"></div><div class="media-body"><h4 class="media-heading timestamp" id="top-aligned-media">'+ data.name+', ' + dateString+'<a class="anchorjs-link" href="#top-aligned-media"><span class="anchorjs-icon"></span></a></h4><p><img src="'+ data.message+'"/></p></div></div></div>';
-        return _htmlTemplateString;
-    }
+   function generateCurrentBlobForImage(data) {
+    var d = new Date();
+    var hours = d.getHours() < 10 ? '0' + d.getHours() : d.getHours();
+    var minutes = d.getMinutes() < 10 ? '0' + d.getMinutes() : d.getMinutes();
+    var dateString = hours + ':' + minutes;
+    var _htmlTemplateString = '<div class="col-xs-12 user_msg"><div class="media message-box"><div class="media-left"><img class="media-object user-profile-in-chat" src="' + data.userImg +'" alt="general_id" style="width: 35px; height: 35px;"></div><div class="media-body"><h4 class="media-heading timestamp" id="top-aligned-media">'+ data.name+', ' + dateString+'<a class="anchorjs-link" href="#top-aligned-media"><span class="anchorjs-icon"></span></a></h4><p><img src="'+ data.message+'"/></p></div></div></div>';
+    return _htmlTemplateString;
+  }
 
-   function ScrollFix() {
+  function ScrollFix() {
     $(".chat_body").scrollTop($(".chat_body")[0].scrollHeight);
   }
 
   io.on('newMsg', function(data) {
-    var outputHTMLString = generateCurrentBlob(data);
+    var dataArr = data.split(' ');
+    if (dataArr[0] === 'txt'){
+      var outputHTMLString = generateCurrentBlob(dataArr[1]);
+    }else{
+      var outputHTMLString = generateCurrentBlobForImage(dataArr[1]);
+    }
    // alert(data);
 
    $('.chat_body').append(outputHTMLString);
