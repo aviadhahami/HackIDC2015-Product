@@ -28,7 +28,7 @@ $(document).ready(function() {
       connectionStatus = res.connection;
       window.cid = res.cid;
       chatAmount = res.amount;
-      userImg = res.img;
+      userImg = 'avatars/' + res.img;
       localID = res.localID; //Beacon ID @ the server
     }).fail(function(e){
       alert('Oops ! problems!, stub generated');
