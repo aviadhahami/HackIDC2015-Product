@@ -75,7 +75,7 @@ class Beacon {
 
         $returnArr = array();
 
-        $getClientSetQuery = "SELECT * FROM $localClientTbl WHERE bid = '$localBeacon'";//crossing against id from other table
+        $getClientSetQuery = "SELECT * FROM $localClientTbl WHERE bid = $localBeacon";//crossing against id from other table
 
         $clientSetResult = $this->mysqli->query($getClientSetQuery);
 
@@ -110,7 +110,7 @@ class Beacon {
 
         $clientId = $this->generateClientId($clientArr);
 
-        $addNewClientQuery = "INSERT INTO $localClientTable (bid, uid) VALUES ('$localBeaconId', '$clientId')";
+        $addNewClientQuery = "INSERT INTO $localClientTable (bid, uid) VALUES ($localBeaconId, '$clientId')";
 
         $addNewClientExecute = $this->mysqli->query($addNewClientQuery);
 
@@ -199,7 +199,7 @@ class Beacon {
         $localBeaconId = $this->beaconIndex;//Meant to work correctly
         $localClientTable = $this->clientTable;
 
-        $removeClientQuery = "DELETE FROM $localClientTable WHERE bid = '$localBeaconId' AND uid = '$clientID'";
+        $removeClientQuery = "DELETE FROM $localClientTable WHERE bid = $localBeaconId AND uid = '$clientID'";
 
         $removeClientExecute = $this->mysqli->query($removeClientQuery);
         if($removeClientExecute === true)
