@@ -144,30 +144,30 @@ class Beacon {
     public function handleConnectionRequest()
     {
         ///
-        echo "</br> entered HandleConnection";
+       // echo "</br> entered HandleConnection";
         ///
         $userSet = $this->isBeaconExists();
 
-        echo "</br> userset : " . print_r($userSet) . "||</br>";
+        //echo "</br> userset : " . print_r($userSet) . "||</br>";
 
         if($userSet === null)
         {
             return ["connection"=>"-1"];
         }
 
-        echo "</br> first if block passed in connection handler </br>";
+       // echo "</br> first if block passed in connection handler </br>";
 
         $clientId = $this->addNewClient($userSet);
 
         ////
-        echo "</br> clientID = ". $clientId ."</br>";
+        //echo "</br> clientID = ". $clientId ."</br>";
         ////
 
         if($clientId === null)
         {
             return ["connection"=>"-1"];
         }
-        echo "</br> second if block passed in connection handler </br>";
+       // echo "</br> second if block passed in connection handler </br>";
 
         $amountConnect = $this->getAmountConnected($userSet);
         $imgSrc = $this->getFreeImage($amountConnect);
