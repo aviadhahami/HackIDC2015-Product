@@ -11,6 +11,7 @@ include_once("Beacon.php");
 $requestID = intval($_GET['rid']);//request id 0/1 connect/disconnect
 $beaconID = $_GET['bid'];
 $clientID = $_GET['cid'];
+$cb = $_GET['callback'];
 
 
 /*echo "</br> type of : </br>" .
@@ -27,21 +28,21 @@ if($requestID === 0 || $requestID === 1)
         $result = $beaconHandler->handleConnectionRequest();
 
         ////
-       // echo "</br> handleConnectionResult  = " . $result  ."|| </br>";
+        // echo "</br> handleConnectionResult  = " . $result  ."|| </br>";
         ///
         if($result !== null)
         {
-            echo parseResponseToJson($result);
+            echo $cb . parseResponseToJson($result);
         }
     }
     elseif($requestID === 1)
     {
         if($beaconHandler->handleDisconnectionRequest($clientID, intval($beaconID)))
         {
-            echo json_encode(["connection"=>"1"]);
+            echo $cb . json_encode(["connection"=>"1"]);
         }
         else {
-            echo json_encode(["connection"=>"-1"]);
+            echo $cb . json_encode(["connection"=>"-1"]);
         }
     }
 }

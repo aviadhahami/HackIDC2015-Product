@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c6abace-e918-4d91-870a-8f23e75d50c5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Client/index.html" afterPath="$PROJECT_DIR$/Client/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Client/js/integration.js" afterPath="$PROJECT_DIR$/Client/js/integration.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Server/app/Beacon.php" afterPath="$PROJECT_DIR$/Server/app/Beacon.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Server/app/response.php" afterPath="$PROJECT_DIR$/Server/app/response.php" />
     </list>
     <ignored path="HackIDC2015.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,30 +28,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Beacon.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Beacon.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Server/app/Beacon.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-32.423077" vertical-offset="4393" max-vertical-offset="5406">
-              <caret line="313" column="74" selection-start-line="313" selection-start-column="74" selection-end-line="313" selection-end-column="74" />
+            <state vertical-scroll-proportion="0.94902915" vertical-offset="4027" max-vertical-offset="4935">
+              <caret line="234" column="1" selection-start-line="234" selection-start-column="1" selection-end-line="234" selection-end-column="1" />
               <folding>
-                <marker date="1428506225043" expanded="true" signature="902:953" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
-                <marker date="1428506225043" expanded="true" signature="1929:1971" placeholder="SELECT * FRO.._localClientTbl WHERE..." />
-                <marker date="1428506225043" expanded="true" signature="3013:3090" placeholder="INSERT INTO ..." />
-                <marker date="1428506225043" expanded="true" signature="5672:5750" placeholder="DELETE FROM ..." />
-                <marker date="1428506225043" expanded="true" signature="6103:6154" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
-                <marker date="1428506225043" expanded="true" signature="6647:6683" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
-                <marker date="1428506225043" expanded="true" signature="7480:7534" placeholder="INSERT INTO ..." />
-                <marker date="1428506225043" expanded="true" signature="7969:8020" placeholder="DELETE FROM ..." />
+                <element signature="e#6#86#0#PHP" expanded="false" />
+                <marker date="1428530835238" expanded="true" signature="1116:1167" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
+                <marker date="1428530835238" expanded="true" signature="2134:2176" placeholder="SELECT * FRO.._localClientTbl WHERE..." />
+                <marker date="1428530835238" expanded="true" signature="3206:3283" placeholder="INSERT INTO ..." />
+                <marker date="1428530835238" expanded="true" signature="5843:5921" placeholder="DELETE FROM ..." />
+                <marker date="1428530835238" expanded="true" signature="6271:6322" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
+                <marker date="1428530835238" expanded="true" signature="6810:6846" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
+                <marker date="1428530835238" expanded="true" signature="1035:1086" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
+                <marker date="1428530835238" expanded="true" signature="1977:2019" placeholder="SELECT * FRO.._localClientTbl WHERE..." />
+                <marker date="1428530835238" expanded="true" signature="3101:3178" placeholder="INSERT INTO ..." />
+                <marker date="1428530835238" expanded="true" signature="5795:5873" placeholder="DELETE FROM ..." />
+                <marker date="1428530835238" expanded="true" signature="6230:6281" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
+                <marker date="1428530835238" expanded="true" signature="6769:6805" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
+                <marker date="1428530835238" expanded="true" signature="7592:7646" placeholder="INSERT INTO ..." />
+                <marker date="1428530835238" expanded="true" signature="8076:8127" placeholder="DELETE FROM ..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Client/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33333334" vertical-offset="3008" max-vertical-offset="5032">
-              <caret line="196" column="20" selection-start-line="196" selection-start-column="20" selection-end-line="196" selection-end-column="20" />
+            <state vertical-scroll-proportion="-19.766666" vertical-offset="3523" max-vertical-offset="4347">
+              <caret line="196" column="0" selection-start-line="196" selection-start-column="0" selection-end-line="196" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -60,7 +67,7 @@
       <file leaf-file-name="postHandler.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Server/app/postHandler.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="391">
+            <state vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="483">
               <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
               <folding />
             </state>
@@ -70,7 +77,7 @@
       <file leaf-file-name="imgHandler.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Server/app/imgHandler.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="816">
+            <state vertical-scroll-proportion="0.0" vertical-offset="336" max-vertical-offset="1008">
               <caret line="16" column="49" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
               <folding>
                 <element signature="e#6#93#0#PHP" expanded="true" />
@@ -82,8 +89,8 @@
       <file leaf-file-name="response.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Server/app/response.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="1003">
-              <caret line="18" column="2" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
+            <state vertical-scroll-proportion="-26.5" vertical-offset="339" max-vertical-offset="1260">
+              <caret line="59" column="2" selection-start-line="59" selection-start-column="2" selection-end-line="59" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -92,7 +99,7 @@
       <file leaf-file-name="ajax.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Server/app/lib/ajax.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="493" max-vertical-offset="1190">
+            <state vertical-scroll-proportion="0.0" vertical-offset="609" max-vertical-offset="1470">
               <caret line="31" column="7" selection-start-line="31" selection-start-column="7" selection-end-line="31" selection-end-column="7" />
               <folding>
                 <element signature="n#!!doc;n#HandleNewConnection#0" expanded="false" />
@@ -104,7 +111,7 @@
       <file leaf-file-name="integration.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Client/js/integration.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.0" vertical-offset="1144" max-vertical-offset="2142">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1932" max-vertical-offset="3717">
               <caret line="92" column="31" selection-start-line="92" selection-start-column="30" selection-end-line="92" selection-end-column="31" />
               <folding />
             </state>
@@ -122,19 +129,22 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
-    <option name="changedFiles">
+    <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Client/js/integration.js" />
-        <option value="$PROJECT_DIR$/Client/index.html" />
+        <option value="$PROJECT_DIR$/Server/app/response.php" />
+        <option value="$PROJECT_DIR$/Server/app/Beacon.php" />
       </list>
     </option>
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1176" />
+    <option name="width" value="1696" />
+    <option name="height" value="1026" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -314,15 +324,15 @@
       <BehatRunner />
       <method />
     </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server" server_id="8110eb32-4367-4b98-8ab5-bc8dcf14ab80" server_name="photogalla">
+      <method />
+    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-options />
       <gulpfile />
       <tasks />
-      <pass-parent-env-vars>false</pass-parent-env-vars>
+      <pass-parent-envs>true</pass-parent-envs>
       <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server" server_id="8110eb32-4367-4b98-8ab5-bc8dcf14ab80" server_name="photogalla">
       <method />
     </configuration>
     <list size="1">
@@ -430,24 +440,24 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
+    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Robotlegs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30729166" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31112468" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32997763" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Robotlegs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -495,17 +505,100 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Server/app/Beacon.php">
       <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="6468" max-vertical-offset="6678">
+          <caret line="313" column="74" selection-start-line="313" selection-start-column="74" selection-end-line="313" selection-end-column="74" />
+          <folding>
+            <element signature="e#6#86#0#PHP" expanded="false" />
+            <marker date="1428530835238" expanded="true" signature="1116:1167" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
+            <marker date="1428530835238" expanded="true" signature="2134:2176" placeholder="SELECT * FRO.._localClientTbl WHERE..." />
+            <marker date="1428530835238" expanded="true" signature="3206:3283" placeholder="INSERT INTO ..." />
+            <marker date="1428530835238" expanded="true" signature="5843:5921" placeholder="DELETE FROM ..." />
+            <marker date="1428530835238" expanded="true" signature="6271:6322" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
+            <marker date="1428530835238" expanded="true" signature="6810:6846" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
+            <marker date="1428530835238" expanded="true" signature="1035:1086" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
+            <marker date="1428530835238" expanded="true" signature="1977:2019" placeholder="SELECT * FRO.._localClientTbl WHERE..." />
+            <marker date="1428530835238" expanded="true" signature="3101:3178" placeholder="INSERT INTO ..." />
+            <marker date="1428530835238" expanded="true" signature="5795:5873" placeholder="DELETE FROM ..." />
+            <marker date="1428530835238" expanded="true" signature="6230:6281" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
+            <marker date="1428530835238" expanded="true" signature="6769:6805" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
+            <marker date="1428530835238" expanded="true" signature="7592:7646" placeholder="INSERT INTO ..." />
+            <marker date="1428530835238" expanded="true" signature="8076:8127" placeholder="DELETE FROM ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Client/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4347">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/app/postHandler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="483">
+          <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/app/imgHandler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="336" max-vertical-offset="1008">
+          <caret line="16" column="49" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
+          <folding>
+            <element signature="e#6#93#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/app/response.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="273" max-vertical-offset="1239">
+          <caret line="18" column="2" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/app/lib/ajax.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="609" max-vertical-offset="1470">
+          <caret line="31" column="7" selection-start-line="31" selection-start-column="7" selection-end-line="31" selection-end-column="7" />
+          <folding>
+            <element signature="n#!!doc;n#HandleNewConnection#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Client/js/integration.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1932" max-vertical-offset="3717">
+          <caret line="92" column="31" selection-start-line="92" selection-start-column="30" selection-end-line="92" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/app/Beacon.php">
+      <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5406">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1428506225043" expanded="true" signature="902:953" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
-            <marker date="1428506225043" expanded="true" signature="1929:1971" placeholder="SELECT * FRO.._localClientTbl WHERE..." />
-            <marker date="1428506225043" expanded="true" signature="3013:3090" placeholder="INSERT INTO ..." />
-            <marker date="1428506225043" expanded="true" signature="5672:5750" placeholder="DELETE FROM ..." />
-            <marker date="1428506225043" expanded="true" signature="6103:6154" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
-            <marker date="1428506225043" expanded="true" signature="6647:6683" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
-            <marker date="1428506225043" expanded="true" signature="7480:7534" placeholder="INSERT INTO ..." />
-            <marker date="1428506225043" expanded="true" signature="7969:8020" placeholder="DELETE FROM ..." />
+            <element signature="e#6#86#0#PHP" expanded="false" />
+            <marker date="1428530835238" expanded="true" signature="1116:1167" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
+            <marker date="1428530835238" expanded="true" signature="2134:2176" placeholder="SELECT * FRO.._localClientTbl WHERE..." />
+            <marker date="1428530835238" expanded="true" signature="3206:3283" placeholder="INSERT INTO ..." />
+            <marker date="1428530835238" expanded="true" signature="5843:5921" placeholder="DELETE FROM ..." />
+            <marker date="1428530835238" expanded="true" signature="6271:6322" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
+            <marker date="1428530835238" expanded="true" signature="6810:6846" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
+            <marker date="1428530835238" expanded="true" signature="1035:1086" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
+            <marker date="1428530835238" expanded="true" signature="1977:2019" placeholder="SELECT * FRO.._localClientTbl WHERE..." />
+            <marker date="1428530835238" expanded="true" signature="3101:3178" placeholder="INSERT INTO ..." />
+            <marker date="1428530835238" expanded="true" signature="5795:5873" placeholder="DELETE FROM ..." />
+            <marker date="1428530835238" expanded="true" signature="6230:6281" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
+            <marker date="1428530835238" expanded="true" signature="6769:6805" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
+            <marker date="1428530835238" expanded="true" signature="7592:7646" placeholder="INSERT INTO ..." />
+            <marker date="1428530835238" expanded="true" signature="8076:8127" placeholder="DELETE FROM ..." />
           </folding>
         </state>
       </provider>
@@ -558,7 +651,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="3255">
           <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -574,7 +666,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="3255">
           <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -606,34 +697,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Server/app/response.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="1003">
-          <caret line="18" column="2" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Server/app/Beacon.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-32.423077" vertical-offset="4393" max-vertical-offset="5406">
-          <caret line="313" column="74" selection-start-line="313" selection-start-column="74" selection-end-line="313" selection-end-column="74" />
-          <folding>
-            <marker date="1428506225043" expanded="true" signature="902:953" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
-            <marker date="1428506225043" expanded="true" signature="1929:1971" placeholder="SELECT * FRO.._localClientTbl WHERE..." />
-            <marker date="1428506225043" expanded="true" signature="3013:3090" placeholder="INSERT INTO ..." />
-            <marker date="1428506225043" expanded="true" signature="5672:5750" placeholder="DELETE FROM ..." />
-            <marker date="1428506225043" expanded="true" signature="6103:6154" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
-            <marker date="1428506225043" expanded="true" signature="6647:6683" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
-            <marker date="1428506225043" expanded="true" signature="7480:7534" placeholder="INSERT INTO ..." />
-            <marker date="1428506225043" expanded="true" signature="7969:8020" placeholder="DELETE FROM ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Client/js/integration.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.0" vertical-offset="1144" max-vertical-offset="2142">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1932" max-vertical-offset="3717">
           <caret line="92" column="31" selection-start-line="92" selection-start-column="30" selection-end-line="92" selection-end-column="31" />
           <folding />
         </state>
@@ -641,12 +707,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Client/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334" vertical-offset="3008" max-vertical-offset="5032">
-          <caret line="196" column="20" selection-start-line="196" selection-start-column="20" selection-end-line="196" selection-end-column="20" />
+        <state vertical-scroll-proportion="-19.766666" vertical-offset="3523" max-vertical-offset="4347">
+          <caret line="196" column="0" selection-start-line="196" selection-start-column="0" selection-end-line="196" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/app/response.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-26.5" vertical-offset="339" max-vertical-offset="1260">
+          <caret line="59" column="2" selection-start-line="59" selection-start-column="2" selection-end-line="59" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/app/Beacon.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.94902915" vertical-offset="4027" max-vertical-offset="4935">
+          <caret line="234" column="1" selection-start-line="234" selection-start-column="1" selection-end-line="234" selection-end-column="1" />
+          <folding>
+            <element signature="e#6#86#0#PHP" expanded="false" />
+            <marker date="1428530835238" expanded="true" signature="1116:1167" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
+            <marker date="1428530835238" expanded="true" signature="2134:2176" placeholder="SELECT * FRO.._localClientTbl WHERE..." />
+            <marker date="1428530835238" expanded="true" signature="3206:3283" placeholder="INSERT INTO ..." />
+            <marker date="1428530835238" expanded="true" signature="5843:5921" placeholder="DELETE FROM ..." />
+            <marker date="1428530835238" expanded="true" signature="6271:6322" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
+            <marker date="1428530835238" expanded="true" signature="6810:6846" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
+            <marker date="1428530835238" expanded="true" signature="1035:1086" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
+            <marker date="1428530835238" expanded="true" signature="1977:2019" placeholder="SELECT * FRO.._localClientTbl WHERE..." />
+            <marker date="1428530835238" expanded="true" signature="3101:3178" placeholder="INSERT INTO ..." />
+            <marker date="1428530835238" expanded="true" signature="5795:5873" placeholder="DELETE FROM ..." />
+            <marker date="1428530835238" expanded="true" signature="6230:6281" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
+            <marker date="1428530835238" expanded="true" signature="6769:6805" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
+            <marker date="1428530835238" expanded="true" signature="7592:7646" placeholder="INSERT INTO ..." />
+            <marker date="1428530835238" expanded="true" signature="8076:8127" placeholder="DELETE FROM ..." />
+          </folding>
         </state>
       </provider>
     </entry>
   </component>
 </project>
-
