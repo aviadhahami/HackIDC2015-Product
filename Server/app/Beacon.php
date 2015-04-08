@@ -159,7 +159,10 @@ class Beacon {
         }
         //echo "</br> second if block passed in connection handler </br>";
 
-        return ["connection"=>"1",'cid'=>$clientId, 'amount'=> $this->getAmountConnected($userSet)];
+        $amountConnect = $this->getAmountConnected($userSet);
+        $imgSrc = $this->getFreeImage($amountConnect);
+
+        return ["connection"=>"1",'cid'=>$clientId, 'amount'=> $amountConnect, "img"=>$imgSrc];
     }
 
 
@@ -262,6 +265,16 @@ class Beacon {
     }
 
 
+    public function getFreeImage($amountConnected)
+    {
+        $dir = "./../../appTest/avatars/";
+        $fileNamesArr = scandir($dir);
+        if($amountConnected < sizeof($fileNamesArr))
+        {
+            return $fileNamesArr[$amountConnected];
+        }
+        return $fileNamesArr[sizeof($fileNamesArr)];
+    }
 
 
 
