@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c6abace-e918-4d91-870a-8f23e75d50c5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Server/app/Beacon.php" afterPath="$PROJECT_DIR$/Server/app/Beacon.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Server/app/response.php" afterPath="$PROJECT_DIR$/Server/app/response.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Client/js/integration.js" afterPath="$PROJECT_DIR$/Client/js/integration.js" />
     </list>
     <ignored path="HackIDC2015.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,10 +27,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Beacon.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Beacon.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Server/app/Beacon.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.94902915" vertical-offset="4027" max-vertical-offset="4935">
+            <state vertical-scroll-proportion="-26.066668" vertical-offset="4027" max-vertical-offset="4935">
               <caret line="234" column="1" selection-start-line="234" selection-start-column="1" selection-end-line="234" selection-end-column="1" />
               <folding>
                 <element signature="e#6#86#0#PHP" expanded="false" />
@@ -108,11 +107,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="integration.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="integration.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Client/js/integration.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1932" max-vertical-offset="3717">
-              <caret line="92" column="31" selection-start-line="92" selection-start-column="30" selection-end-line="92" selection-end-column="31" />
+            <state vertical-scroll-proportion="0.24590164" vertical-offset="0" max-vertical-offset="3717">
+              <caret line="10" column="48" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -133,6 +132,7 @@
       <list>
         <option value="$PROJECT_DIR$/Server/app/response.php" />
         <option value="$PROJECT_DIR$/Server/app/Beacon.php" />
+        <option value="$PROJECT_DIR$/Client/js/integration.js" />
       </list>
     </option>
   </component>
@@ -697,14 +697,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Client/js/integration.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1932" max-vertical-offset="3717">
-          <caret line="92" column="31" selection-start-line="92" selection-start-column="30" selection-end-line="92" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Client/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-19.766666" vertical-offset="3523" max-vertical-offset="4347">
@@ -723,7 +715,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Server/app/Beacon.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.94902915" vertical-offset="4027" max-vertical-offset="4935">
+        <state vertical-scroll-proportion="-26.066668" vertical-offset="4027" max-vertical-offset="4935">
           <caret line="234" column="1" selection-start-line="234" selection-start-column="1" selection-end-line="234" selection-end-column="1" />
           <folding>
             <element signature="e#6#86#0#PHP" expanded="false" />
@@ -742,6 +734,14 @@
             <marker date="1428530835238" expanded="true" signature="7592:7646" placeholder="INSERT INTO ..." />
             <marker date="1428530835238" expanded="true" signature="8076:8127" placeholder="DELETE FROM ..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Client/js/integration.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24590164" vertical-offset="0" max-vertical-offset="3717">
+          <caret line="10" column="48" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
+          <folding />
         </state>
       </provider>
     </entry>

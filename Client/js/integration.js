@@ -8,7 +8,7 @@ $(document).ready(function() {
     //two vars above this should come from beacon integration
 
 
-    var serverDomain = 'http://argov.grn.cc/';
+    var serverDomain = 'http://argov.webuda.com/';
     var managmentServerUrl = serverDomain + 'Server/app/response.php?callback=?';
     var method = 'GET';
     var connectionFlag = '0'; //0 is income, 1 is disconnect
