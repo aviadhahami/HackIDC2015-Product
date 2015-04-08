@@ -3,13 +3,13 @@ $(document).ready(function() {
 
     //Managment server integration module//
 
-    var major = '';
-    var minor = '';
+    var major = '12345';
+    var minor = '67890';
     //two vars above this should come from beacon integration
 
 
     var serverDomain = 'http://argov.grn.cc/';
-    var managmentServerUrl = serverDomain + 'Server/app/response.php';
+    var managmentServerUrl = serverDomain + 'Server/app/response.php?callback=?';
     var method = 'GET';
     var connectionFlag = '0'; //0 is income, 1 is disconnect
     var bid = major+ '.' + minor;
@@ -22,7 +22,7 @@ $(document).ready(function() {
     var connectionStatus = '';
 
     window.initiatePrimaryConnection = function(){
-    var getReqDataString = 'rid=' + connectionFlag + '&bid=' + bid; //connection GET request string
+    var getReqDataString = '&rid=' + connectionFlag + '&bid=' + bid; //connection GET request string
     $.getJSON(managmentServerUrl,getReqDataString).done(function(res){
       console.log(res);
       connectionStatus = res.connection;
