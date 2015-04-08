@@ -46,7 +46,7 @@ $(document).ready(function() {
 
     //global data
     var url = 'https://hackidc2015.imrapid.io/message';
-    var roomID = bid + 'BeaconRoom';
+    var roomID = bid + '_LocalBeaconRoom';
     var projectName = 'hackidc2015'; //do not change ! server critical (RapidAPI)
     var chatMsg ='';
 
