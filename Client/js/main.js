@@ -4,7 +4,7 @@
  *
  * Licensed under the MIT license.
  * http://www.opensource.org/licenses/mit-license.php
- * 
+ *
  * Copyright 2014, Codrops
  * http://www.codrops.com
  */
@@ -27,12 +27,12 @@
 		}
 
 		// close the menu element if the target it´s not the menu element or one of its descendants..
-		content.addEventListener( 'click', function(ev) {
+/*		content.addEventListener( 'click', function(ev) {
 			var target = ev.target;
 			if( isOpen && target !== openbtn ) {
 				toggleMenu();
 			}
-		} );
+		} );*/
 	}
 
 	function toggleMenu() {
