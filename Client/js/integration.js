@@ -71,9 +71,9 @@ $(document).ready(function() {
         msgType : 'txt'
       };
       console.log('sending message object.. msg is ',msg);
-      var outputHTMLString = generateCurrentBlob(msg);
+      /*var outputHTMLString = generateCurrentBlob(msg);
 
-      $('.chat_body').append(outputHTMLString);
+      $('.chat_body').append(outputHTMLString);*/
       ScrollFix();
       $.post(url,msg,function(data,status){
         console.log('data: ' + data + 'status : ' + status + 'from the POST');
@@ -101,9 +101,9 @@ $(document).ready(function() {
       console.log('sending message object.. msg is ',msg);
 
         //code for local double messaging
-        var outputHTMLString = generateCurrentBlob(msg);
-        $('.chat_body').append(outputHTMLString);
-        ScrollFix();
+       /* var outputHTMLString = generateCurrentBlob(msg);
+       $('.chat_body').append(outputHTMLString);*/
+       ScrollFix();
         //end of local double messaging
 
         $.post(url,msg,function(data,status){
@@ -132,6 +132,7 @@ $(document).ready(function() {
    };
 
    function generateCurrentBlobForImage(data) {
+    console.log('img blob');
     var d = new Date();
     var hours = d.getHours() < 10 ? '0' + d.getHours() : d.getHours();
     var minutes = d.getMinutes() < 10 ? '0' + d.getMinutes() : d.getMinutes();
@@ -145,11 +146,13 @@ $(document).ready(function() {
   }
 
   io.on('newMsg', function(data) {
-    var dataArr = data.split(' ');
-    if (dataArr[0] === 'txt'){
-      var outputHTMLString = generateCurrentBlob(dataArr[1]);
+    //console.log('data is ', JSON.stringify(data), 'data string is', data + '');
+    //console.log(dataArr);
+    console.log(data.msgType);
+    if (data.msgType === 'txt'){
+      var outputHTMLString = generateCurrentBlob(data.message);
     }else{
-      var outputHTMLString = generateCurrentBlobForImage(dataArr[1]);
+      var outputHTMLString = generateCurrentBlobForImage(data.message);
     }
    // alert(data);
 
