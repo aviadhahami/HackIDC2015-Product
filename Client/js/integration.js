@@ -31,8 +31,13 @@ $(document).ready(function() {
       userImg = res.img;
       localID = res.localID; //Beacon ID @ the server
     }).fail(function(e){
-      alert('Oops ! problems ! reload page!');
+      alert('Oops ! problems!, stub generated');
       console.log(e);
+      connectionStatus = 0;
+      window.cid = 0;
+      chatAmount = 5;
+      userImg = 'avatars/cyan.png';
+      localID = 0;
     });
 
   };
