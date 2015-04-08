@@ -33,7 +33,6 @@ class Beacon {
 
 
 
-
     /**
      * @return null | objectSet if beacon doesn't exists or failed in fetch returns null | returns the query set of clients
      */
