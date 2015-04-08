@@ -305,13 +305,13 @@ class Beacon {
 
     public function getFreeImage($amountConnected)
     {
-        $dir = "./../../appTest/avatars/";
+        $dir = "./../../appTest/avatars";
         $fileNamesArr = scandir($dir);
-        if($amountConnected < sizeof($fileNamesArr))
+        if($amountConnected + 2 < sizeof($fileNamesArr))
         {
-            return $fileNamesArr[$amountConnected];
+            return $fileNamesArr[$amountConnected + 2];
         }
-        return $fileNamesArr[sizeof($fileNamesArr)];
+        return $this->getFreeImage($amountConnected % sizeof($fileNamesArr));
     }
 
 
