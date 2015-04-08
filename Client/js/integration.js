@@ -2,16 +2,24 @@
 $(document).ready(function() {
 
     //Managment server integration module//
+
     var major = '';
     var minor = '';
     //two vars above this should come from beacon integration
 
-    
+
     var serverDomain = 'argov.freevar.com/';
     var managmentServerUrl = serverDomain + 'serverTest/app/response.php';
     var method = 'GET';
     var connectionFlag = '0'; //0 is income, 1 is disconnect
     var bid = major+ '.' + minor;
+    var cid = ''; //recieved by server and shouold be sent to server upon DC
+
+
+    var getReqDataString = 'rid=' + connectionFlag + '&bid=' + bid; //connection GET request string
+    $.get(managmentServerUrl,getReqDataString,function(res){
+
+    });
 
 
     //end of server integration module//
