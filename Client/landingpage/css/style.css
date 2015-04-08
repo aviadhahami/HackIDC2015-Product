@@ -1,0 +1,141 @@
+@font-face {
+  font-family: 'NexaFreeBoldwebfont';
+  src: url('../fonts/NexaFreeBoldwebfont.eot');
+  src: local('NexaFreeBoldwebfont'), url('../fonts/NexaFreeBoldwebfont.woff') format('woff'), url('../fonts/NexaFreeBoldwebfont.ttf') format('truetype');
+}
+
+body{
+    font-family: 'NexaFreeBoldwebfont';
+    text-align: center;
+    padding-bottom: 100px;
+}
+
+.splash{
+  margin-top: 140px;
+  display: inline-block;
+  text-align: left;
+}
+
+.logo{
+  margin-top: 50px;
+  float: left;
+  opacity: 0;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-delay: 1.5s;
+  -webkit-animation-iteration-count: 1;
+    -webkit-animation: 1.0s forwards;
+
+
+}
+
+.logo img{
+  width: 140px;
+height: 140px;
+}
+
+.splash-msg{
+  margin-left: 80px;
+  display: inline-block;
+}
+
+h2{
+    opacity: 0;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-delay: 2s;
+    -webkit-animation-iteration-count: 1.5;
+    color: #df7502;
+    font-size: 80pt;
+    -webkit-animation: 1.0s forwards;
+}
+.chats{
+    -webkit-animation-duration: 3s;
+  -webkit-animation-delay: 4s;
+  -webkit-animation-iteration-count: 1;
+    -webkit-animation: 1.0s forwards;
+}
+
+
+.livenow_headline{
+  margin-top: 150px;
+}
+
+.livenow_headline img{
+width: 12px;
+height: 12px;
+margin-bottom: 8px;
+}
+
+.description{
+  min-width: 430px;
+  max-width: 430px;
+}
+
+h3{
+  margin-left: 10px;
+  color: #50df02;
+  display: inline;
+}
+
+p{
+  line-height: 1.2;
+  color: #df7502;
+font-size: 24px;
+}
+
+p.chatname{
+  position: absolute;
+color: #fff;
+bottom: 3px;
+left: 15px;
+}
+
+p.numusers{
+  position: absolute;
+  color: #fff;
+  bottom: 3px;
+  right: 15px;
+}
+
+.chat{
+  margin-top: 50px;
+  position: relative;
+width: 23%;
+margin-left: 10px;
+margin-right: 10px;
+min-height: 150px;
+display: inline-block;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.chat:hover{
+  top: -5px;
+      -ms-transform: translatey(-7px); /* IE 9 */
+    -webkit-transform: translatey(-7px); /* Safari */
+    transform: translatey(-7px); /* Standard syntax */
+}
+
+.chat1{
+background: url("../img/map1.png");
+}
+
+.chat1:hover{
+  top: -5px;
+}
+
+.chat2{
+background: url("../img/map2.png");
+}
+
+.chat3{
+  background: url("../img/map3.png");
+}
+
+.footer{
+  margin-top: 100px;
+  font-family: Arial;
+  font-size: 14px;
+  color: #1c1c1c;
+}
