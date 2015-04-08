@@ -15,8 +15,8 @@ $clientID = $_GET['cid'];
 
 /*echo "</br> type of : </br>" .
     "rid = " . (gettype($requestID)) . "</br>" .
-    "bid = " . (gettype($beaconID)) . "</br>" ;*/
-
+    "bid = " . (gettype($beaconID)) . "</br>" ;
+*/
 
 
 if($requestID === 0 || $requestID === 1)
@@ -36,7 +36,7 @@ if($requestID === 0 || $requestID === 1)
     }
     elseif($requestID === 1)
     {
-        if($beaconHandler->handleDisconnectionRequest($clientID))
+        if($beaconHandler->handleDisconnectionRequest($clientID, intval($beaconID)))
         {
             echo json_encode(["connection"=>"1"]);
         }

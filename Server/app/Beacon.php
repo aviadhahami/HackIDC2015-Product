@@ -8,11 +8,12 @@
 
 class Beacon {
 
-    public $beaconID;
+    public $beaconID;//Represent an MAC address
     public $responseID;
     public $mysqli;
     public $beaconTable;
     public $clientTable;
+    public $beaconIndex;
 
     function __construct($beaconID, $responseID)
     {
@@ -23,6 +24,8 @@ class Beacon {
 
         $this->beaconTable = "beacon";
         $this->clientTable = "clients";
+
+        $this->beaconIndex = 0;
     }
 
 
@@ -42,13 +45,17 @@ class Beacon {
         $resultSetNumRows = $resultSet->num_rows;
         if(false || $resultSetNumRows === 0)
         {
+
             return null;
         }
 
         elseif($resultSetNumRows === 1)
         {
+            $beaconRowForExtractingId = $resultSet->fetch_object();
+            $this->beaconIndex = $beaconRowForExtractingId->id;
             return $this->getClientsSet();
         }
+        $this->beaconIndex = -1;
 
         return null;
 
@@ -61,12 +68,14 @@ class Beacon {
      */
     private function getClientsSet()
     {
+        //TODO: check if the beacon index is greated then 1 aka valid index
         $localClientTbl = $this->clientTable;
-        $localBeacon = $this->beaconID;
+        //$localBeacon = $this->beaconID;
+        $localBeacon = $this->beaconIndex;//Changed to work with new table structure
 
         $returnArr = array();
 
-        $getClientSetQuery = "SELECT * FROM $localClientTbl WHERE bid = '$localBeacon'";
+        $getClientSetQuery = "SELECT * FROM $localClientTbl WHERE bid = $localBeacon";//crossing against id from other table
 
         $clientSetResult = $this->mysqli->query($getClientSetQuery);
 
@@ -95,12 +104,13 @@ class Beacon {
 
     private function addNewClient($clientArr)
     {
-        $localBeaconId = $this->beaconID;
+        //$localBeaconId = $this->beaconID;
+        $localBeaconId = $this->beaconIndex;//Changed to work with new table Structure
         $localClientTable = $this->clientTable;
 
         $clientId = $this->generateClientId($clientArr);
 
-        $addNewClientQuery = "INSERT INTO $localClientTable (bid, uid) VALUES ('$localBeaconId', '$clientId')";
+        $addNewClientQuery = "INSERT INTO $localClientTable (bid, uid) VALUES ($localBeaconId, '$clientId')";
 
         $addNewClientExecute = $this->mysqli->query($addNewClientQuery);
 
@@ -134,11 +144,11 @@ class Beacon {
     public function handleConnectionRequest()
     {
         ///
-        //echo "</br> entered HandleConnection";
+       // echo "</br> entered HandleConnection";
         ///
         $userSet = $this->isBeaconExists();
 
-       // echo "</br> userset : " . print_r($userSet) . "||</br>";
+        //echo "</br> userset : " . print_r($userSet) . "||</br>";
 
         if($userSet === null)
         {
@@ -150,16 +160,21 @@ class Beacon {
         $clientId = $this->addNewClient($userSet);
 
         ////
-       // echo "</br> clientID = ". $clientId ."</br>";
+        //echo "</br> clientID = ". $clientId ."</br>";
         ////
 
         if($clientId === null)
         {
             return ["connection"=>"-1"];
         }
-        //echo "</br> second if block passed in connection handler </br>";
+       // echo "</br> second if block passed in connection handler </br>";
 
-        return ["connection"=>"1",'cid'=>$clientId, 'amount'=> $this->getAmountConnected($userSet)];
+        $amountConnect = $this->getAmountConnected($userSet);
+        $imgSrc = $this->getFreeImage($amountConnect);
+        $localBeaconIndex = $this->beaconIndex;
+
+        //now returns aslo the localID of the beacon
+        return ["connection"=>"1",'cid'=>$clientId, 'amount'=> $amountConnect, "img"=>$imgSrc, "localID"=>$localBeaconIndex];
     }
 
 
@@ -168,24 +183,28 @@ class Beacon {
     /////////////////////////////////////////////////////////////////////////////
     /////////////////////////////////////////////////////////////////////////////
     /////////////////////////////////////////////////////////////////////////////
-    public function handleDisconnectionRequest($clientID)
+    public function handleDisconnectionRequest($clientID, $beaconID)
     {
-        $bool = $this->verifyBeaconBoolean();
+
         //echo "</br> handleDisconnect berifyBeaconbool = " .$bool ."</br>";
+        $this->beaconIndex = $beaconID;
+        $bool = $this->verifyBeaconBooleanWithID();
         if($bool)
         {
-            return $this->removeClientFromDB($clientID);
+            return $this->removeClientFromDB($clientID, $beaconID);//Added a parameter
         }
         return false;
     }
 
 
-    private function removeClientFromDB($clientID)
+    //Changed added one more parameter!!!
+    private function removeClientFromDB($clientID,$beaconID)
     {
-        $localBeaconId = $this->beaconID;
+        //$localBeaconId = $this->beaconID;
+        $localBeaconId = $beaconID;//Meant to work correctly
         $localClientTable = $this->clientTable;
 
-        $removeClientQuery = "DELETE FROM $localClientTable WHERE bid = '$localBeaconId' AND uid = '$clientID'";
+        $removeClientQuery = "DELETE FROM $localClientTable WHERE bid = $localBeaconId AND uid = '$clientID'";
 
         $removeClientExecute = $this->mysqli->query($removeClientQuery);
         if($removeClientExecute === true)
@@ -201,6 +220,28 @@ class Beacon {
         $localBeacon = $this->beaconID;
         $beaconTbl = $this->beaconTable;
         $beaconExistsQuery = "SELECT * FROM $beaconTbl WHERE bid = '$localBeacon'";
+
+        $resultSet = $this->mysqli->query($beaconExistsQuery);
+        $resultSetNumRows = $resultSet->num_rows;
+        if(false || $resultSetNumRows === 0)
+        {
+            return false;
+        }
+
+        elseif($resultSetNumRows === 1)
+        {
+            return true;
+        }
+
+        return false;
+
+    }
+
+    public function verifyBeaconBooleanWithID()
+    {
+        $localBeacon = $this->beaconIndex;
+        $beaconTbl = $this->beaconTable;
+        $beaconExistsQuery = "SELECT * FROM $beaconTbl WHERE id = $localBeacon";
 
         $resultSet = $this->mysqli->query($beaconExistsQuery);
         $resultSetNumRows = $resultSet->num_rows;
@@ -262,7 +303,16 @@ class Beacon {
     }
 
 
-
+    public function getFreeImage($amountConnected)
+    {
+        $dir = "./../../appTest/avatars/";
+        $fileNamesArr = scandir($dir);
+        if($amountConnected < sizeof($fileNamesArr))
+        {
+            return $fileNamesArr[$amountConnected];
+        }
+        return $fileNamesArr[sizeof($fileNamesArr)];
+    }
 
 
 }
