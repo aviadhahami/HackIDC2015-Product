@@ -20,8 +20,10 @@ class Beacon {
         $this->beaconID = $beaconID;
         $this->responseID = $responseID;
 
-        $this->mysqli = new mysqli("localhost","839771","argov123","839771");
+       // $this->mysqli = new mysqli("localhost","839771","argov123","839771");
+        //$this->mysqli = new mysqli("localhost","username","pass","dbname");
 
+        $this->mysqli = new mysqli("mysql.grendelhosting.com","u840437630_argov","argov123","u840437630_argov");
         $this->beaconTable = "beacon";
         $this->clientTable = "clients";
 
@@ -305,7 +307,7 @@ class Beacon {
 
     public function getFreeImage($amountConnected)
     {
-        $dir = "./../../appTest/avatars";
+        $dir = "./../../Client/avatars";
         $fileNamesArr = scandir($dir);
         if($amountConnected + 2 < sizeof($fileNamesArr))
         {

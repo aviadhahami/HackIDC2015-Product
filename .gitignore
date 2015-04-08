@@ -43,3 +43,4 @@ Temporary Items
 .apdisk
 *.xml
 *.xml
+.idea/workspace.xml

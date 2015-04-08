@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1c6abace-e918-4d91-870a-8f23e75d50c5" name="Default" comment="" />
+    <list default="true" id="1c6abace-e918-4d91-870a-8f23e75d50c5" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Server/app/Beacon.php" afterPath="$PROJECT_DIR$/Server/app/Beacon.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="HackIDC2015.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -28,32 +31,25 @@
       <file leaf-file-name="Beacon.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Server/app/Beacon.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7254902" vertical-offset="5913" max-vertical-offset="6678">
-              <caret line="313" column="74" selection-start-line="313" selection-start-column="74" selection-end-line="313" selection-end-column="74" />
+            <state vertical-scroll-proportion="0.74880385" vertical-offset="5758" max-vertical-offset="6720">
+              <caret line="309" column="24" selection-start-line="309" selection-start-column="24" selection-end-line="309" selection-end-column="24" />
               <folding>
-                <marker date="1428504892497" expanded="true" signature="902:939" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
-                <marker date="1428504892497" expanded="true" signature="902:952" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
-                <marker date="1428504892497" expanded="true" signature="902:953" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
-                <marker date="1428504892497" expanded="true" signature="1772:1913" placeholder="SELECT * FRO.._localClientTbl WHERE..." />
-                <marker date="1428504892497" expanded="true" signature="1929:1971" placeholder="SELECT * FRO.._localClientTbl WHERE..." />
-                <marker date="1428504892497" expanded="true" signature="1929:1983" placeholder="SELECT * FRO.._localClientTbl WHERE..." />
-                <marker date="1428504892497" expanded="true" signature="3013:3090" placeholder="INSERT INTO ..." />
-                <marker date="1428504892497" expanded="true" signature="5672:5701" placeholder="DELETE FROM ..." />
-                <marker date="1428504892497" expanded="true" signature="5672:5728" placeholder="DELETE FROM ..." />
-                <marker date="1428504892497" expanded="true" signature="5672:5732" placeholder="DELETE FROM ..." />
-                <marker date="1428504892497" expanded="true" signature="5672:5750" placeholder="DELETE FROM ..." />
-                <marker date="1428504892497" expanded="true" signature="5672:5752" placeholder="DELETE FROM ..." />
-                <marker date="1428504892497" expanded="true" signature="5672:6015" placeholder="DELETE FROM ..." />
-                <marker date="1428504892497" expanded="true" signature="6103:6154" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
-                <marker date="1428504892497" expanded="true" signature="6647:6683" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
-                <marker date="1428504892497" expanded="true" signature="6647:6695" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
-                <marker date="1428504892497" expanded="true" signature="7480:7517" placeholder="INSERT INTO ..." />
-                <marker date="1428504892497" expanded="true" signature="7480:7534" placeholder="INSERT INTO ..." />
-                <marker date="1428504892497" expanded="true" signature="7969:7981" placeholder="DELETE FROM ..." />
-                <marker date="1428504892497" expanded="true" signature="7969:7982" placeholder="DELETE FROM ..." />
-                <marker date="1428504892497" expanded="true" signature="7969:7997" placeholder="DELETE FROM ..." />
-                <marker date="1428504892497" expanded="true" signature="7969:8003" placeholder="DELETE FROM ..." />
-                <marker date="1428504892497" expanded="true" signature="7969:8020" placeholder="DELETE FROM ..." />
+                <marker date="1428512309670" expanded="true" signature="1095:1132" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
+                <marker date="1428512309670" expanded="true" signature="1095:1145" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
+                <marker date="1428512309670" expanded="true" signature="1095:1146" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
+                <marker date="1428512309670" expanded="true" signature="1965:2106" placeholder="SELECT * FRO.._localClientTbl WHERE..." />
+                <marker date="1428512309670" expanded="true" signature="2122:2164" placeholder="SELECT * FRO.._localClientTbl WHERE..." />
+                <marker date="1428512309670" expanded="true" signature="2122:2176" placeholder="SELECT * FRO.._localClientTbl WHERE..." />
+                <marker date="1428512309670" expanded="true" signature="3206:3283" placeholder="INSERT INTO ..." />
+                <marker date="1428512309670" expanded="true" signature="5865:5894" placeholder="DELETE FROM ..." />
+                <marker date="1428512309670" expanded="true" signature="5865:5921" placeholder="DELETE FROM ..." />
+                <marker date="1428512309670" expanded="true" signature="5865:5925" placeholder="DELETE FROM ..." />
+                <marker date="1428512309670" expanded="true" signature="5865:5943" placeholder="DELETE FROM ..." />
+                <marker date="1428512309670" expanded="true" signature="5865:5945" placeholder="DELETE FROM ..." />
+                <marker date="1428512309670" expanded="true" signature="6296:6347" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
+                <marker date="1428512309670" expanded="true" signature="6840:6876" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
+                <marker date="1428512309670" expanded="true" signature="7673:7727" placeholder="INSERT INTO ..." />
+                <marker date="1428512309670" expanded="true" signature="8162:8213" placeholder="DELETE FROM ..." />
               </folding>
             </state>
           </provider>
@@ -62,7 +58,7 @@
       <file leaf-file-name="postHandler.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Server/app/postHandler.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.9" vertical-offset="0" max-vertical-offset="483">
+            <state vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="483">
               <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
               <folding />
             </state>
@@ -72,7 +68,7 @@
       <file leaf-file-name="imgHandler.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Server/app/imgHandler.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.2" vertical-offset="0" max-vertical-offset="1008">
+            <state vertical-scroll-proportion="0.0" vertical-offset="336" max-vertical-offset="1008">
               <caret line="16" column="49" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
               <folding>
                 <element signature="e#6#93#0#PHP" expanded="true" />
@@ -84,7 +80,7 @@
       <file leaf-file-name="response.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Server/app/response.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.3863637" vertical-offset="63" max-vertical-offset="1239">
+            <state vertical-scroll-proportion="0.0" vertical-offset="63" max-vertical-offset="1239">
               <caret line="18" column="2" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
               <folding />
             </state>
@@ -233,56 +229,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HackIDC2015" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HackIDC2015" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HackIDC2015" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HackIDC2015" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HackIDC2015" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HackIDC2015" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -292,6 +238,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="recentsLimit" value="5" />
+    <property name="FullScreen" value="false" />
   </component>
   <component name="RunManager" selected="JavaScript Debug.index.html">
     <configuration default="false" name="index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/HackIDC2015/Client/index.html">
@@ -316,15 +263,15 @@
     <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="">
       <method />
     </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server" server_id="8110eb32-4367-4b98-8ab5-bc8dcf14ab80" server_name="photogalla">
-      <method />
-    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-options />
       <gulpfile />
       <tasks />
       <pass-parent-envs>true</pass-parent-envs>
       <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server" server_id="8110eb32-4367-4b98-8ab5-bc8dcf14ab80" server_name="photogalla">
       <method />
     </configuration>
     <list size="1">
@@ -337,6 +284,9 @@
     </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="1c6abace-e918-4d91-870a-8f23e75d50c5" name="Default" comment="" />
@@ -435,27 +385,27 @@
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Robotlegs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Robotlegs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3074572" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3850227" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32997763" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -495,49 +445,34 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Client/index.html">
+    <entry file="file://$PROJECT_DIR$/Server/app/Beacon.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4914">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6678">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Client/css/chatapp.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="3255">
-          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Client/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1598">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Client/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1848" max-vertical-offset="4914">
-          <caret line="88" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Client/css/chatapp.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="3255">
-          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-          <folding />
+          <folding>
+            <marker date="1428512309670" expanded="true" signature="1095:1132" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
+            <marker date="1428512309670" expanded="true" signature="1095:1145" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
+            <marker date="1428512309670" expanded="true" signature="1095:1146" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
+            <marker date="1428512309670" expanded="true" signature="1965:2106" placeholder="SELECT * FRO.._localClientTbl WHERE..." />
+            <marker date="1428512309670" expanded="true" signature="2122:2164" placeholder="SELECT * FRO.._localClientTbl WHERE..." />
+            <marker date="1428512309670" expanded="true" signature="2122:2176" placeholder="SELECT * FRO.._localClientTbl WHERE..." />
+            <marker date="1428512309670" expanded="true" signature="3206:3283" placeholder="INSERT INTO ..." />
+            <marker date="1428512309670" expanded="true" signature="5865:5894" placeholder="DELETE FROM ..." />
+            <marker date="1428512309670" expanded="true" signature="5865:5921" placeholder="DELETE FROM ..." />
+            <marker date="1428512309670" expanded="true" signature="5865:5925" placeholder="DELETE FROM ..." />
+            <marker date="1428512309670" expanded="true" signature="5865:5943" placeholder="DELETE FROM ..." />
+            <marker date="1428512309670" expanded="true" signature="5865:5945" placeholder="DELETE FROM ..." />
+            <marker date="1428512309670" expanded="true" signature="6296:6347" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
+            <marker date="1428512309670" expanded="true" signature="6840:6876" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
+            <marker date="1428512309670" expanded="true" signature="7673:7727" placeholder="INSERT INTO ..." />
+            <marker date="1428512309670" expanded="true" signature="8162:8213" placeholder="DELETE FROM ..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Server/app/postHandler.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.9" vertical-offset="0" max-vertical-offset="483">
+        <state vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="483">
           <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
           <folding />
         </state>
@@ -545,7 +480,78 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Server/app/imgHandler.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.2" vertical-offset="0" max-vertical-offset="1008">
+        <state vertical-scroll-proportion="0.0" vertical-offset="336" max-vertical-offset="1008">
+          <caret line="16" column="49" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
+          <folding>
+            <element signature="e#6#93#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/app/response.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="63" max-vertical-offset="1239">
+          <caret line="18" column="2" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/app/lib/ajax.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="189" max-vertical-offset="1470">
+          <caret line="31" column="7" selection-start-line="31" selection-start-column="7" selection-end-line="31" selection-end-column="7" />
+          <folding>
+            <element signature="n#!!doc;n#HandleNewConnection#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Client/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4914">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Client/css/chatapp.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="3255">
+          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Client/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1598">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Client/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1848" max-vertical-offset="4914">
+          <caret line="88" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Client/css/chatapp.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="3255">
+          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/app/postHandler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="483">
+          <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/app/imgHandler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="336" max-vertical-offset="1008">
           <caret line="16" column="49" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
           <folding>
             <element signature="e#6#93#0#PHP" expanded="true" />
@@ -565,40 +571,41 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Server/app/response.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.3863637" vertical-offset="63" max-vertical-offset="1239">
+        <state vertical-scroll-proportion="0.0" vertical-offset="63" max-vertical-offset="1239">
           <caret line="18" column="2" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/mysqli.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34507897" vertical-offset="2572" max-vertical-offset="67788">
+          <caret line="139" column="20" selection-start-line="139" selection-start-column="20" selection-end-line="139" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Server/app/Beacon.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7254902" vertical-offset="5913" max-vertical-offset="6678">
-          <caret line="313" column="74" selection-start-line="313" selection-start-column="74" selection-end-line="313" selection-end-column="74" />
+        <state vertical-scroll-proportion="0.74880385" vertical-offset="5758" max-vertical-offset="6720">
+          <caret line="309" column="24" selection-start-line="309" selection-start-column="24" selection-end-line="309" selection-end-column="24" />
           <folding>
-            <marker date="1428504892497" expanded="true" signature="902:939" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
-            <marker date="1428504892497" expanded="true" signature="902:952" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
-            <marker date="1428504892497" expanded="true" signature="902:953" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
-            <marker date="1428504892497" expanded="true" signature="1772:1913" placeholder="SELECT * FRO.._localClientTbl WHERE..." />
-            <marker date="1428504892497" expanded="true" signature="1929:1971" placeholder="SELECT * FRO.._localClientTbl WHERE..." />
-            <marker date="1428504892497" expanded="true" signature="1929:1983" placeholder="SELECT * FRO.._localClientTbl WHERE..." />
-            <marker date="1428504892497" expanded="true" signature="3013:3090" placeholder="INSERT INTO ..." />
-            <marker date="1428504892497" expanded="true" signature="5672:5701" placeholder="DELETE FROM ..." />
-            <marker date="1428504892497" expanded="true" signature="5672:5728" placeholder="DELETE FROM ..." />
-            <marker date="1428504892497" expanded="true" signature="5672:5732" placeholder="DELETE FROM ..." />
-            <marker date="1428504892497" expanded="true" signature="5672:5750" placeholder="DELETE FROM ..." />
-            <marker date="1428504892497" expanded="true" signature="5672:5752" placeholder="DELETE FROM ..." />
-            <marker date="1428504892497" expanded="true" signature="5672:6015" placeholder="DELETE FROM ..." />
-            <marker date="1428504892497" expanded="true" signature="6103:6154" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
-            <marker date="1428504892497" expanded="true" signature="6647:6683" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
-            <marker date="1428504892497" expanded="true" signature="6647:6695" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
-            <marker date="1428504892497" expanded="true" signature="7480:7517" placeholder="INSERT INTO ..." />
-            <marker date="1428504892497" expanded="true" signature="7480:7534" placeholder="INSERT INTO ..." />
-            <marker date="1428504892497" expanded="true" signature="7969:7981" placeholder="DELETE FROM ..." />
-            <marker date="1428504892497" expanded="true" signature="7969:7982" placeholder="DELETE FROM ..." />
-            <marker date="1428504892497" expanded="true" signature="7969:7997" placeholder="DELETE FROM ..." />
-            <marker date="1428504892497" expanded="true" signature="7969:8003" placeholder="DELETE FROM ..." />
-            <marker date="1428504892497" expanded="true" signature="7969:8020" placeholder="DELETE FROM ..." />
+            <marker date="1428512309670" expanded="true" signature="1095:1132" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
+            <marker date="1428512309670" expanded="true" signature="1095:1145" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
+            <marker date="1428512309670" expanded="true" signature="1095:1146" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
+            <marker date="1428512309670" expanded="true" signature="1965:2106" placeholder="SELECT * FRO.._localClientTbl WHERE..." />
+            <marker date="1428512309670" expanded="true" signature="2122:2164" placeholder="SELECT * FRO.._localClientTbl WHERE..." />
+            <marker date="1428512309670" expanded="true" signature="2122:2176" placeholder="SELECT * FRO.._localClientTbl WHERE..." />
+            <marker date="1428512309670" expanded="true" signature="3206:3283" placeholder="INSERT INTO ..." />
+            <marker date="1428512309670" expanded="true" signature="5865:5894" placeholder="DELETE FROM ..." />
+            <marker date="1428512309670" expanded="true" signature="5865:5921" placeholder="DELETE FROM ..." />
+            <marker date="1428512309670" expanded="true" signature="5865:5925" placeholder="DELETE FROM ..." />
+            <marker date="1428512309670" expanded="true" signature="5865:5943" placeholder="DELETE FROM ..." />
+            <marker date="1428512309670" expanded="true" signature="5865:5945" placeholder="DELETE FROM ..." />
+            <marker date="1428512309670" expanded="true" signature="6296:6347" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
+            <marker date="1428512309670" expanded="true" signature="6840:6876" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
+            <marker date="1428512309670" expanded="true" signature="7673:7727" placeholder="INSERT INTO ..." />
+            <marker date="1428512309670" expanded="true" signature="8162:8213" placeholder="DELETE FROM ..." />
           </folding>
         </state>
       </provider>
