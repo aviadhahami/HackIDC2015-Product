@@ -9,6 +9,7 @@ $(document).ready(function() {
     $(window).resize(function() {
         fitChatWindow();
     });
+
     //Overriding "ENTER" key for send msg
     $('.chat_input_box').on('keyup',function(e){
     	if (e.which == 13){
@@ -18,6 +19,7 @@ $(document).ready(function() {
     });
     $('.username_form').submit(function(){
     	window.clientName = $('#namePick').val().length < 4 ? chance.name() : $('#namePick').val();
+        window.initiatePrimaryConnection();
     });
 
     function mobilecheck() {
