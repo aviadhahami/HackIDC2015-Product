@@ -152,6 +152,7 @@ $(document).ready(function() {
     if (data.msgType === 'txt'){
       var outputHTMLString = generateCurrentBlob(data);
     }else{
+      $('#open-button').click();
       var outputHTMLString = generateCurrentBlobForImage(data);
     }
    // alert(data);
