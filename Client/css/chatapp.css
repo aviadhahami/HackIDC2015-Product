@@ -225,10 +225,13 @@ body {
     border: 1px solid #e6e6e6;
 }
 
+.chat_gif_btn:hover, .chat_gif_btn:active, .chat_gif_btn:focus {
+    background: white;
+}
+
 .chat_body{
     padding-top: 20px;
-    padding-bottom: 50px;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 @media (max-width: 768px) {
@@ -239,5 +242,8 @@ body {
     }
 }
 
+.gif_toggle_icon {
+    transition: all 0.4s;
+}
 
 

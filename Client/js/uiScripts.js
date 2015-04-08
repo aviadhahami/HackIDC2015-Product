@@ -28,7 +28,8 @@ $(document).ready(function() {
 
     var isOpen = false;
     $('#open-button').on('click', function(){
-       toggleMenu();
+       toggleGifMenu();
+
     });
 
     $('.chat_body').on('click', function(ev) {
@@ -36,12 +37,12 @@ $(document).ready(function() {
         if (isOpen && eventClass != "gif_drawer" && eventClass != "btn btn-default chat_gif_btn") {
             /*console.log(isOpen);
             console.log("yay" + $(event.target).attr('class'));*/
-            toggleMenu();
+            toggleGifMenu();
 
         }
     });
 
-    function toggleMenu() {
+    function toggleGifMenu() {
         if(!isOpen){
             console.log('hi');
             $('.gif_drawer').css({
@@ -51,6 +52,7 @@ $(document).ready(function() {
                 '-o-transform'      : 'translate3d(0, 0, 0)',
                 'transform'         : 'translate3d(0, 0, 0)'
             });
+            $('.gif_toggle_icon').css('transform', 'rotate(45deg)');
             isOpen = true;
         }
         else{
@@ -62,6 +64,9 @@ $(document).ready(function() {
                 '-o-transform'      : 'translate3d(0, 750px, 0)',
                 'transform'         : 'translate3d(0, 750px, 0)'
             });
+            $('.gif_toggle_icon').css('transform', 'rotate(0)');
+
+
             isOpen = false;
         }
     }
