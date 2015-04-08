@@ -31,8 +31,7 @@ $(document).ready(function() {
     var isOpen = false;
     $('#open-button').on('click', function(){
        toggleGifMenu();
-
-    });
+   });
 
     $('.chat_body').on('click', function(ev) {
         var eventClass = $(event.target).attr('class');
@@ -40,6 +39,7 @@ $(document).ready(function() {
             /*console.log(isOpen);
             console.log("yay" + $(event.target).attr('class'));*/
             toggleGifMenu();
+            //console.log('opening drawer');
 
         }
     });
@@ -51,8 +51,10 @@ $(document).ready(function() {
         input.val(input.val() +" @" +name + " ");
     });
 
-    function toggleGifMenu() {
-        if(!isOpen){
+
+
+   var toggleGifMenu = function () {
+    if(!isOpen){
             //console.log('hi');
             $('.gif_drawer').css({
                 '-webkit-transform' : 'translate3d(0, 0, 0)',

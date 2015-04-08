@@ -92,18 +92,19 @@ $(document).ready(function() {
     $('.gif_drawer img').on('click',function(){
       chatMsg = $(this).attr('src');
       $('#chatMsg').val('');
+//close drawer
+$('#open-button').click();
+var msg = {
+  name: window.clientName,
+  message : chatMsg,
+  room : roomID,
+  userID : userID,
+  userImg : userImg,
+  msgType : 'img'
+};
 
-      var msg = {
-        name: window.clientName,
-        message : chatMsg,
-        room : roomID,
-        userID : userID,
-        userImg : userImg,
-        msgType : 'img'
-      };
 
-
-      console.log('sending message object.. msg is ',msg);
+console.log('sending message object.. msg is ',msg);
 
         //code for local double messaging
        /* var outputHTMLString = generateCurrentBlob(msg);
@@ -158,7 +159,6 @@ $(document).ready(function() {
     if (data.msgType === 'txt'){
       var outputHTMLString = generateCurrentBlob(data);
     }else{
-      $('#open-button').click();
       var outputHTMLString = generateCurrentBlobForImage(data);
     }
    // alert(data);
