@@ -8,11 +8,12 @@
 
 class Beacon {
 
-    public $beaconID;
+    public $beaconID;//Represent an MAC address
     public $responseID;
     public $mysqli;
     public $beaconTable;
     public $clientTable;
+    public $beaconIndex;
 
     function __construct($beaconID, $responseID)
     {
@@ -23,6 +24,8 @@ class Beacon {
 
         $this->beaconTable = "beacon";
         $this->clientTable = "clients";
+
+        $this->beaconIndex = 0;
     }
 
 
@@ -42,13 +45,17 @@ class Beacon {
         $resultSetNumRows = $resultSet->num_rows;
         if(false || $resultSetNumRows === 0)
         {
+
             return null;
         }
 
         elseif($resultSetNumRows === 1)
         {
+            $beaconRowForExtractingId = $resultSet->fetch_object();
+            $this->beaconIndex = $beaconRowForExtractingId->id;
             return $this->getClientsSet();
         }
+        $this->beaconIndex = -1;
 
         return null;
 
@@ -61,12 +68,14 @@ class Beacon {
      */
     private function getClientsSet()
     {
+        //TODO: check if the beacon index is greated then 1 aka valid index
         $localClientTbl = $this->clientTable;
-        $localBeacon = $this->beaconID;
+        //$localBeacon = $this->beaconID;
+        $localBeacon = $this->beaconIndex;//Changed to work with new table structure
 
         $returnArr = array();
 
-        $getClientSetQuery = "SELECT * FROM $localClientTbl WHERE bid = '$localBeacon'";
+        $getClientSetQuery = "SELECT * FROM $localClientTbl WHERE bid = '$localBeacon'";//crossing against id from other table
 
         $clientSetResult = $this->mysqli->query($getClientSetQuery);
 
@@ -95,7 +104,8 @@ class Beacon {
 
     private function addNewClient($clientArr)
     {
-        $localBeaconId = $this->beaconID;
+        //$localBeaconId = $this->beaconID;
+        $localBeaconId = $this->beaconIndex;//Changed to work with new table Structure
         $localClientTable = $this->clientTable;
 
         $clientId = $this->generateClientId($clientArr);
@@ -185,7 +195,8 @@ class Beacon {
 
     private function removeClientFromDB($clientID)
     {
-        $localBeaconId = $this->beaconID;
+        //$localBeaconId = $this->beaconID;
+        $localBeaconId = $this->beaconIndex;//Meant to work correctly
         $localClientTable = $this->clientTable;
 
         $removeClientQuery = "DELETE FROM $localClientTable WHERE bid = '$localBeaconId' AND uid = '$clientID'";
@@ -275,7 +286,6 @@ class Beacon {
         }
         return $fileNamesArr[sizeof($fileNamesArr)];
     }
-
 
 
 }
