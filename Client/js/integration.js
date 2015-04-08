@@ -2,12 +2,21 @@
 $(document).ready(function() {
 
     //Managment server integration module//
+    var major = '';
+    var minor = '';
+    //two vars above this should come from beacon integration
 
+    
+    var serverDomain = 'argov.freevar.com/';
+    var managmentServerUrl = serverDomain + 'serverTest/app/response.php';
+    var method = 'GET';
+    var connectionFlag = '0'; //0 is income, 1 is disconnect
+    var bid = major+ '.' + minor;
 
 
     //end of server integration module//
 
-    
+
     //global data
     var url = 'https://hackidc2015.imrapid.io/message';
     var roomID = 'david';
