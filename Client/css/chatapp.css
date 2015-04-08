@@ -14,7 +14,6 @@ body {
   height: 100%;
   padding-top: 50px;
   font-family: 'Open Sans';
-  overflow: hidden;
 }
 
 /*
@@ -116,8 +115,10 @@ body {
 }
 
 .user_msg {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
+
+
 
 .user_icon_container {
     width: 65px;
@@ -143,8 +144,17 @@ body {
     width: inherit;
     position: fixed;
     bottom: 0;
-    padding: 10px;
-    background: white;
+    padding: 0 8px 4px 8px;
+}
+
+@media (min-width: 768px) {
+  .chat_input_area{
+    z-index: 1000;
+    width: inherit;
+    position: fixed;
+    bottom: 0;
+    padding: 0 20px 4px 8px;
+  }
 }
 
 .chat_input_box {
@@ -157,6 +167,7 @@ body {
     outline: none;
     height: 46px;
     border: 1px solid #e6e6e6;
+    box-shadow: 15px 15px 15px #fff;
 }
 
 .chat_send_btn {
@@ -167,8 +178,16 @@ body {
 
 .chat_body{
     height: 100%;
-    /*overflow-y: scroll;*/
+    padding-bottom: 50px;
+    overflow-y: scroll;
 }
+
+@media (max-width: 768px) {
+  .chat_body{
+      height: 100%;
+      padding: 0px 10px 50px 10px;
+    }
+  }
 
 
 
