@@ -40,7 +40,7 @@ $(document).ready(function() {
       userImg = 'avatars/cyan.png';
       localID = 0;
     }).always(function(){
-     userID = localID === '' ? 0 : localID;
+      userID = window.cid === '' ? 0 : window.cid;
    });
 
   };
@@ -187,7 +187,8 @@ $('#roomTag').text('@' + roomID);
     //console.log('data is ', JSON.stringify(data), 'data string is', data + '');
     //console.log(dataArr);
     console.log(data.msgType);
-    if (! (data.userID === userID)){
+    console.log(data.userID);
+    if (! (data.userID == userID)){
       if (data.msgType === 'txt'){
         var outputHTMLString = generateCurrentBlob(data,false);
       }else{
