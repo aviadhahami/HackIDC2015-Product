@@ -90,9 +90,9 @@ $(document).ready(function() {
 
 
         if (status === "success") {
-          //$('.timestamp').append('V');
+          //$('.timestamp').append('Recieved');
           var currentMsg = $('h4[data-userID=' + userID + ']');
-          currentMsg.append('V');
+          currentMsg.append('Recieved');
           currentMsg.removeAttr('data-userID');
         }
       });
@@ -130,7 +130,7 @@ $(document).ready(function() {
             //mark V if recieved by server
             if (status === "success") {
               var currentMsg = $('h4[data-userID=' + userID + ']');
-              currentMsg.append('V');
+              currentMsg.append('Recieved');
               currentMsg.removeAttr('data-userID');
             }
           });
