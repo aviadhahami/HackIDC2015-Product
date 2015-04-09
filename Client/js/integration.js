@@ -55,7 +55,7 @@ $(document).ready(function() {
       //end of members population
 
       //shout to RapidAPI for new user
-      var newUserURL = 'https://hackidc2015.imrapid.io/users';
+      var newUserURL = 'http://hackidc2015.imrapid.io/users';
       var requestObject = {
         cid : window.cid,
         clientName : window.clientName,
