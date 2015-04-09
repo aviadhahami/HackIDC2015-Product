@@ -5,14 +5,17 @@
  * Date: 4/7/2015
  * Time: 7:30 PM
  */
-class Beacon {
+class beaconNew {
     public $beaconID;//Represent an MAC address
     public $responseID;
     public $mysqli;
     public $beaconTable;
     public $clientTable;
     public $beaconIndex;
-    function __construct($beaconID, $responseID)
+
+    
+
+    function __construct($beaconID, $responseID, $name)
     {
         $this->beaconID = $beaconID;
         $this->responseID = $responseID;
