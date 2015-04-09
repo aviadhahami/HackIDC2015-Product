@@ -6,11 +6,14 @@
  * Time: 7:13 PM
  */
 
-include_once("Beacon.php");
+//
+//include_once("Beacon.php");
+
+include_once("beaconNew.php");
 
 $requestID = intval($_GET['rid']);
 $beaconID = $_GET['bid'];
-
+$name = $_GET['userName'];//new
 $clientID = $_GET['cid'];//Only upon disconnection request
 $cb = $_GET['callback'];
 
