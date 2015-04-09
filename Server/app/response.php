@@ -44,7 +44,7 @@ if($requestID === 0 || $requestID === 1)
 // {connection:"-1/0/1""userId":"userid", "amountConnected":"??"}
 function parseResponseToJson($resArr)
 {
-    return json_encode($resArr);
+    return json_encode($resArr,JSON_FORCE_OBJECT);
 }
 
 
