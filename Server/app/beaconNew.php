@@ -122,7 +122,8 @@ class beaconNew {
         for($i = 0; $i < sizeof($clientArr); $i++)
         {
             $currentObjectInArray = $clientArr[$i];
-            $namesArray[] = $currentObjectInArray->name;
+            $name = $currentObjectInArray->name;
+            $this->array_push_assoc($namesArray,"'".$i."'",$name);
         }
 
         return $namesArray;
@@ -130,6 +131,10 @@ class beaconNew {
     }
 
 
+    private function array_push_assoc($array, $key, $value){
+        $array[$key] = $value;
+        return $array;
+    }
 
 
     public function handleConnectionRequest()
