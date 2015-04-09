@@ -13,7 +13,7 @@ class beaconNew {
     public $clientTable;
     public $beaconIndex;
 
-    
+    public $name;//new
 
     function __construct($beaconID, $responseID, $name)
     {
@@ -24,6 +24,8 @@ class beaconNew {
         $this->beaconTable = "beacon";
         $this->clientTable = "clients";
         $this->beaconIndex = 0;
+
+        $this->name = $name;//new
     }
     /**
      * @return null | objectSet if beacon doesn't exists or failed in fetch returns null | returns the query set of clients
