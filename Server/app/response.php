@@ -21,7 +21,7 @@ $cb = $_GET['callback'];
 //  0 - new user , 1 disconnect a user
 if($requestID === 0 || $requestID === 1)
 {
-    $beaconHandler = new Beacon($beaconID,$requestID);
+    $beaconHandler = new beaconNew($beaconID,$requestID,$name);
     if($requestID === 0)
     {
         $result = $beaconHandler->handleConnectionRequest();
@@ -47,7 +47,7 @@ if($requestID === 0 || $requestID === 1)
 // {connection:"-1/0/1""userId":"userid", "amountConnected":"??"}
 function parseResponseToJson($resArr)
 {
-    return json_encode($resArr,JSON_FORCE_OBJECT);
+    return json_encode($resArr);
 }
 
 
