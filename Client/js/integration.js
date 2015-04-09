@@ -58,7 +58,8 @@ $(document).ready(function() {
       var newUserURL = 'hackidc2015.imrapid.io/users';
       var requestObject = {
         cid : window.cid,
-        clientName : window.clientName 
+        clientName : window.clientName,
+        userImg : userImg
       };
       $.post(newUserURL,requestObject,function(){
         console.log('send to Rapi of new user')
@@ -235,7 +236,7 @@ $('#roomTag').text('@' + roomID);
 
   io.on('newUser',function(data){
     console.log('newUser event data',data);
-    var onlineUserHtmlStub = '<li data-userid=' + data.cid + '><a href="#" class="user"><img src="avatars/yellow.png"><span class="user_name">' + data.clientName + '</span></a></li>';
+    var onlineUserHtmlStub = '<li data-userid=' + data.cid + '><a href="#" class="user"><img src="' + data.userImg +'"><span class="user_name">' + data.clientName + '</span></a></li>';
   });
 
 
