@@ -6,42 +6,40 @@
  * Time: 7:13 PM
  */
 
-include_once("Beacon.php");
+//
+//include_once("Beacon.php");
 
-$requestID = intval($_GET['rid']);//request id 0/1 connect/disconnect
+include_once("beaconNew.php");
+
+$requestID = intval($_GET['rid']);
 $beaconID = $_GET['bid'];
-$clientID = $_GET['cid'];
+$name = $_GET['userName'];//new
+$clientID = $_GET['cid'];//Only upon disconnection request
+$cb = $_GET['callback'];
 
 
-/*echo "</br> type of : </br>" .
-    "rid = " . (gettype($requestID)) . "</br>" .
-    "bid = " . (gettype($beaconID)) . "</br>" ;
-*/
-
-
+//  0 - new user , 1 disconnect a user
 if($requestID === 0 || $requestID === 1)
 {
-    $beaconHandler = new Beacon($beaconID,$requestID);
+    $beaconHandler = new beaconNew($beaconID,$requestID,$name);
     if($requestID === 0)
     {
         $result = $beaconHandler->handleConnectionRequest();
 
-        ////
-       // echo "</br> handleConnectionResult  = " . $result  ."|| </br>";
-        ///
+
         if($result !== null)
         {
-            echo parseResponseToJson($result);
+            echo $cb ."(". parseResponseToJson($result) .")";
         }
     }
     elseif($requestID === 1)
     {
         if($beaconHandler->handleDisconnectionRequest($clientID, intval($beaconID)))
         {
-            echo json_encode(["connection"=>"1"]);
+            echo $cb . "(" . json_encode(array("connection"=>"1")).")";
         }
         else {
-            echo json_encode(["connection"=>"-1"]);
+            echo $cb ."(" . json_encode(array("connection"=>"-1")).")";
         }
     }
 }
