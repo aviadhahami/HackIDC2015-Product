@@ -48,7 +48,7 @@ $(document).ready(function() {
        });
     */
     $.each(usersArray,function(key,value){
-      var onlineUserHtmlStub = '<li data-userid=' + value.clientId + '><a href="#" class="user"><img src="avatars/yellow.png"><span class="user_name">' +value.name + '</span></a></li>';
+      var onlineUserHtmlStub = '<li data-userid=' + value.clientId + '><a href="#" class="user"><img src="avatars/' + value.userImg +'"><span class="user_name">' +value.name + '</span></a></li>';
       onlineUsersList.append(onlineUserHtmlStub);
 
     });
