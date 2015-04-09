@@ -123,7 +123,8 @@ class beaconNew {
         {
             $currentObjectInArray = $clientArr[$i];
             $name = $currentObjectInArray->name;
-            $this->array_push_assoc($namesArray,"'".$i."'",$name);
+            $localCid = $currentObjectInArray->uid;
+            $this->array_push_assoc($namesArray,"'".$i."'",array("userName"=>$name,"clientName"=>$localCid));
         }
 
         return $namesArray;
