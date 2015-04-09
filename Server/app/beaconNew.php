@@ -113,6 +113,7 @@ class beaconNew {
 
     private function getAllUserName($clientArr)
     {
+        $namesArray = array();
         if($clientArr === null)
         {
             return null;
@@ -120,8 +121,11 @@ class beaconNew {
 
         for($i = 0; $i < sizeof($clientArr); $i++)
         {
-            
+            $currentObjectInArray = $clientArr[$i];
+            $namesArray[] = $currentObjectInArray->name;
         }
+
+        return $namesArray;
 
     }
 
@@ -153,7 +157,10 @@ class beaconNew {
         $imgSrc = $this->getFreeImage($amountConnect);
         $localBeaconIndex = $this->beaconIndex;
         //now returns aslo the localID of the beacon
-        return array("connection"=>"1",'cid'=>$clientId, 'amount'=> $amountConnect, "img"=>$imgSrc, "localID"=>$localBeaconIndex);
+
+        $namesArray = $this->getAllUserName($userSet);
+
+        return array("connection"=>"1",'cid'=>$clientId, 'amount'=> $amountConnect, "img"=>$imgSrc, "localID"=>$localBeaconIndex, "names"=>$namesArray);
     }
     /////////////////////////////////////////////////////////////////////////////
     /////////////////////////////////////////////////////////////////////////////
