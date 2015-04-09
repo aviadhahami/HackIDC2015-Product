@@ -123,9 +123,9 @@ $(document).ready(function() {
 
         if (status === "success") {
           //$('.timestamp').append('Recieved');
-          var currentMsg = $('h4[data-userID=' + userID + ']');
+          var currentMsg = $('h4[data-userid=' + userID + ']');
           currentMsg.append('Recieved');
-          currentMsg.removeAttr('data-userID');
+          currentMsg.removeAttr('data-userid');
         }
       });
     });
@@ -161,9 +161,9 @@ $(document).ready(function() {
 
             //mark V if recieved by server
             if (status === "success") {
-              var currentMsg = $('h4[data-userID=' + userID + ']');
+              var currentMsg = $('h4[data-userid=' + userID + ']');
               currentMsg.append('Recieved');
-              currentMsg.removeAttr('data-userID');
+              currentMsg.removeAttr('data-userid');
             }
           });
 
@@ -183,7 +183,7 @@ $('#roomTag').text('@' + roomID);
       
       if (flag){
         //if true we need to add data attr
-        var _htmlTemplateString = '<div class="col-xs-12 user_msg"><div class="media message-box"><div class="media-left"><img class="media-object user-profile-in-chat" src="' + data.userImg +'" alt="general_id" style="width: 35px; height: 35px;"></div><div class="media-body"><h4 class="media-heading timestamp" id="top-aligned-media" data-userID=' + userID +'>'+ data.name+', ' + dateString+'<a class="anchorjs-link" href="#top-aligned-media"><span class="anchorjs-icon"></span></a></h4><p>'+ data.message+'</p></div></div></div>';
+        var _htmlTemplateString = '<div class="col-xs-12 user_msg"><div class="media message-box"><div class="media-left"><img class="media-object user-profile-in-chat" src="' + data.userImg +'" alt="general_id" style="width: 35px; height: 35px;"></div><div class="media-body"><h4 class="media-heading timestamp" id="top-aligned-media" data-userid=' + userID +'>'+ data.name+', ' + dateString+'<a class="anchorjs-link" href="#top-aligned-media"><span class="anchorjs-icon"></span></a></h4><p>'+ data.message+'</p></div></div></div>';
 
       }else{
         //regular generation  
@@ -202,7 +202,7 @@ $('#roomTag').text('@' + roomID);
      var dateString = hours + ':' + minutes;
 
      if (flag){
-      var _htmlTemplateString = '<div class="col-xs-12 user_msg"><div class="media message-box"><div class="media-left"><img class="media-object user-profile-in-chat" src="' + data.userImg +'" alt="general_id" style="width: 35px; height: 35px;"></div><div class="media-body"><h4 class="media-heading timestamp" id="top-aligned-media" data-userID=' + userID+ '>'+ data.name+', ' + dateString+'<a class="anchorjs-link" href="#top-aligned-media"><span class="anchorjs-icon"></span></a></h4><p><img src="'+ data.message+'"/></p></div></div></div>';
+      var _htmlTemplateString = '<div class="col-xs-12 user_msg"><div class="media message-box"><div class="media-left"><img class="media-object user-profile-in-chat" src="' + data.userImg +'" alt="general_id" style="width: 35px; height: 35px;"></div><div class="media-body"><h4 class="media-heading timestamp" id="top-aligned-media" data-userid=' + userID+ '>'+ data.name+', ' + dateString+'<a class="anchorjs-link" href="#top-aligned-media"><span class="anchorjs-icon"></span></a></h4><p><img src="'+ data.message+'"/></p></div></div></div>';
 
     }else{
       var _htmlTemplateString = '<div class="col-xs-12 user_msg"><div class="media message-box"><div class="media-left"><img class="media-object user-profile-in-chat" src="' + data.userImg +'" alt="general_id" style="width: 35px; height: 35px;"></div><div class="media-body"><h4 class="media-heading timestamp" id="top-aligned-media">'+ data.name+', ' + dateString+'<a class="anchorjs-link" href="#top-aligned-media"><span class="anchorjs-icon"></span></a></h4><p><img src="'+ data.message+'"/></p></div></div></div>';
