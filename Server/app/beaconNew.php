@@ -79,8 +79,9 @@ class beaconNew {
             $currentObjectInArray = $clientArr[$i];
             $name = $currentObjectInArray->name;
             $localCid = $currentObjectInArray->uid;
+            $imageSrc = $currentObjectInArray->image;
             $key = "'" . $i . "'";
-            $namesArray[$key] = array("name"=>$name, "clientId"=>$localCid);
+            $namesArray[$key] = array("name"=>$name, "clientId"=>$localCid,$imageSrc);
         }
 
         return $namesArray;
