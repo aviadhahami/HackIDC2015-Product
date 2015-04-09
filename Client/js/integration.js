@@ -25,7 +25,7 @@ $(document).ready(function() {
     window.initiatePrimaryConnection = function(){
     var getReqDataString = 'rid=' + connectionFlag + '&bid=' + bid; //connection GET request string
     $.getJSON(managmentServerUrl,getReqDataString).done(function(res){
-      console.log(res);
+      //console.log(res);
       connectionStatus = res.connection;
       window.cid = res.cid;
       chatAmount = res.amount;
@@ -33,7 +33,7 @@ $(document).ready(function() {
       localID = res.localID; //Beacon ID @ the server
     }).fail(function(e){
       alert('Oops ! problems!, stub generated');
-      console.log(e);
+      //console.log(e);
       connectionStatus = 0;
       window.cid = 0;
       chatAmount = 5;
@@ -60,8 +60,8 @@ $(document).ready(function() {
 
 
 
-    console.log(window.clientName);
-    console.log('got JQ on via integration');
+    //console.log(window.clientName);
+    //console.log('got JQ on via integration');
 
 
 
@@ -80,13 +80,13 @@ $(document).ready(function() {
       };
 
 
-      console.log('sending message object.. msg is ',msg);
+      //console.log('sending message object.. msg is ',msg);
       var outputHTMLString = generateCurrentBlob(msg,true);
       $('.chat_body').append(outputHTMLString);
       ScrollFix();
 
       $.post(url,msg,function(data,status){
-        console.log('data: ' + data + 'status : ' + status + 'from the POST');
+        //console.log('data: ' + data + 'status : ' + status + 'from the POST');
 
 
         if (status === "success") {
@@ -114,7 +114,7 @@ $(document).ready(function() {
       };
 
 
-      console.log('sending message object.. msg is ',msg);
+      //console.log('sending message object.. msg is ',msg);
           // CHECK ME ! 
         //code for local double messaging
         var outputHTMLString = generateCurrentBlobForImage(msg,true);
@@ -125,7 +125,7 @@ $(document).ready(function() {
         //end of local double messaging
 
         $.post(url,msg,function(data,status){
-          console.log('data: ' + data + 'status : ' + status + 'from the POST');
+          //console.log('data: ' + data + 'status : ' + status + 'from the POST');
 
             //mark V if recieved by server
             if (status === "success") {
@@ -163,7 +163,7 @@ $('#roomTag').text('@' + roomID);
     };
 
     function generateCurrentBlobForImage(data,flag) {
-     // console.log('img blob');
+     // //console.log('img blob');
      var d = new Date();
      var hours = d.getHours() < 10 ? '0' + d.getHours() : d.getHours();
      var minutes = d.getMinutes() < 10 ? '0' + d.getMinutes() : d.getMinutes();
@@ -184,10 +184,10 @@ $('#roomTag').text('@' + roomID);
   }
 
   io.on('newMsg', function(data) {
-    //console.log('data is ', JSON.stringify(data), 'data string is', data + '');
-    //console.log(dataArr);
-    console.log(data.msgType);
-    console.log(data.userID);
+    ////console.log('data is ', JSON.stringify(data), 'data string is', data + '');
+    ////console.log(dataArr);
+    //console.log(data.msgType);
+    //console.log(data.userID);
     if (! (data.userID == userID)){
       if (data.msgType === 'txt'){
         var outputHTMLString = generateCurrentBlob(data,false);
