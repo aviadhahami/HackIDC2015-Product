@@ -33,64 +33,39 @@
 
   <body>
 
-                <nav class="navbar navbar-inverse navbar-fixed-top">
-                    <div class="container-fluid">
-                        <div class="navbar-header">
-                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                                <span class="sr-only" id="roomName">Sxsw</span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
-                            <a class="navbar-brand navbar-white" href="#" id="roomTag">@sxsw</a>
-                        </div>
-                        <div id="navbar" class="navbar-collapse collapse">
-                            <ul class="nav navbar-nav navbar-right">
-                                <li><a href="landingpage/index.html">Visit Jumanji →</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only" id="roomName">Sxsw</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand navbar-white" href="#" id="roomTag">@sxsw</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="landingpage/index.html">Visit Jumanji →</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
 
 
-                <div class="col-sm-3 col-md-2 sidebar">
-                    <ul class="nav nav-sidebar usersList">
-                        <li>
-                            <a href="#" class="user">
-                                <img src="avatars/yellow.png" /><span class="user_name">Jonny</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="user">
-                                <img src="avatars/green.png" /><span class="user_name">Jonny</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="user">
-                                <img src="avatars/cyan.png" /><span class="user_name">Jonny</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="user">
-                                <img src="avatars/devil.png" /><span class="user_name">Jonny</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="user">
-                                <img src="avatars/pink.png" /><span class="user_name">Jonny</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="user">
-                                <img src="avatars/blue.png" /><span class="user_name">Jonny</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-                <div class="chat_body">
+    <div class="col-sm-3 col-md-2 sidebar">
+        <ul class="nav nav-sidebar usersList">
+        <li data-userID="adminCID">
+                <a href="#" class="user">
+                    <img src="avatars/yellow.png" /><span class="user_name">Admin</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+        <div class="chat_body">
                 <!--<div class="col-xs-12 user_msg">
                 <div class="user_icon_container">
                     <img src="img/devil.png"/>
@@ -110,35 +85,35 @@
                     </div>
                 </div>
             </div>
-            </div>
+        </div>
 
-            <div class="chat_input_area input-group">
-                <input id="chatMsg" type="text" class="form-control chat_input_box" placeholder="Enter text">
-                <span class="input-group-btn">
-                  <button id="open-button" class="btn btn-default chat_gif_btn" type="button">
-                    <img class="gif_toggle_icon" src="img/gif_toggle_icon.jpg" />
-                  </button>
-                  <button id="sendMsg" class="btn btn-default chat_send_btn" type="button">Send</button>
-              </span>
-          </div><!-- /input-group -->
-                    <div class = "gif_drawer">
-                        <img id="snorlax" src = "gifs/snorlax.gif" />
-                        <img src = "gifs/dog.gif" />
-                        <img src = "gifs/dolphin.gif" />
-                        <img src = "gifs/freakout.gif" />
-                        <img src = "gifs/happy.gif" />
-                        <img src = "gifs/jimcarrey.gif" />
-                        <img src = "gifs/longesthourofmylife.gif" />
-                        <img src = "gifs/megusta.gif" />
-                        <img src = "gifs/patrick.gif" />
-                        <img src = "gifs/retard.gif" />
-                        <img src = "gifs/scary.gif" />
-                        <img src = "gifs/socialnetwork.gif" />
-                        <img src = "gifs/tampon.gif" />
-                        <img src = "gifs/willsmith.gif" />
-                        <img src = "gifs/yes.gif" />
-                    </div>
-      </div>
+        <div class="chat_input_area input-group">
+            <input id="chatMsg" type="text" class="form-control chat_input_box" placeholder="Enter text">
+            <span class="input-group-btn">
+              <button id="open-button" class="btn btn-default chat_gif_btn" type="button">
+                <img class="gif_toggle_icon" src="img/gif_toggle_icon.jpg" />
+            </button>
+            <button id="sendMsg" class="btn btn-default chat_send_btn" type="button">Send</button>
+        </span>
+    </div><!-- /input-group -->
+    <div class = "gif_drawer">
+        <img id="snorlax" src = "gifs/snorlax.gif" />
+        <img src = "gifs/dog.gif" />
+        <img src = "gifs/dolphin.gif" />
+        <img src = "gifs/freakout.gif" />
+        <img src = "gifs/happy.gif" />
+        <img src = "gifs/jimcarrey.gif" />
+        <img src = "gifs/longesthourofmylife.gif" />
+        <img src = "gifs/megusta.gif" />
+        <img src = "gifs/patrick.gif" />
+        <img src = "gifs/retard.gif" />
+        <img src = "gifs/scary.gif" />
+        <img src = "gifs/socialnetwork.gif" />
+        <img src = "gifs/tampon.gif" />
+        <img src = "gifs/willsmith.gif" />
+        <img src = "gifs/yes.gif" />
+    </div>
+</div>
 
 
 
