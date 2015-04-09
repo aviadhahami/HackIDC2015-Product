@@ -5,14 +5,17 @@
  * Date: 4/7/2015
  * Time: 7:30 PM
  */
-class Beacon {
+class beaconNew {
     public $beaconID;//Represent an MAC address
     public $responseID;
     public $mysqli;
     public $beaconTable;
     public $clientTable;
     public $beaconIndex;
-    function __construct($beaconID, $responseID)
+
+    public $name;//new
+
+    function __construct($beaconID, $responseID, $name)
     {
         $this->beaconID = $beaconID;
         $this->responseID = $responseID;
@@ -21,6 +24,8 @@ class Beacon {
         $this->beaconTable = "beacon";
         $this->clientTable = "clients";
         $this->beaconIndex = 0;
+
+        $this->name = $name;//new
     }
     /**
      * @return null | objectSet if beacon doesn't exists or failed in fetch returns null | returns the query set of clients
@@ -78,8 +83,11 @@ class Beacon {
         //$localBeaconId = $this->beaconID;
         $localBeaconId = $this->beaconIndex;//Changed to work with new table Structure
         $localClientTable = $this->clientTable;
+
+        $localNameToAdd = $this->name;//new
+
         $clientId = $this->generateClientId($clientArr);
-        $addNewClientQuery = "INSERT INTO $localClientTable (bid, uid) VALUES ($localBeaconId, '$clientId')";
+        $addNewClientQuery = "INSERT INTO $localClientTable (bid, uid, name) VALUES ($localBeaconId, '$clientId', '$localNameToAdd')";//new
         $addNewClientExecute = $this->mysqli->query($addNewClientQuery);
         if($addNewClientExecute)
         {
@@ -101,6 +109,29 @@ class Beacon {
         }
         return sizeof($arrObjects);
     }
+
+
+    private function getAllUserName($clientArr)
+    {
+        $namesArray = array();
+        if($clientArr === null)
+        {
+            return null;
+        }
+
+        for($i = 0; $i < sizeof($clientArr); $i++)
+        {
+            $currentObjectInArray = $clientArr[$i];
+            $namesArray[] = $currentObjectInArray->name;
+        }
+
+        return $namesArray;
+
+    }
+
+
+
+
     public function handleConnectionRequest()
     {
         ///
@@ -126,7 +157,10 @@ class Beacon {
         $imgSrc = $this->getFreeImage($amountConnect);
         $localBeaconIndex = $this->beaconIndex;
         //now returns aslo the localID of the beacon
-        return array("connection"=>"1",'cid'=>$clientId, 'amount'=> $amountConnect, "img"=>$imgSrc, "localID"=>$localBeaconIndex);
+
+        $namesArray = $this->getAllUserName($userSet);
+
+        return array("connection"=>"1",'cid'=>$clientId, 'amount'=> $amountConnect, "img"=>$imgSrc, "localID"=>$localBeaconIndex, "names"=>$namesArray);
     }
     /////////////////////////////////////////////////////////////////////////////
     /////////////////////////////////////////////////////////////////////////////
@@ -246,5 +280,7 @@ class Beacon {
         }
         return $str;
     }
+
+
 
 }

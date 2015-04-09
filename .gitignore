@@ -45,3 +45,6 @@ Temporary Items
 *.xml
 .idea/workspace.xml
 .idea/workspace.xml
+Server/app/hashTag.php
+Server/app/lib/Tags.php
+Server/app/hashTag.php
