@@ -28,6 +28,8 @@ $(document).ready(function() {
     var getReqDataString = 'rid=' + connectionFlag + '&bid=' + bid + '&userName=' + window.clientName; //connection GET request string
     $.getJSON(managmentServerUrl,getReqDataString).done(function(res){
       console.log(res);
+
+
       connectionStatus = res.connection;
       window.cid = res.cid;
       chatAmount = res.amount;
@@ -42,10 +44,14 @@ $(document).ready(function() {
      // usersArray = [{cid:'asdf',clientName:'David'},{cid:'w45j',clientName:'Rubi'},{cid:'kjw4',clientName:'Jonny'}];
       //
 
-      usersArray.forEach(function(user){
-        var onlineUserHtmlStub = '<li data-userid=' + user.cid + '><a href="#" class="user"><img src="avatars/yellow.png"><span class="user_name">' +user.clientName + '</span></a></li>';
-        onlineUsersList.append(onlineUserHtmlStub);
-      });
+/*      usersArray.forEach(function(user){
+       });
+    */
+    $.each(usersArray,function(key,value){
+      var onlineUserHtmlStub = '<li data-userid=' + value.clientId + '><a href="#" class="user"><img src="avatars/yellow.png"><span class="user_name">' +value.name + '</span></a></li>';
+      onlineUsersList.append(onlineUserHtmlStub);
+
+    });
       //end of members population
 
       //shout to RapidAPI for new user
