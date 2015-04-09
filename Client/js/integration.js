@@ -21,7 +21,7 @@ $(document).ready(function() {
     var localID = '';
     var connectionStatus = '';
     var userID = '';
-
+    var roomID = bid + '_LBC';
 
     //Primary connection logic
     window.initiatePrimaryConnection = function(){
@@ -55,11 +55,12 @@ $(document).ready(function() {
       //end of members population
 
       //shout to RapidAPI for new user
-      var newUserURL = 'hackidc2015.imrapid.io/users';
+      var newUserURL = 'https://hackidc2015.imrapid.io/users';
       var requestObject = {
         cid : window.cid,
         clientName : window.clientName,
-        userImg : userImg
+        userImg : userImg,
+        roomID : roomID
       };
       $.post(newUserURL,requestObject,function(){
         console.log('send to Rapi of new user')
@@ -85,7 +86,6 @@ $(document).ready(function() {
 
     //global data
     var url = 'https://hackidc2015.imrapid.io/message';
-    var roomID = bid + '_LBC';
     var projectName = 'hackidc2015'; //do not change ! server critical (RapidAPI)
     var chatMsg ='';
 
@@ -122,9 +122,9 @@ $(document).ready(function() {
 
 
         if (status === "success") {
-          //$('.timestamp').append('Recieved');
+          //$('.timestamp').append(' - Recieved');
           var currentMsg = $('h4[data-userid=' + userID + ']');
-          currentMsg.append('Recieved');
+          currentMsg.append(' - Recieved');
           currentMsg.removeAttr('data-userid');
         }
       });
@@ -162,7 +162,7 @@ $(document).ready(function() {
             //mark V if recieved by server
             if (status === "success") {
               var currentMsg = $('h4[data-userid=' + userID + ']');
-              currentMsg.append('Recieved');
+              currentMsg.append(' - Recieved');
               currentMsg.removeAttr('data-userid');
             }
           });
