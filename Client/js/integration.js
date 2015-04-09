@@ -41,6 +41,7 @@ $(document).ready(function() {
       //STUB
      // usersArray = [{cid:'asdf',clientName:'David'},{cid:'w45j',clientName:'Rubi'},{cid:'kjw4',clientName:'Jonny'}];
       //
+
       usersArray.forEach(function(user){
         var onlineUserHtmlStub = '<li data-userid=' + user.cid + '><a href="#" class="user"><img src="avatars/yellow.png"><span class="user_name">' +user.clientName + '</span></a></li>';
         onlineUsersList.append(onlineUserHtmlStub);
