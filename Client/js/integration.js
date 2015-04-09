@@ -33,6 +33,13 @@ $(document).ready(function() {
       chatAmount = res.amount;
       userImg = 'avatars/' + res.img;
       localID = res.localID; //Beacon ID @ the server
+
+      //chat members population
+      var usersArray = res.onlineUsers;
+      var onlineUsersList = $('.usersList');
+      for each (var user in usersArray){
+        var onlineUserHtmlStub = '<li data-userid=' + user.cid + '><a href="#" class="user"><img src="avatars/yellow.png"><span class="user_name">' +user.clientName + '</span></a></li>';
+      }
     }).fail(function(e){
       alert('Oops ! problems!, stub generated');
       console.log(e);
@@ -43,7 +50,7 @@ $(document).ready(function() {
       localID = 0;
     }).always(function(){
       userID = window.cid === '' ? 0 : window.cid;
-   });
+    });
 
   };
     //end of server integration module//
