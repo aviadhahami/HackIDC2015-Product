@@ -124,7 +124,8 @@ class beaconNew {
             $currentObjectInArray = $clientArr[$i];
             $name = $currentObjectInArray->name;
             $localCid = $currentObjectInArray->uid;
-            $this->array_push_assoc($namesArray,"'".$i."'",array("userName"=>$name,"clientName"=>$localCid));
+            $key = "'" . $i . "'";
+            $namesArray[$key] = array("name"=>$name, "clientId"=>$localCid);
         }
 
         return $namesArray;
@@ -166,7 +167,7 @@ class beaconNew {
 
         $namesArray = $this->getAllUserName($userSet);
 
-        return array("connection"=>"1",'cid'=>$clientId, 'amount'=> $amountConnect, "img"=>$imgSrc, "localID"=>$localBeaconIndex, "names"=>$namesArray);
+        return array("connection"=>"1",'cid'=>$clientId, 'amount'=> $amountConnect, "img"=>$imgSrc, "localID"=>$localBeaconIndex, "onlineUsers"=>$namesArray);
     }
     /////////////////////////////////////////////////////////////////////////////
     /////////////////////////////////////////////////////////////////////////////
