@@ -37,11 +37,25 @@ $(document).ready(function() {
       //chat members population
       var usersArray = res.onlineUsers;
       var onlineUsersList = $('.usersList');
-      usersArray.forEach(user){
+      //STUB
+      usersArray = [{cid:'asdf',clientName:'David'},{cid:'w45j',clientName:'Rubi'},{cid:'kjw4',clientName:'Jonny'}];
+      //
+      usersArray.forEach(function(user){
         var onlineUserHtmlStub = '<li data-userid=' + user.cid + '><a href="#" class="user"><img src="avatars/yellow.png"><span class="user_name">' +user.clientName + '</span></a></li>';
-        onlineUsersList.append(onlineUsersList);
-      }
+        onlineUsersList.append(onlineUserHtmlStub);
+      });
       //end of members population
+
+      //shout to RapidAPI for new user
+      var newUserURL = 'hackidc2015.imrapid.io/users';
+      var requestObject = {
+        cid : window.cid,
+        clientName : window.clientName 
+      };
+      $.post(newUserURL,requestObject,function(){
+        console.log('send to Rapi of new user')
+      });
+      //end of RAPI shout
 
 
     }).fail(function(e){
@@ -210,5 +224,12 @@ $('#roomTag').text('@' + roomID);
  }
 
 });
+
+  io.on('newUser',function(data){
+    console.log('newUser event data',data);
+    var onlineUserHtmlStub = '<li data-userid=' + data.cid + '><a href="#" class="user"><img src="avatars/yellow.png"><span class="user_name">' + data.clientName + '</span></a></li>';
+  });
+
+
 });
 
