@@ -50,6 +50,79 @@ class beaconNew {
         $this->beaconIndex = -1;
         return null;
     }
+
+
+
+
+    /////////////////////////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////
+
+    private function generateClientId($clientArr)
+    {
+        $size = $this->getAmountConnected($clientArr);
+        $beaconShrink = substr($this->beaconID,0,3);
+        return $beaconShrink . $size . ($this->get_rand_str(5));
+    }
+
+
+    private function getAllUserName($clientArr)
+    {
+        $namesArray = array();
+        if($clientArr === null)
+        {
+            return null;
+        }
+
+        for($i = 0; $i < sizeof($clientArr); $i++)
+        {
+            $currentObjectInArray = $clientArr[$i];
+            $name = $currentObjectInArray->name;
+            $localCid = $currentObjectInArray->uid;
+            $imageSrc = $currentObjectInArray->image;
+            $key = "'" . $i . "'";
+            $namesArray[$key] = array("name"=>$name, "clientId"=>$localCid,$imageSrc);
+        }
+
+        return $namesArray;
+
+    }
+
+
+    private function array_push_assoc($array, $key, $value){
+        $array[$key] = $value;
+        return $array;
+    }
+
+
+    public function handleConnectionRequest()
+    {
+
+        $userSet = $this->isBeaconExists();
+
+        if($userSet === null)
+        {
+            return array("connection"=>"-1");
+        }
+        //
+        $amountConnect = $this->getAmountConnected($userSet);
+        $imgSrc = $this->getFreeImage($amountConnect);
+        //
+        $clientId = $this->addNewClient($userSet, $imgSrc);
+
+        if($clientId === null)
+        {
+            return array("connection"=>"-1");
+        }
+
+
+        $localBeaconIndex = $this->beaconIndex;
+
+        $namesArray = $this->getAllUserName($userSet);
+
+        return array("connection"=>"1",'cid'=>$clientId, 'amount'=> $amountConnect, "img"=>$imgSrc, "localID"=>$localBeaconIndex, "onlineUsers"=>$namesArray);
+    }
+
     /**
      * @desc retrieves an object set that represent the fetch
      * @return null|object|stdClass
@@ -75,19 +148,17 @@ class beaconNew {
         }
         return $returnArr;
     }
-    /////////////////////////////////////////////////////////////////////////////
-    /////////////////////////////////////////////////////////////////////////////
-    /////////////////////////////////////////////////////////////////////////////
-    private function addNewClient($clientArr)
+
+
+    private function addNewClient($clientArr, $imgSrc)
     {
-        //$localBeaconId = $this->beaconID;
         $localBeaconId = $this->beaconIndex;//Changed to work with new table Structure
         $localClientTable = $this->clientTable;
 
         $localNameToAdd = $this->name;//new
 
         $clientId = $this->generateClientId($clientArr);
-        $addNewClientQuery = "INSERT INTO $localClientTable (bid, uid, name) VALUES ($localBeaconId, '$clientId', '$localNameToAdd')";//new
+        $addNewClientQuery = "INSERT INTO $localClientTable (bid, uid, name, image) VALUES ($localBeaconId, '$clientId', '$localNameToAdd', '$imgSrc')";//new
         $addNewClientExecute = $this->mysqli->query($addNewClientQuery);
         if($addNewClientExecute)
         {
@@ -95,12 +166,19 @@ class beaconNew {
         }
         return null;
     }
-    private function generateClientId($clientArr)
+
+    public function getFreeImage($amountConnected)
     {
-        $size = $this->getAmountConnected($clientArr);
-        $beaconShrink = substr($this->beaconID,0,3);
-        return $beaconShrink . $size . ($this->get_rand_str(5));
+        $dir = "./../../Client/avatars";
+        $fileNamesArr = scandir($dir);
+        if($amountConnected + 2 < sizeof($fileNamesArr))
+        {
+            return $fileNamesArr[$amountConnected + 2];
+        }
+        return $this->getFreeImage($amountConnected % sizeof($fileNamesArr));
     }
+
+
     private function getAmountConnected($arrObjects)
     {
         if($arrObjects === null)
@@ -111,64 +189,10 @@ class beaconNew {
     }
 
 
-    private function getAllUserName($clientArr)
-    {
-        $namesArray = array();
-        if($clientArr === null)
-        {
-            return null;
-        }
-
-        for($i = 0; $i < sizeof($clientArr); $i++)
-        {
-            $currentObjectInArray = $clientArr[$i];
-            $name = $currentObjectInArray->name;
-            $localCid = $currentObjectInArray->uid;
-            $key = "'" . $i . "'";
-            $namesArray[$key] = array("name"=>$name, "clientId"=>$localCid);
-        }
-
-        return $namesArray;
-
-    }
 
 
-    private function array_push_assoc($array, $key, $value){
-        $array[$key] = $value;
-        return $array;
-    }
 
 
-    public function handleConnectionRequest()
-    {
-        ///
-        // echo "</br> entered HandleConnection";
-        ///
-        $userSet = $this->isBeaconExists();
-        //echo "</br> userset : " . print_r($userSet) . "||</br>";
-        if($userSet === null)
-        {
-            return array("connection"=>"-1");
-        }
-        // echo "</br> first if block passed in connection handler </br>";
-        $clientId = $this->addNewClient($userSet);
-        ////
-        //echo "</br> clientID = ". $clientId ."</br>";
-        ////
-        if($clientId === null)
-        {
-            return array("connection"=>"-1");
-        }
-        // echo "</br> second if block passed in connection handler </br>";
-        $amountConnect = $this->getAmountConnected($userSet);
-        $imgSrc = $this->getFreeImage($amountConnect);
-        $localBeaconIndex = $this->beaconIndex;
-        //now returns aslo the localID of the beacon
-
-        $namesArray = $this->getAllUserName($userSet);
-
-        return array("connection"=>"1",'cid'=>$clientId, 'amount'=> $amountConnect, "img"=>$imgSrc, "localID"=>$localBeaconIndex, "onlineUsers"=>$namesArray);
-    }
     /////////////////////////////////////////////////////////////////////////////
     /////////////////////////////////////////////////////////////////////////////
     /////////////////////////////////////////////////////////////////////////////
@@ -262,16 +286,7 @@ class beaconNew {
         }
         return false;
     }
-    public function getFreeImage($amountConnected)
-    {
-        $dir = "./../../Client/avatars";
-        $fileNamesArr = scandir($dir);
-        if($amountConnected + 2 < sizeof($fileNamesArr))
-        {
-            return $fileNamesArr[$amountConnected + 2];
-        }
-        return $this->getFreeImage($amountConnected % sizeof($fileNamesArr));
-    }
+
 
     private function get_rand_str($length)
     {
