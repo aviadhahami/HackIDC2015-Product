@@ -83,8 +83,11 @@ class beaconNew {
         //$localBeaconId = $this->beaconID;
         $localBeaconId = $this->beaconIndex;//Changed to work with new table Structure
         $localClientTable = $this->clientTable;
+
+        $localNameToAdd = $this->name;//new
+
         $clientId = $this->generateClientId($clientArr);
-        $addNewClientQuery = "INSERT INTO $localClientTable (bid, uid) VALUES ($localBeaconId, '$clientId')";
+        $addNewClientQuery = "INSERT INTO $localClientTable (bid, uid, name) VALUES ($localBeaconId, '$clientId', '$localNameToAdd')";//new
         $addNewClientExecute = $this->mysqli->query($addNewClientQuery);
         if($addNewClientExecute)
         {
@@ -106,6 +109,25 @@ class beaconNew {
         }
         return sizeof($arrObjects);
     }
+
+
+    private function getAllUserName($clientArr)
+    {
+        if($clientArr === null)
+        {
+            return null;
+        }
+
+        for($i = 0; $i < sizeof($clientArr); $i++)
+        {
+            
+        }
+
+    }
+
+
+
+
     public function handleConnectionRequest()
     {
         ///
@@ -251,5 +273,7 @@ class beaconNew {
         }
         return $str;
     }
+
+
 
 }
