@@ -37,9 +37,13 @@ $(document).ready(function() {
       //chat members population
       var usersArray = res.onlineUsers;
       var onlineUsersList = $('.usersList');
-      for each (var user in usersArray){
+      usersArray.forEach(user){
         var onlineUserHtmlStub = '<li data-userid=' + user.cid + '><a href="#" class="user"><img src="avatars/yellow.png"><span class="user_name">' +user.clientName + '</span></a></li>';
+        onlineUsersList.append(onlineUsersList);
       }
+      //end of members population
+
+
     }).fail(function(e){
       alert('Oops ! problems!, stub generated');
       console.log(e);
