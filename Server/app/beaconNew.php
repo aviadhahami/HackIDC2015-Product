@@ -62,7 +62,7 @@ class beaconNew {
     {
         $size = $this->getAmountConnected($clientArr);
         $beaconShrink = substr($this->beaconID,0,3);
-        return $beaconShrink . $size . ($this->get_rand_str(5));
+        return $beaconShrink . ($this->get_rand_str(19));
     }
 
 
@@ -290,7 +290,7 @@ class beaconNew {
 
     private function get_rand_str($length)
     {
-        $chars = array_merge(range('a','z'), range('A','Z'), array('!','%','*'));
+        $chars = array_merge(range('a','z'), range('A','Z'), array('1','2','3'));
         $length = intval($length) > 0 ? intval($length) : 16;
         $max = count($chars) - 1;
         $str = "";
