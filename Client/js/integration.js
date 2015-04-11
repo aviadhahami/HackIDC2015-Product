@@ -7,12 +7,12 @@ $(document).ready(function() {
     var minor = '670';
     //two vars above this should come from beacon integration
 
-    var serverDomain = 'http://argov.webuda.com/';
+    var serverDomain = 'http://argov.co.nf/';
     var managmentServerUrl = serverDomain + 'Server/app/response.php?callback=?';
 
     var method = 'GET';
     var connectionFlag = '0'; //0 is income, 1 is disconnect
-    var bid = major+ '.' + minor;
+    var bid = major + '' +  minor;
     window.cid = ''; //recieved by server and shouold be sent to server upon DC
 
     //preping global vars
@@ -52,10 +52,16 @@ $(document).ready(function() {
       onlineUsersList.append(onlineUserHtmlStub);
 
     });
+        ///Added by gal - this 2 lines just addes the user that just connected to the right panel///
+        var onlineUserHtmlStub = '<li data-userid=' + window.cid + '><a href="#" class="user"><img src="avatars/' + res.img +'"><span class="user_name">' + window.clientName + '</span></a></li>';
+        onlineUsersList.append(onlineUserHtmlStub);
+        /////////////////////////end/////////////////
+
       //end of members population
 
       //shout to RapidAPI for new user
-      var newUserURL = 'hackidc2015.imrapid.io/users';
+
+      var newUserURL = 'http://hackidc2015.imrapid.io/users';
       var requestObject = {
         cid : window.cid,
         clientName : window.clientName,
@@ -68,10 +74,12 @@ $(document).ready(function() {
 
 
     }).fail(function(e){
-      alert('Oops ! problems!, stub generated');
+      //alert('Oops ! problems!, stub generated');
       console.log(e);
       connectionStatus = 0;
-      window.cid = 0;
+      // var x = document.getElementById("demo")
+      //x.innerHTML = 
+      window.cid = Math.floor((Math.random() * 1000) + 1);
       chatAmount = 5;
       userImg = 'avatars/cyan.png';
       localID = 0;
@@ -122,9 +130,9 @@ $(document).ready(function() {
 
         if (status === "success") {
           //$('.timestamp').append('Recieved');
-          var currentMsg = $('h4[data-userID=' + userID + ']');
+          var currentMsg = $('h4[data-userid=' + userID + ']');
           currentMsg.append('Recieved');
-          currentMsg.removeAttr('data-userID');
+          currentMsg.removeAttr('data-userid');
         }
       });
     });
@@ -160,9 +168,9 @@ $(document).ready(function() {
 
             //mark V if recieved by server
             if (status === "success") {
-              var currentMsg = $('h4[data-userID=' + userID + ']');
+              var currentMsg = $('h4[data-userid=' + userID + ']');
               currentMsg.append('Recieved');
-              currentMsg.removeAttr('data-userID');
+              currentMsg.removeAttr('data-userid');
             }
           });
 
@@ -183,7 +191,7 @@ $('#roomTag').text('@' + roomID);
       
       if (flag){
         //if true we need to add data attr
-        var _htmlTemplateString = '<div class="col-xs-12 user_msg"><div class="media message-box"><div class="media-left"><img class="media-object user-profile-in-chat" src="' + data.userImg +'" alt="general_id" style="width: 35px; height: 35px;"></div><div class="media-body"><h4 class="media-heading timestamp" id="top-aligned-media" data-userID=' + userID +'>'+ data.name+', ' + dateString+'<a class="anchorjs-link" href="#top-aligned-media"><span class="anchorjs-icon"></span></a></h4><p>'+ data.message+'</p></div></div></div>';
+        var _htmlTemplateString = '<div class="col-xs-12 user_msg"><div class="media message-box"><div class="media-left"><img class="media-object user-profile-in-chat" src="' + data.userImg +'" alt="general_id" style="width: 35px; height: 35px;"></div><div class="media-body"><h4 class="media-heading timestamp" id="top-aligned-media" data-userid=' + userID +'>'+ data.name+', ' + dateString+'<a class="anchorjs-link" href="#top-aligned-media"><span class="anchorjs-icon"></span></a></h4><p>'+ data.message+'</p></div></div></div>';
 
       }else{
         //regular generation  
@@ -202,7 +210,7 @@ $('#roomTag').text('@' + roomID);
      var dateString = hours + ':' + minutes;
 
      if (flag){
-      var _htmlTemplateString = '<div class="col-xs-12 user_msg"><div class="media message-box"><div class="media-left"><img class="media-object user-profile-in-chat" src="' + data.userImg +'" alt="general_id" style="width: 35px; height: 35px;"></div><div class="media-body"><h4 class="media-heading timestamp" id="top-aligned-media" data-userID=' + userID+ '>'+ data.name+', ' + dateString+'<a class="anchorjs-link" href="#top-aligned-media"><span class="anchorjs-icon"></span></a></h4><p><img src="'+ data.message+'"/></p></div></div></div>';
+      var _htmlTemplateString = '<div class="col-xs-12 user_msg"><div class="media message-box"><div class="media-left"><img class="media-object user-profile-in-chat" src="' + data.userImg +'" alt="general_id" style="width: 35px; height: 35px;"></div><div class="media-body"><h4 class="media-heading timestamp" id="top-aligned-media" data-userid=' + userID+ '>'+ data.name+', ' + dateString+'<a class="anchorjs-link" href="#top-aligned-media"><span class="anchorjs-icon"></span></a></h4><p><img src="'+ data.message+'"/></p></div></div></div>';
 
     }else{
       var _htmlTemplateString = '<div class="col-xs-12 user_msg"><div class="media message-box"><div class="media-left"><img class="media-object user-profile-in-chat" src="' + data.userImg +'" alt="general_id" style="width: 35px; height: 35px;"></div><div class="media-body"><h4 class="media-heading timestamp" id="top-aligned-media">'+ data.name+', ' + dateString+'<a class="anchorjs-link" href="#top-aligned-media"><span class="anchorjs-icon"></span></a></h4><p><img src="'+ data.message+'"/></p></div></div></div>';
@@ -220,8 +228,9 @@ $('#roomTag').text('@' + roomID);
     //console.log(dataArr);
     console.log(data.msgType);
     console.log(data.userID);
+    console.log(data.userID,'and',userID);
     if (! (data.userID == userID)){
-      if (data.msgType === 'txt'){
+      if (data.msgType == 'txt'){
         var outputHTMLString = generateCurrentBlob(data,false);
       }else{
         var outputHTMLString = generateCurrentBlobForImage(data,false);

@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /**
  * Created by PhpStorm.
  * User: וSER
@@ -20,7 +20,7 @@ class beaconNew {
         $this->beaconID = $beaconID;
         $this->responseID = $responseID;
 
-        $this->mysqli = new mysqli("fdb13.biz.nf","1855048_argov","argov123","1855048_argov");
+        $this->mysqli = new mysqli("mysql14.000webhost.com","a5016316_argov","argov123","a5016316_argov");
         $this->beaconTable = "beacon";
         $this->clientTable = "clients";
         $this->beaconIndex = 0;
@@ -169,15 +169,13 @@ class beaconNew {
 
     public function getFreeImage($amountConnected)
     {
-        $image = ["blue.png", "cyan.png" , "devil.png" ,"green.png","pink.png","yellow.png"];
-        if($amountConnected  < sizeof($image))
+        $dir = "./../../Client/avatars";
+        $fileNamesArr = scandir($dir);
+        if($amountConnected + 2 < sizeof($fileNamesArr))
         {
-            return $image[$amountConnected];
+            return $fileNamesArr[$amountConnected + 2];
         }
-
-
-
-        return $image[rand(0,4)];
+        return $this->getFreeImage($amountConnected % sizeof($fileNamesArr));
     }
 
 
