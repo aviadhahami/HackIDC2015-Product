@@ -7,12 +7,12 @@ $(document).ready(function() {
     var minor = '670';
     //two vars above this should come from beacon integration
 
-    var serverDomain = 'http://argov.webuda.com/';
+    var serverDomain = 'http://argov.co.nf/';
     var managmentServerUrl = serverDomain + 'Server/app/response.php?callback=?';
 
     var method = 'GET';
     var connectionFlag = '0'; //0 is income, 1 is disconnect
-    var bid = major+ '.' + minor;
+    var bid = major + '' +  minor;
     window.cid = ''; //recieved by server and shouold be sent to server upon DC
 
     //preping global vars
@@ -69,10 +69,12 @@ $(document).ready(function() {
 
 
     }).fail(function(e){
-      alert('Oops ! problems!, stub generated');
+      //alert('Oops ! problems!, stub generated');
       console.log(e);
       connectionStatus = 0;
-      window.cid = 0;
+      // var x = document.getElementById("demo")
+      //x.innerHTML = 
+      window.cid = Math.floor((Math.random() * 1000) + 1);
       chatAmount = 5;
       userImg = 'avatars/cyan.png';
       localID = 0;
@@ -148,7 +150,7 @@ $(document).ready(function() {
 
 
       console.log('sending message object.. msg is ',msg);
-          // CHECK ME !
+          // CHECK ME ! 
         //code for local double messaging
         var outputHTMLString = generateCurrentBlobForImage(msg,true);
         $('.chat_body').append(outputHTMLString);
@@ -181,13 +183,13 @@ $('#roomTag').text('@' + roomID);
       var hours = d.getHours() < 10 ? '0' + d.getHours() : d.getHours();
       var minutes = d.getMinutes() < 10 ? '0' + d.getMinutes() : d.getMinutes();
       var dateString = hours + ':' + minutes;
-
+      
       if (flag){
         //if true we need to add data attr
         var _htmlTemplateString = '<div class="col-xs-12 user_msg"><div class="media message-box"><div class="media-left"><img class="media-object user-profile-in-chat" src="' + data.userImg +'" alt="general_id" style="width: 35px; height: 35px;"></div><div class="media-body"><h4 class="media-heading timestamp" id="top-aligned-media" data-userid=' + userID +'>'+ data.name+', ' + dateString+'<a class="anchorjs-link" href="#top-aligned-media"><span class="anchorjs-icon"></span></a></h4><p>'+ data.message+'</p></div></div></div>';
 
       }else{
-        //regular generation
+        //regular generation  
         var _htmlTemplateString = '<div class="col-xs-12 user_msg"><div class="media message-box"><div class="media-left"><img class="media-object user-profile-in-chat" src="' + data.userImg +'" alt="general_id" style="width: 35px; height: 35px;"></div><div class="media-body"><h4 class="media-heading timestamp" id="top-aligned-media">'+ data.name+', ' + dateString+'<a class="anchorjs-link" href="#top-aligned-media"><span class="anchorjs-icon"></span></a></h4><p>'+ data.message+'</p></div></div></div>';
 
       }
@@ -221,8 +223,9 @@ $('#roomTag').text('@' + roomID);
     //console.log(dataArr);
     console.log(data.msgType);
     console.log(data.userID);
+    console.log(data.userID,'and',userID);
     if (! (data.userID == userID)){
-      if (data.msgType === 'txt'){
+      if (data.msgType == 'txt'){
         var outputHTMLString = generateCurrentBlob(data,false);
       }else{
         var outputHTMLString = generateCurrentBlobForImage(data,false);

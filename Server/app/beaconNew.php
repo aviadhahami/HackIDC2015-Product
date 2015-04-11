@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Created by PhpStorm.
  * User: וSER
@@ -20,7 +20,7 @@ class beaconNew {
         $this->beaconID = $beaconID;
         $this->responseID = $responseID;
 
-        $this->mysqli = new mysqli("mysql14.000webhost.com","a5016316_argov","argov123","a5016316_argov");
+        $this->mysqli = new mysqli("fdb13.biz.nf","1855048_argov","argov123","1855048_argov");
         $this->beaconTable = "beacon";
         $this->clientTable = "clients";
         $this->beaconIndex = 0;
