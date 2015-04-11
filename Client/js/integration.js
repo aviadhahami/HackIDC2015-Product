@@ -12,7 +12,7 @@ $(document).ready(function() {
 
     var method = 'GET';
     var connectionFlag = '0'; //0 is income, 1 is disconnect
-    var bid = major+ '.' + minor;
+    var bid = major + '' +  minor;
     window.cid = ''; //recieved by server and shouold be sent to server upon DC
 
     //preping global vars
@@ -221,8 +221,9 @@ $('#roomTag').text('@' + roomID);
     //console.log(dataArr);
     console.log(data.msgType);
     console.log(data.userID);
+    console.log(data.userID,'and',userID);
     if (! (data.userID == userID)){
-      if (data.msgType === 'txt'){
+      if (data.msgType == 'txt'){
         var outputHTMLString = generateCurrentBlob(data,false);
       }else{
         var outputHTMLString = generateCurrentBlobForImage(data,false);
