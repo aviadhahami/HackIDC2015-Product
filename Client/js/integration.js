@@ -52,6 +52,11 @@ $(document).ready(function() {
       onlineUsersList.append(onlineUserHtmlStub);
 
     });
+        ///Added by gal - this 2 lines just addes the user that just connected to the right panel///
+        var onlineUserHtmlStub = '<li data-userid=' + window.cid + '><a href="#" class="user"><img src="avatars/' + res.img +'"><span class="user_name">' + window.clientName + '</span></a></li>';
+        onlineUsersList.append(onlineUserHtmlStub);
+        /////////////////////////end/////////////////
+
       //end of members population
 
       //shout to RapidAPI for new user

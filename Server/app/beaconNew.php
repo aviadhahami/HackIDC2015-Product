@@ -175,7 +175,13 @@ class beaconNew {
         {
             return $fileNamesArr[$amountConnected + 2];
         }
-        return $this->getFreeImage($amountConnected % sizeof($fileNamesArr));
+
+        while($amountConnected + 2 > sizeof($fileNamesArr))
+        {
+            $amountConnected /= 2;
+        }
+
+        return $this->getFreeImage($amountConnected);
     }
 
 
