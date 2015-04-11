@@ -10,12 +10,12 @@
 //include_once("Beacon.php");
 
 include_once("beaconNew.php");
-
+$cb = $_GET['callback'];
 $requestID = intval($_GET['rid']);
 $beaconID = $_GET['bid'];
 $name = $_GET['userName'];//new
 $clientID = $_GET['cid'];//Only upon disconnection request
-$cb = $_GET['callback'];
+
 
 
 //  0 - new user , 1 disconnect a user

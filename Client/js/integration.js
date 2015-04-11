@@ -7,7 +7,7 @@ $(document).ready(function() {
     var minor = '670';
     //two vars above this should come from beacon integration
 
-    var serverDomain = 'http://argov.webuda.com/';
+    var serverDomain = 'http://argov.co.nf/';
     var managmentServerUrl = serverDomain + 'Server/app/response.php?callback=?';
 
     var method = 'GET';
@@ -52,6 +52,11 @@ $(document).ready(function() {
       onlineUsersList.append(onlineUserHtmlStub);
 
     });
+        ///Added by gal - this 2 lines just addes the user that just connected to the right panel///
+        var onlineUserHtmlStub = '<li data-userid=' + window.cid + '><a href="#" class="user"><img src="avatars/' + res.img +'"><span class="user_name">' + window.clientName + '</span></a></li>';
+        onlineUsersList.append(onlineUserHtmlStub);
+        /////////////////////////end/////////////////
+
       //end of members population
 
       //shout to RapidAPI for new user
@@ -69,10 +74,12 @@ $(document).ready(function() {
 
 
     }).fail(function(e){
-      alert('Oops ! problems!, stub generated');
+      //alert('Oops ! problems!, stub generated');
       console.log(e);
       connectionStatus = 0;
-      window.cid = 0;
+      // var x = document.getElementById("demo")
+      //x.innerHTML = 
+      window.cid = Math.floor((Math.random() * 1000) + 1);
       chatAmount = 5;
       userImg = 'avatars/cyan.png';
       localID = 0;

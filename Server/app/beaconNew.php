@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Created by PhpStorm.
  * User: וSER
@@ -20,7 +20,7 @@ class beaconNew {
         $this->beaconID = $beaconID;
         $this->responseID = $responseID;
 
-        $this->mysqli = new mysqli("mysql14.000webhost.com","a5016316_argov","argov123","a5016316_argov");
+        $this->mysqli = new mysqli("fdb13.biz.nf","1855048_argov","argov123","1855048_argov");
         $this->beaconTable = "beacon";
         $this->clientTable = "clients";
         $this->beaconIndex = 0;
@@ -62,7 +62,7 @@ class beaconNew {
     {
         $size = $this->getAmountConnected($clientArr);
         $beaconShrink = substr($this->beaconID,0,3);
-        return $beaconShrink . $size . ($this->get_rand_str(5));
+        return $beaconShrink . ($this->get_rand_str(19));
     }
 
 
@@ -169,13 +169,15 @@ class beaconNew {
 
     public function getFreeImage($amountConnected)
     {
-        $dir = "./../../Client/avatars";
-        $fileNamesArr = scandir($dir);
-        if($amountConnected + 2 < sizeof($fileNamesArr))
+        $image = ["blue.png", "cyan.png" , "devil.png" ,"green.png","pink.png","yellow.png"];
+        if($amountConnected  < sizeof($image))
         {
-            return $fileNamesArr[$amountConnected + 2];
+            return $image[$amountConnected];
         }
-        return $this->getFreeImage($amountConnected % sizeof($fileNamesArr));
+
+
+
+        return $image[rand(0,4)];
     }
 
 
@@ -290,7 +292,7 @@ class beaconNew {
 
     private function get_rand_str($length)
     {
-        $chars = array_merge(range('a','z'), range('A','Z'), array('!','%','*'));
+        $chars = array_merge(range('a','z'), range('A','Z'), array('1','2','3'));
         $length = intval($length) > 0 ? intval($length) : 16;
         $max = count($chars) - 1;
         $str = "";
