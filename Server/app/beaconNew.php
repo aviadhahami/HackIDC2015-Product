@@ -169,19 +169,15 @@ class beaconNew {
 
     public function getFreeImage($amountConnected)
     {
-        $dir = "./../../Client/avatars";
-        $fileNamesArr = scandir($dir);
-        if($amountConnected + 2 < sizeof($fileNamesArr))
+        $image = ["blue.png", "cyan.png" , "devil.png" ,"green.png","pink.png","yellow.png"];
+        if($amountConnected  < sizeof($image))
         {
-            return $fileNamesArr[$amountConnected + 2];
+            return $image[$amountConnected];
         }
 
-        while($amountConnected + 2 > sizeof($fileNamesArr))
-        {
-            $amountConnected /= 2;
-        }
 
-        return $this->getFreeImage($amountConnected);
+
+        return $image[rand(0,4)];
     }
 
 

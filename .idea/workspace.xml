@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1c6abace-e918-4d91-870a-8f23e75d50c5" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Server/app/beaconNew.php" afterPath="$PROJECT_DIR$/Server/app/beaconNew.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Client/js/integration.js" afterPath="$PROJECT_DIR$/Client/js/integration.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="HackIDC2015.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,20 +30,20 @@
       <file leaf-file-name="beaconNew.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Server/app/beaconNew.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6407767" vertical-offset="3126" max-vertical-offset="6510">
-              <caret line="183" column="51" selection-start-line="183" selection-start-column="51" selection-end-line="183" selection-end-column="51" />
+            <state vertical-scroll-proportion="0.717233" vertical-offset="2979" max-vertical-offset="6426">
+              <caret line="179" column="30" selection-start-line="179" selection-start-column="30" selection-end-line="179" selection-end-column="30" />
               <folding>
                 <element signature="n#array_push_assoc#0;n#beaconNew#0;n#!!top" expanded="false" />
                 <element signature="e#2853#2940#0#PHP" expanded="false" />
                 <element signature="e#3149#3237#0#PHP" expanded="false" />
-                <marker date="1428716504364" expanded="true" signature="979:1030" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
-                <marker date="1428716504364" expanded="true" signature="3977:4019" placeholder="SELECT * FRO.._localClientTbl WHERE..." />
-                <marker date="1428716504364" expanded="true" signature="4816:4936" placeholder="INSERT INTO ..." />
-                <marker date="1428716504364" expanded="true" signature="6694:6772" placeholder="DELETE FROM ..." />
-                <marker date="1428716504364" expanded="true" signature="7122:7173" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
-                <marker date="1428716504364" expanded="true" signature="7661:7697" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
-                <marker date="1428716504364" expanded="true" signature="8485:8539" placeholder="INSERT INTO ..." />
-                <marker date="1428716504364" expanded="true" signature="8969:9020" placeholder="DELETE FROM ..." />
+                <marker date="1428716889227" expanded="true" signature="979:1030" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
+                <marker date="1428716889227" expanded="true" signature="3977:4019" placeholder="SELECT * FRO.._localClientTbl WHERE..." />
+                <marker date="1428716889227" expanded="true" signature="4816:4936" placeholder="INSERT INTO ..." />
+                <marker date="1428716889227" expanded="true" signature="6553:6631" placeholder="DELETE FROM ..." />
+                <marker date="1428716889227" expanded="true" signature="6981:7032" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
+                <marker date="1428716889227" expanded="true" signature="7520:7556" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
+                <marker date="1428716889227" expanded="true" signature="8344:8398" placeholder="INSERT INTO ..." />
+                <marker date="1428716889227" expanded="true" signature="8828:8879" placeholder="DELETE FROM ..." />
               </folding>
             </state>
           </provider>
@@ -427,14 +425,14 @@
             <element signature="n#array_push_assoc#0;n#beaconNew#0;n#!!top" expanded="false" />
             <element signature="e#2853#2940#0#PHP" expanded="false" />
             <element signature="e#3149#3237#0#PHP" expanded="false" />
-            <marker date="1428716504364" expanded="true" signature="979:1030" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
-            <marker date="1428716504364" expanded="true" signature="3977:4019" placeholder="SELECT * FRO.._localClientTbl WHERE..." />
-            <marker date="1428716504364" expanded="true" signature="4816:4936" placeholder="INSERT INTO ..." />
-            <marker date="1428716504364" expanded="true" signature="6694:6772" placeholder="DELETE FROM ..." />
-            <marker date="1428716504364" expanded="true" signature="7122:7173" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
-            <marker date="1428716504364" expanded="true" signature="7661:7697" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
-            <marker date="1428716504364" expanded="true" signature="8485:8539" placeholder="INSERT INTO ..." />
-            <marker date="1428716504364" expanded="true" signature="8969:9020" placeholder="DELETE FROM ..." />
+            <marker date="1428716889227" expanded="true" signature="979:1030" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
+            <marker date="1428716889227" expanded="true" signature="3977:4019" placeholder="SELECT * FRO.._localClientTbl WHERE..." />
+            <marker date="1428716889227" expanded="true" signature="4816:4936" placeholder="INSERT INTO ..." />
+            <marker date="1428716889227" expanded="true" signature="6553:6631" placeholder="DELETE FROM ..." />
+            <marker date="1428716889227" expanded="true" signature="6981:7032" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
+            <marker date="1428716889227" expanded="true" signature="7520:7556" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
+            <marker date="1428716889227" expanded="true" signature="8344:8398" placeholder="INSERT INTO ..." />
+            <marker date="1428716889227" expanded="true" signature="8828:8879" placeholder="DELETE FROM ..." />
           </folding>
         </state>
       </provider>
@@ -743,20 +741,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Server/app/beaconNew.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6407767" vertical-offset="3126" max-vertical-offset="6510">
-          <caret line="183" column="51" selection-start-line="183" selection-start-column="51" selection-end-line="183" selection-end-column="51" />
+        <state vertical-scroll-proportion="0.717233" vertical-offset="2979" max-vertical-offset="6426">
+          <caret line="179" column="30" selection-start-line="179" selection-start-column="30" selection-end-line="179" selection-end-column="30" />
           <folding>
             <element signature="n#array_push_assoc#0;n#beaconNew#0;n#!!top" expanded="false" />
             <element signature="e#2853#2940#0#PHP" expanded="false" />
             <element signature="e#3149#3237#0#PHP" expanded="false" />
-            <marker date="1428716504364" expanded="true" signature="979:1030" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
-            <marker date="1428716504364" expanded="true" signature="3977:4019" placeholder="SELECT * FRO.._localClientTbl WHERE..." />
-            <marker date="1428716504364" expanded="true" signature="4816:4936" placeholder="INSERT INTO ..." />
-            <marker date="1428716504364" expanded="true" signature="6694:6772" placeholder="DELETE FROM ..." />
-            <marker date="1428716504364" expanded="true" signature="7122:7173" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
-            <marker date="1428716504364" expanded="true" signature="7661:7697" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
-            <marker date="1428716504364" expanded="true" signature="8485:8539" placeholder="INSERT INTO ..." />
-            <marker date="1428716504364" expanded="true" signature="8969:9020" placeholder="DELETE FROM ..." />
+            <marker date="1428716889227" expanded="true" signature="979:1030" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
+            <marker date="1428716889227" expanded="true" signature="3977:4019" placeholder="SELECT * FRO.._localClientTbl WHERE..." />
+            <marker date="1428716889227" expanded="true" signature="4816:4936" placeholder="INSERT INTO ..." />
+            <marker date="1428716889227" expanded="true" signature="6553:6631" placeholder="DELETE FROM ..." />
+            <marker date="1428716889227" expanded="true" signature="6981:7032" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
+            <marker date="1428716889227" expanded="true" signature="7520:7556" placeholder="SELECT * FRO.._beaconTbl WHERE..." />
+            <marker date="1428716889227" expanded="true" signature="8344:8398" placeholder="INSERT INTO ..." />
+            <marker date="1428716889227" expanded="true" signature="8828:8879" placeholder="DELETE FROM ..." />
           </folding>
         </state>
       </provider>
