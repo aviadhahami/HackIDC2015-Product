@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1c6abace-e918-4d91-870a-8f23e75d50c5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Server/app/beaconNew.php" afterPath="$PROJECT_DIR$/Server/app/beaconNew.php" />
-    </list>
+    <list default="true" id="1c6abace-e918-4d91-870a-8f23e75d50c5" name="Default" comment="" />
     <ignored path="HackIDC2015.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -27,10 +25,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="beaconNew.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="beaconNew.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Server/app/beaconNew.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.717233" vertical-offset="2979" max-vertical-offset="6426">
+            <state vertical-scroll-proportion="-19.7" vertical-offset="2979" max-vertical-offset="6426">
               <caret line="179" column="30" selection-start-line="179" selection-start-column="30" selection-end-line="179" selection-end-column="30" />
               <folding>
                 <element signature="n#array_push_assoc#0;n#beaconNew#0;n#!!top" expanded="false" />
@@ -59,10 +57,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="integration.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="integration.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Client/js/integration.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2359" max-vertical-offset="5439">
+            <state vertical-scroll-proportion="-2.909836" vertical-offset="3682" max-vertical-offset="5439">
               <caret line="57" column="53" selection-start-line="57" selection-start-column="53" selection-end-line="57" selection-end-column="53" />
               <folding />
             </state>
@@ -731,17 +729,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Client/js/integration.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2359" max-vertical-offset="5439">
-          <caret line="57" column="53" selection-start-line="57" selection-start-column="53" selection-end-line="57" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Server/app/beaconNew.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.717233" vertical-offset="2979" max-vertical-offset="6426">
+        <state vertical-scroll-proportion="-19.7" vertical-offset="2979" max-vertical-offset="6426">
           <caret line="179" column="30" selection-start-line="179" selection-start-column="30" selection-end-line="179" selection-end-column="30" />
           <folding>
             <element signature="n#array_push_assoc#0;n#beaconNew#0;n#!!top" expanded="false" />
@@ -756,6 +746,14 @@
             <marker date="1428716889227" expanded="true" signature="8344:8398" placeholder="INSERT INTO ..." />
             <marker date="1428716889227" expanded="true" signature="8828:8879" placeholder="DELETE FROM ..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Client/js/integration.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.909836" vertical-offset="3682" max-vertical-offset="5439">
+          <caret line="57" column="53" selection-start-line="57" selection-start-column="53" selection-end-line="57" selection-end-column="53" />
+          <folding />
         </state>
       </provider>
     </entry>
