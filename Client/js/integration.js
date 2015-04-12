@@ -24,12 +24,6 @@ $(document).ready(function() {
 
 
 
-
-
-
-
-
-
     //Primary connection logic
     window.initiatePrimaryConnection = function(){
         var getReqDataString = 'rid=' + connectionFlag + '&bid=' + bid + '&userName=' + window.clientName; //connection GET request string
@@ -55,7 +49,9 @@ $(document).ready(function() {
              });
              */
 
-
+            //AVIAD LOOK HERE--------
+            // window.addEventListener("onbeforeunload",closeConnectionToServer(managmentServerUrl,localID,window.cid));
+            // --------
 
 
             $.each(usersArray,function(key,value){
@@ -96,7 +92,7 @@ $(document).ready(function() {
             localID = 0;
         }).always(function(){
             userID = window.cid === '' ? 0 : window.cid;
-            window.addEventListener("beforeunload",closeConnectionToServer(managmentServerUrl,localID,window.cid));
+
         });
 
     };
@@ -111,21 +107,23 @@ $(document).ready(function() {
     {
         var disconnectionFlag = '1';
         var sendDisconnectionRequestParams = 'rid=' + disconnectionFlag + "&bid=" + localID + "&cid=" + clientID;
-        $.getJSON(managmentServerUrl, sendDisconnectionRequestParams).done(function(response)
-        {
-            console.log(response);
 
-            if(response.connection === "-1")
+            $.getJSON(managmentServerUrl, sendDisconnectionRequestParams).done(function(response)
             {
-                alert("Oops , you suck and we didn't succceed in disconnecting you!!");
-            } else if(response.connection === "1")
+                console.log(response);
+
+                if(response.connection === "-1")
+                {
+                    alert("Oops , you suck and we didn't succceed in disconnecting you!!");
+                } else if(response.connection === "1")
+                {
+                    alert("You can go on you way now , we disconnected you from the chat");
+                }
+            }).fail(function()
             {
-                alert("You can go on you way now , we disconnected you from the chat");
-            }
-        }).fail(function()
-        {
-            console.log("response miserably failed!");
-        });
+                console.log("response miserably failed!");
+            });
+
 
     }
 
@@ -281,6 +279,7 @@ $(document).ready(function() {
 
             $('.chat_body').append(outputHTMLString);
             ScrollFix();
+
         }
 
     });
