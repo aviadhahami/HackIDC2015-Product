@@ -24,26 +24,7 @@ $(document).ready(function() {
 
 
 
-    $(window).unload(function()
-    {
-        var disconnectionFlag = '1';
-        var sendDisconnectionRequestParams = 'rid=' + disconnectionFlag + "&bid=" + localID;
-        $.getJSON(managmentServerUrl, sendDisconnectionRequestParams).done(function(response)
-        {
-            console.log(response);
 
-            if(response.connection === "-1")
-            {
-                alert("Oops , you suck and we didn't succceed in disconnecting you!!");
-            } else if(response.connection === "1")
-            {
-                alert("You can go on you way now , we disconnected you from the chat");
-            }
-        }).fail(function()
-        {
-            console.log("response miserably failed!");
-        });
-    });
 
 
 
@@ -113,6 +94,34 @@ $(document).ready(function() {
 
   };
     //end of server integration module//
+
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////DISCONNECTION FUNCTIONALLITY ADDED TO THE SCRIPT ----- GAL RETTIG 12.4
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    $(window).unload(function()
+    {
+        var disconnectionFlag = '1';
+        var sendDisconnectionRequestParams = 'rid=' + disconnectionFlag + "&bid=" + localID;
+        $.getJSON(managmentServerUrl, sendDisconnectionRequestParams).done(function(response)
+        {
+            console.log(response);
+
+            if(response.connection === "-1")
+            {
+                alert("Oops , you suck and we didn't succceed in disconnecting you!!");
+            } else if(response.connection === "1")
+            {
+                alert("You can go on you way now , we disconnected you from the chat");
+            }
+        }).fail(function()
+        {
+            console.log("response miserably failed!");
+        });
+    });
+
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
     //global data
