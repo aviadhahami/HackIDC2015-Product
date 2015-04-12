@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1c6abace-e918-4d91-870a-8f23e75d50c5" name="Default" comment="" />
+    <list default="true" id="1c6abace-e918-4d91-870a-8f23e75d50c5" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Client/js/integration.js" afterPath="$PROJECT_DIR$/Client/js/integration.js" />
+    </list>
     <ignored path="HackIDC2015.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -28,7 +30,7 @@
       <file leaf-file-name="beaconNew.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Server/app/beaconNew.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-19.7" vertical-offset="2979" max-vertical-offset="6426">
+            <state vertical-scroll-proportion="-28.1" vertical-offset="2727" max-vertical-offset="6426">
               <caret line="179" column="30" selection-start-line="179" selection-start-column="30" selection-end-line="179" selection-end-column="30" />
               <folding>
                 <element signature="n#array_push_assoc#0;n#beaconNew#0;n#!!top" expanded="false" />
@@ -50,8 +52,8 @@
       <file leaf-file-name="response.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Server/app/response.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.6" vertical-offset="360" max-vertical-offset="1197">
-              <caret line="23" column="35" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
+            <state vertical-scroll-proportion="-16.8" vertical-offset="126" max-vertical-offset="1197">
+              <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -60,8 +62,8 @@
       <file leaf-file-name="integration.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Client/js/integration.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.909836" vertical-offset="3682" max-vertical-offset="5439">
-              <caret line="57" column="53" selection-start-line="57" selection-start-column="53" selection-end-line="57" selection-end-column="53" />
+            <state vertical-scroll-proportion="0.4648712" vertical-offset="422" max-vertical-offset="6006">
+              <caret line="39" column="87" selection-start-line="39" selection-start-column="87" selection-end-line="39" selection-end-column="87" />
               <folding />
             </state>
           </provider>
@@ -80,8 +82,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Client/js/integration.js" />
         <option value="$PROJECT_DIR$/Server/app/beaconNew.php" />
+        <option value="$PROJECT_DIR$/Client/js/integration.js" />
       </list>
     </option>
   </component>
@@ -721,17 +723,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Server/app/response.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.6" vertical-offset="360" max-vertical-offset="1197">
-          <caret line="23" column="35" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Server/app/beaconNew.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.7" vertical-offset="2979" max-vertical-offset="6426">
+        <state vertical-scroll-proportion="-28.1" vertical-offset="2727" max-vertical-offset="6426">
           <caret line="179" column="30" selection-start-line="179" selection-start-column="30" selection-end-line="179" selection-end-column="30" />
           <folding>
             <element signature="n#array_push_assoc#0;n#beaconNew#0;n#!!top" expanded="false" />
@@ -749,10 +743,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Server/app/response.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.8" vertical-offset="126" max-vertical-offset="1197">
+          <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Client/js/integration.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.909836" vertical-offset="3682" max-vertical-offset="5439">
-          <caret line="57" column="53" selection-start-line="57" selection-start-column="53" selection-end-line="57" selection-end-column="53" />
+        <state vertical-scroll-proportion="0.4648712" vertical-offset="422" max-vertical-offset="6006">
+          <caret line="39" column="87" selection-start-line="39" selection-start-column="87" selection-end-line="39" selection-end-column="87" />
           <folding />
         </state>
       </provider>

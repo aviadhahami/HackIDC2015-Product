@@ -23,6 +23,30 @@ $(document).ready(function() {
     var userID = '';
 
 
+
+    $(window).unload(function()
+    {
+        var disconnectionFlag = '1';
+        var sendDisconnectionRequestParams = 'rid=' + disconnectionFlag + "&bid=" + localID;
+        $.getJSON(managmentServerUrl, sendDisconnectionRequestParams).done(function(response)
+        {
+            console.log(response);
+
+            if(response.connection === "-1")
+            {
+                alert("Oops , you suck and we didn't succceed in disconnecting you!!");
+            } else if(response.connection === "1")
+            {
+                alert("You can go on you way now , we disconnected you from the chat");
+            }
+        }).fail(function()
+        {
+            console.log("response miserably failed!");
+        });
+    });
+
+
+
     //Primary connection logic
     window.initiatePrimaryConnection = function(){
     var getReqDataString = 'rid=' + connectionFlag + '&bid=' + bid + '&userName=' + window.clientName; //connection GET request string
@@ -250,4 +274,7 @@ $('#roomTag').text('@' + roomID);
 
 
 });
+
+
+
 
