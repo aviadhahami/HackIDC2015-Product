@@ -28,6 +28,8 @@ $(document).ready(function() {
 
 
 
+
+
     //Primary connection logic
     window.initiatePrimaryConnection = function(){
     var getReqDataString = 'rid=' + connectionFlag + '&bid=' + bid + '&userName=' + window.clientName; //connection GET request string
@@ -52,6 +54,12 @@ $(document).ready(function() {
 /*      usersArray.forEach(function(user){
        });
     */
+
+        window.addEventListener("beforeunload",closeConnectionToServer(managmentServerUrl,localID,window.cid));
+
+
+
+
     $.each(usersArray,function(key,value){
       var onlineUserHtmlStub = '<li data-userid=' + value.clientId + '><a href="#" class="user"><img src="avatars/' + value.userImg +'"><span class="user_name">' +value.name + '</span></a></li>';
       onlineUsersList.append(onlineUserHtmlStub);
@@ -99,10 +107,11 @@ $(document).ready(function() {
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     //////////////////////////////////DISCONNECTION FUNCTIONALLITY ADDED TO THE SCRIPT ----- GAL RETTIG 12.4
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    $(window).bind("beforeunload",function()
+
+    function closeConnectionToServer(managmentServerUrl, localID, clientID)
     {
         var disconnectionFlag = '1';
-        var sendDisconnectionRequestParams = 'rid=' + disconnectionFlag + "&bid=" + localID;
+        var sendDisconnectionRequestParams = 'rid=' + disconnectionFlag + "&bid=" + localID + "&cid=" + clientID;
         $.getJSON(managmentServerUrl, sendDisconnectionRequestParams).done(function(response)
         {
             console.log(response);
@@ -118,7 +127,8 @@ $(document).ready(function() {
         {
             console.log("response miserably failed!");
         });
-    });
+
+    }
 
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
